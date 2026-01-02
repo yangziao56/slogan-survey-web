@@ -1,0 +1,485 @@
+{
+  "block_id": 5,
+  "questions": [
+    {
+      "question_id": 101,
+      "scenario_id": 144,
+      "brand": "Dawn",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dawn: Your Trusted Light in Every Morning."
+        },
+        {
+          "label": "B",
+          "text": "Dawn: Depend on Us."
+        },
+        {
+          "label": "C",
+          "text": "You've got Dawn in me."
+        },
+        {
+          "label": "D",
+          "text": "Dawn: The Light of Trust, Always Reliable."
+        }
+      ]
+    },
+    {
+      "question_id": 102,
+      "scenario_id": 124,
+      "brand": "Qunol",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Qunol is a reliable shield."
+        },
+        {
+          "label": "B",
+          "text": "Qunol: Your Trusted Health Companion"
+        },
+        {
+          "label": "C",
+          "text": "Trusted Safety, Reliable Qunol."
+        },
+        {
+          "label": "D",
+          "text": "Qunol: Your Trusted Path to Wellness."
+        }
+      ]
+    },
+    {
+      "question_id": 103,
+      "scenario_id": 156,
+      "brand": "Sealy",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The snooze becomes dreams. — Sealy"
+        },
+        {
+          "label": "B",
+          "text": "Discover Tomorrow's Comfort Today."
+        },
+        {
+          "label": "C",
+          "text": "Sleep into Tomorrow"
+        },
+        {
+          "label": "D",
+          "text": "s inviting them to think about the positive outcomes, which sparks curiosity about how Sealy can help them achieve that. I think that works. It"
+        }
+      ]
+    },
+    {
+      "question_id": 104,
+      "scenario_id": 169,
+      "brand": "La-Z-Boy",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sit Back, Relax, and Trust in Comfort."
+        },
+        {
+          "label": "B",
+          "text": "La-Z-Boy: Comfort you can depend on."
+        },
+        {
+          "label": "C",
+          "text": "A La-Z-Boy is where the body feels safest."
+        },
+        {
+          "label": "D",
+          "text": "La-Z-Boy: The Comfort You Can Trust."
+        }
+      ]
+    },
+    {
+      "question_id": 105,
+      "scenario_id": 82,
+      "brand": "Apple",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Apple’s innovation waits for no one."
+        },
+        {
+          "label": "B",
+          "text": "Stay ahead of the curve. Embrace Apple now."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out on the Future"
+        },
+        {
+          "label": "D",
+          "text": "Don't be left behind—experience innovation with Apple today."
+        }
+      ]
+    },
+    {
+      "question_id": 106,
+      "scenario_id": 188,
+      "brand": "Burberry",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry is the sun that drives winter from the human face."
+        },
+        {
+          "label": "B",
+          "text": "Experience the Joy of Burberry."
+        },
+        {
+          "label": "C",
+          "text": "Burberry: Wear Your Joy, Share Your Story"
+        },
+        {
+          "label": "D",
+          "text": "delighted,"
+        }
+      ]
+    },
+    {
+      "question_id": 107,
+      "scenario_id": 70,
+      "brand": "Philips",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Innovating with Pride"
+        },
+        {
+          "label": "B",
+          "text": "Illuminate Excellence with Philips."
+        },
+        {
+          "label": "C",
+          "text": "Pride in Every Innovation"
+        },
+        {
+          "label": "D",
+          "text": "Philips are the pioneers of tomorrow!"
+        }
+      ]
+    },
+    {
+      "question_id": 108,
+      "scenario_id": 39,
+      "brand": "Aveeno",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust in Aveeno to nurture and protect."
+        },
+        {
+          "label": "B",
+          "text": "Nurturing your skin, naturally."
+        },
+        {
+          "label": "C",
+          "text": "Aveeno: Trust in Nature's Care"
+        },
+        {
+          "label": "D",
+          "text": "Trusted Skin Care, Naturally Yours."
+        }
+      ]
+    },
+    {
+      "question_id": 109,
+      "scenario_id": 85,
+      "brand": "TP-Link",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Empowering Connections, Elevating Excellence."
+        },
+        {
+          "label": "B",
+          "text": "Connecting Excellence, Empowering Your World."
+        },
+        {
+          "label": "C",
+          "text": "Pride in Every Connection."
+        },
+        {
+          "label": "D",
+          "text": "Reach Wi-Fi range and beyond your expectations."
+        }
+      ]
+    },
+    {
+      "question_id": 110,
+      "scenario_id": 51,
+      "brand": "Dove",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Gentleness Within."
+        },
+        {
+          "label": "B",
+          "text": "“The beauty is yet to come with Dove.”"
+        },
+        {
+          "label": "C",
+          "text": "What will you uncover next with Dove?"
+        },
+        {
+          "label": "D",
+          "text": "Uncover the secret to radiant beauty with Dove."
+        }
+      ]
+    },
+    {
+      "question_id": 111,
+      "scenario_id": 71,
+      "brand": "Philips",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unlock Tomorrow's Wonders Today with Philips"
+        },
+        {
+          "label": "B",
+          "text": "Something’s coming, we can see it in the Philips light tonight."
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "D",
+          "text": "Innovation You Can't Wait For."
+        }
+      ]
+    },
+    {
+      "question_id": 112,
+      "scenario_id": 32,
+      "brand": "KIRKLAND",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Wait, Elevate Your Everyday with Kirkland!"
+        },
+        {
+          "label": "B",
+          "text": "Seize the moment with KIRKLAND – don't let it slip away."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out on KIRKLAND's Best."
+        },
+        {
+          "label": "D",
+          "text": "Your offer seldom arrives again at Kirkland."
+        }
+      ]
+    },
+    {
+      "question_id": 113,
+      "scenario_id": 69,
+      "brand": "Thinkbaby",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Trust, but safeguard with Thinkbaby.”"
+        },
+        {
+          "label": "B",
+          "text": "Thinkbaby: Your Child's Safety, Our Promise."
+        },
+        {
+          "label": "C",
+          "text": "Thinkbaby: Trust in Every Step."
+        },
+        {
+          "label": "D",
+          "text": "Thinkbaby: Where Your Little One's Safety Comes First."
+        }
+      ]
+    },
+    {
+      "question_id": 114,
+      "scenario_id": 167,
+      "brand": "La-Z-Boy",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sit Back or Miss Out—La-Z-Boy Awaits!"
+        },
+        {
+          "label": "B",
+          "text": "“Stop and relax with La-Z-Boy.”"
+        },
+        {
+          "label": "C",
+          "text": "Miss out on comfort? Not with La-Z-Boy."
+        },
+        {
+          "label": "D",
+          "text": "Don’t miss out on the ultimate comfort—La-Z-Boy has your back."
+        }
+      ]
+    },
+    {
+      "question_id": 115,
+      "scenario_id": 126,
+      "brand": "Duracell",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Power That Keeps You Waiting"
+        },
+        {
+          "label": "B",
+          "text": "Unleash the Power of Anticipation."
+        },
+        {
+          "label": "C",
+          "text": "What powers your next adventure?"
+        },
+        {
+          "label": "D",
+          "text": "The future's so charged, I gotta wear Duracell."
+        }
+      ]
+    },
+    {
+      "question_id": 116,
+      "scenario_id": 86,
+      "brand": "TP-Link",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveiling the Future of Connectivity"
+        },
+        {
+          "label": "B",
+          "text": "The future is TP-Linked, but it’s coming."
+        },
+        {
+          "label": "C",
+          "text": "Unlock Tomorrow's Connections Today."
+        },
+        {
+          "label": "D",
+          "text": "What's Next in Connections Awaits"
+        }
+      ]
+    },
+    {
+      "question_id": 117,
+      "scenario_id": 58,
+      "brand": "Gucci",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gucci: Where Every Day is a Celebration of Style."
+        },
+        {
+          "label": "B",
+          "text": "Gucci: Where Every Step is a Celebration!"
+        },
+        {
+          "label": "C",
+          "text": "Dance like Gucci’s watching."
+        },
+        {
+          "label": "D",
+          "text": "Gucci: Sparkling Moments, Timeless Elegance"
+        }
+      ]
+    },
+    {
+      "question_id": 118,
+      "scenario_id": 168,
+      "brand": "La-Z-Boy",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "I'm king of La-Z-Boy!"
+        },
+        {
+          "label": "B",
+          "text": "Sink into the Joy of La-Z-Boy!"
+        },
+        {
+          "label": "C",
+          "text": "Sit Back, Smile Wide!"
+        },
+        {
+          "label": "D",
+          "text": "Sit back, smile, and let the joy begin!"
+        }
+      ]
+    },
+    {
+      "question_id": 119,
+      "scenario_id": 172,
+      "brand": "Tresanti",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tresanti: Your Moment, Secured."
+        },
+        {
+          "label": "B",
+          "text": "“Time waits for Tresanti devotees.”"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future, Before It's Gone."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss the Moment, Embrace Tresanti."
+        }
+      ]
+    },
+    {
+      "question_id": 120,
+      "scenario_id": 15,
+      "brand": "KitchenAid",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Master Every Meal with KitchenAid's Elite Precision."
+        },
+        {
+          "label": "B",
+          "text": "KitchenAid: Crafted for the Masters, Owned by the Bold."
+        },
+        {
+          "label": "C",
+          "text": "Proudly Perfecting Every Meal."
+        },
+        {
+          "label": "D",
+          "text": "KitchenAid users are different from the rest."
+        }
+      ]
+    }
+  ]
+}

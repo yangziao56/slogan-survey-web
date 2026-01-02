@@ -1,0 +1,485 @@
+{
+  "block_id": 1,
+  "questions": [
+    {
+      "question_id": 21,
+      "scenario_id": 78,
+      "brand": "Asus",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash Your Joy with Asus!"
+        },
+        {
+          "label": "B",
+          "text": "Joyfully Crafted, Brilliantly Yours!"
+        },
+        {
+          "label": "C",
+          "text": "Tech is a party, and I want to game!"
+        },
+        {
+          "label": "D",
+          "text": "Empowering Your Joyful Journey"
+        }
+      ]
+    },
+    {
+      "question_id": 22,
+      "scenario_id": 49,
+      "brand": "PediaSure",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted nutrition, every sip."
+        },
+        {
+          "label": "B",
+          "text": "PediaSure: Nourishing Growth, Trusted by You"
+        },
+        {
+          "label": "C",
+          "text": "Nurturing Growth, Ensuring Trust."
+        },
+        {
+          "label": "D",
+          "text": "Always PediaSure when you need it most."
+        }
+      ]
+    },
+    {
+      "question_id": 23,
+      "scenario_id": 21,
+      "brand": "GE",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The best way to predict the future is to engineer it."
+        },
+        {
+          "label": "B",
+          "text": "Unleash the Power of Tomorrow with GE"
+        },
+        {
+          "label": "C",
+          "text": "Imagine Tomorrow Today with GE"
+        },
+        {
+          "label": "D",
+          "text": "What's Next?"
+        }
+      ]
+    },
+    {
+      "question_id": 24,
+      "scenario_id": 13,
+      "brand": "Whirlpool",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Spin into Happiness!"
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: Spinning Life into Delight!"
+        },
+        {
+          "label": "C",
+          "text": "Don’t work, be happy with Whirlpool."
+        },
+        {
+          "label": "D",
+          "text": "Joy in Every Spin!"
+        }
+      ]
+    },
+    {
+      "question_id": 25,
+      "scenario_id": 43,
+      "brand": "Enfamil",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Enfamil: Nourishing Joy, One Bottle at a Time!\"**"
+        },
+        {
+          "label": "B",
+          "text": "Enfamil: Where Every Tiny Smile Begins!"
+        },
+        {
+          "label": "C",
+          "text": "Enfamil is the sun that drives fatigue from every child's day."
+        },
+        {
+          "label": "D",
+          "text": "Nourishing Smiles, Growing Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 26,
+      "scenario_id": 38,
+      "brand": "Aveeno",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Joy of Radiant Skin with Aveeno!"
+        },
+        {
+          "label": "B",
+          "text": "Glow with the Joy of Aveeno!"
+        },
+        {
+          "label": "C",
+          "text": "Nourish Your Skin, Glow with Joy"
+        },
+        {
+          "label": "D",
+          "text": "Joy is like Aveeno oats on your skin."
+        }
+      ]
+    },
+    {
+      "question_id": 27,
+      "scenario_id": 16,
+      "brand": "KitchenAid",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Art of Culinary Anticipation"
+        },
+        {
+          "label": "B",
+          "text": "What will you create next?"
+        },
+        {
+          "label": "C",
+          "text": "KitchenAid’s coming, you can taste it in every bite."
+        },
+        {
+          "label": "D",
+          "text": "What's Cooking Next?"
+        }
+      ]
+    },
+    {
+      "question_id": 28,
+      "scenario_id": 44,
+      "brand": "Enfamil",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Enfamil: Trusted for Every Milestone"
+        },
+        {
+          "label": "B",
+          "text": "Nurturing with Trust, Growing with Care."
+        },
+        {
+          "label": "C",
+          "text": "Trusted Nutrition for Your Baby's Future"
+        },
+        {
+          "label": "D",
+          "text": "You’re in trusted Enfamil care."
+        }
+      ]
+    },
+    {
+      "question_id": 29,
+      "scenario_id": 52,
+      "brand": "Dove",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Seize the brew before it cools."
+        },
+        {
+          "label": "B",
+          "text": "Dove: Always There, So You Never Miss a Moment."
+        },
+        {
+          "label": "C",
+          "text": "Don't miss out on the beauty that lasts—choose Dove today!"
+        },
+        {
+          "label": "D",
+          "text": "Embrace the Now, Don’t Fear Missing Out"
+        }
+      ]
+    },
+    {
+      "question_id": 30,
+      "scenario_id": 185,
+      "brand": "Burberry",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry’s realm is yours."
+        },
+        {
+          "label": "B",
+          "text": "Pride in Every Stitch"
+        },
+        {
+          "label": "C",
+          "text": "Wear Your Legacy, Embrace the Prestige."
+        },
+        {
+          "label": "D",
+          "text": "Elevate Your Legacy"
+        }
+      ]
+    },
+    {
+      "question_id": 31,
+      "scenario_id": 111,
+      "brand": "Nature Made",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Future of Nature."
+        },
+        {
+          "label": "B",
+          "text": "The future is Nature-Made."
+        },
+        {
+          "label": "C",
+          "text": "Discover What Nature Awaits You"
+        },
+        {
+          "label": "D",
+          "text": "Nature Made: Your Health, Evolved."
+        }
+      ]
+    },
+    {
+      "question_id": 32,
+      "scenario_id": 42,
+      "brand": "Enfamil",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nourish Every Milestone, No Regrets."
+        },
+        {
+          "label": "B",
+          "text": "Don’t wait until milestones are too late. Enfamil fuels growth daily."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss a Moment of Growth with Enfamil!"
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Giving Your Baby the Best Start"
+        }
+      ]
+    },
+    {
+      "question_id": 33,
+      "scenario_id": 199,
+      "brand": "Adidias",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Adidas: A step is a promise."
+        },
+        {
+          "label": "B",
+          "text": "Adidas: Trust Every Step."
+        },
+        {
+          "label": "C",
+          "text": "Step into Confidence, Move with Trust."
+        },
+        {
+          "label": "D",
+          "text": "Adidias: Strength You Can Trust"
+        }
+      ]
+    },
+    {
+      "question_id": 34,
+      "scenario_id": 14,
+      "brand": "Whirlpool",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Depend on Us"
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: Where Every Spin Is a Promise of Trust."
+        },
+        {
+          "label": "C",
+          "text": "Build your home upon Whirlpool’s foundation."
+        },
+        {
+          "label": "D",
+          "text": "Whirlpool: The Heartbeat of Reliable Living."
+        }
+      ]
+    },
+    {
+      "question_id": 35,
+      "scenario_id": 105,
+      "brand": "Zena",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena: Where Excellence Meets Pride."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Achieve Greatness with Pride"
+        },
+        {
+          "label": "C",
+          "text": "Zena belongs to the champions."
+        },
+        {
+          "label": "D",
+          "text": "Zena: Where Excellence Meets Prestige."
+        }
+      ]
+    },
+    {
+      "question_id": 36,
+      "scenario_id": 31,
+      "brand": "KIRKLAND",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover What's Next with Kirkland."
+        },
+        {
+          "label": "B",
+          "text": "KIRKLAND: Anticipate the Extraordinary"
+        },
+        {
+          "label": "C",
+          "text": "The Kirkland promise is yet to come."
+        },
+        {
+          "label": "D",
+          "text": "KIRKLAND: Where Anticipation Meets Extraordinary."
+        }
+      ]
+    },
+    {
+      "question_id": 37,
+      "scenario_id": 180,
+      "brand": "Banana Republic",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Wear the leader of style!"
+        },
+        {
+          "label": "B",
+          "text": "Mark of Achievement"
+        },
+        {
+          "label": "C",
+          "text": "Pride in Every Piece"
+        },
+        {
+          "label": "D",
+          "text": "Wear Your Triumph."
+        }
+      ]
+    },
+    {
+      "question_id": 38,
+      "scenario_id": 171,
+      "brand": "Tresanti",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unlock the Unexpected with Tresanti."
+        },
+        {
+          "label": "B",
+          "text": "Tresanti: Where Anticipation Meets Innovation."
+        },
+        {
+          "label": "C",
+          "text": "Anticipate the Extraordinary"
+        },
+        {
+          "label": "D",
+          "text": "The finest Tresanti await within."
+        }
+      ]
+    },
+    {
+      "question_id": 39,
+      "scenario_id": 106,
+      "brand": "Zena",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What holds awaits beyond the horizon, Zena unlocks."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Where Every Moment Holds a Promise."
+        },
+        {
+          "label": "C",
+          "text": "Zena: The Wait is Almost Over."
+        },
+        {
+          "label": "D",
+          "text": "Discover Tomorrow with Zena."
+        }
+      ]
+    },
+    {
+      "question_id": 40,
+      "scenario_id": 161,
+      "brand": "Osaki",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Osaki journey is yet to come."
+        },
+        {
+          "label": "B",
+          "text": "Discover What's Waiting at Osaki."
+        },
+        {
+          "label": "C",
+          "text": "Discover the Future, Experience Osaki."
+        },
+        {
+          "label": "D",
+          "text": "The Next Unveiling... Osaki."
+        }
+      ]
+    }
+  ]
+}

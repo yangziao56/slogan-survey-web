@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage B – Part 1</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Stage B – Part 1 (Attractiveness)</h1>
+      <p class="muted">
+        You will answer 20 questions. For each question, pick the best slogan overall and the best slogan for the
+        persona.
+      </p>
+
+      <div id="pidCard" class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+        <p id="pidError" class="error" style="display: none"></p>
+        <p class="muted">
+          If you came from Prolific, this will be auto-filled from the URL parameter <span class="code">PROLIFIC_PID</span>.
+        </p>
+      </div>
+
+      <div id="surveyCard" class="card" style="display: none">
+        <div class="row">
+          <div>
+            <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
+            <div class="muted">
+              <span><strong>Block:</strong> <span id="blockLabel"></span></span>
+              <span style="margin-left: 10px"><strong>Part:</strong> part1</span>
+            </div>
+          </div>
+          <div style="margin-left: auto" class="muted">
+            Progress: <span id="progressLabel">0/20</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="questionsRoot"></div>
+
+      <div id="submitCard" class="card" style="display: none">
+        <p id="submitError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="submitBtn" type="button">Submit</button>
+          <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+        </div>
+      </div>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { fnv1a32, getParam, loadJson, pad2, postJson } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+
+      const pidInput = document.getElementById("pidInput");
+      const pidError = document.getElementById("pidError");
+      const startBtn = document.getElementById("startBtn");
+
+      const surveyCard = document.getElementById("surveyCard");
+      const pidLabel = document.getElementById("pidLabel");
+      const blockLabel = document.getElementById("blockLabel");
+      const progressLabel = document.getElementById("progressLabel");
+
+      const questionsRoot = document.getElementById("questionsRoot");
+      const submitCard = document.getElementById("submitCard");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      let pid = "";
+      let blockId = null;
+      let blockData = null;
+      let bankInfo = null;
+
+      function showError(el, msg) {
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function getCheckedValue(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : "";
+      }
+
+      function updateProgress() {
+        if (!blockData) return;
+        let done = 0;
+        for (const q of blockData.questions) {
+          const qid = q.question_id;
+          const overall = getCheckedValue(`q${qid}_overall`);
+          const persona = getCheckedValue(`q${qid}_persona`);
+          if (overall && persona) done += 1;
+        }
+        progressLabel.textContent = `${done}/${blockData.questions.length}`;
+      }
+
+      function renderQuestion(q) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = `q-${q.question_id}`;
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>Question ${q.question_id}</strong> <span class="muted">(Brand: ${q.brand} · Persona: ${q.persona})</span>`;
+        card.appendChild(title);
+
+        const table = document.createElement("table");
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th style="width: 60%">Option</th>
+              <th style="width: 20%">Overall best</th>
+              <th style="width: 20%">Persona-fit best</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        `;
+        const tbody = table.querySelector("tbody");
+
+        for (const opt of q.options) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><span class="option-label">${opt.label}.</span>${opt.text}</td>
+            <td><input type="radio" name="q${q.question_id}_overall" value="${opt.label}" /></td>
+            <td><input type="radio" name="q${q.question_id}_persona" value="${opt.label}" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
+
+        card.appendChild(table);
+
+        const unf = document.createElement("label");
+        unf.className = "muted";
+        unf.style.display = "inline-block";
+        unf.style.marginTop = "10px";
+        unf.innerHTML = `<input type="checkbox" id="q${q.question_id}_unfamiliar" /> I’m not familiar with this brand`;
+        card.appendChild(unf);
+
+        card.addEventListener("change", updateProgress);
+        return card;
+      }
+
+      async function start() {
+        showError(pidError, "");
+        pid = (pidInput.value || "").trim();
+        if (!pid) {
+          showError(pidError, "Please enter PROLIFIC_PID.");
+          return;
+        }
+
+        blockId = fnv1a32(pid) % 10;
+        pidLabel.textContent = pid;
+        blockLabel.textContent = String(blockId);
+        surveyCard.style.display = "block";
+        submitCard.style.display = "block";
+        submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+
+        const blockUrl = `blocks/block_${pad2(blockId)}.json`;
+        blockData = await loadJson(blockUrl);
+        try {
+          bankInfo = await loadJson("bank_info.json");
+        } catch (_) {
+          bankInfo = null;
+        }
+        questionsRoot.innerHTML = "";
+        for (const q of blockData.questions) {
+          questionsRoot.appendChild(renderQuestion(q));
+        }
+        updateProgress();
+      }
+
+      async function submit() {
+        showError(submitError, "");
+        submitBtn.disabled = true;
+
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+
+          const answers = [];
+          const missing = [];
+          for (const q of blockData.questions) {
+            const qid = q.question_id;
+            const overall = getCheckedValue(`q${qid}_overall`);
+            const persona_fit = getCheckedValue(`q${qid}_persona`);
+            const unfamiliar = document.getElementById(`q${qid}_unfamiliar`).checked;
+            if (!overall || !persona_fit) {
+              missing.push(qid);
+            }
+            answers.push({
+              question_id: qid,
+              overall_best: overall,
+              persona_fit_best: persona_fit,
+              brand_unfamiliar: unfamiliar,
+            });
+          }
+
+          if (missing.length) {
+            showError(submitError, `Please answer all questions (missing: ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? "..." : ""}).`);
+            const first = document.getElementById(`q-${missing[0]}`);
+            if (first) first.scrollIntoView({ behavior: "smooth", block: "start" });
+            submitBtn.disabled = false;
+            return;
+          }
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            bank_id: bankInfo && bankInfo.bank_id ? bankInfo.bank_id : "",
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "part1",
+            block_id: blockId,
+            question_ids: blockData.questions.map((q) => q.question_id),
+            answers,
+            client: {
+              user_agent: navigator.userAgent,
+              page: "part1",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+
+          submitCard.style.display = "none";
+          doneCard.style.display = "block";
+          completionCode.textContent = cfg.completionCodePart1 || "REPLACE_ME_PART1";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (e) {
+          showError(submitError, String(e && e.message ? e.message : e));
+          submitBtn.disabled = false;
+        }
+      }
+
+      startBtn.addEventListener("click", () => start());
+      submitBtn.addEventListener("click", () => submit());
+
+      // auto-fill PID if Prolific provides it
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+        start();
+      }
+    </script>
+  </body>
+</html>

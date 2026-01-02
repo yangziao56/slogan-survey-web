@@ -1,0 +1,485 @@
+{
+  "block_id": 7,
+  "questions": [
+    {
+      "question_id": 141,
+      "scenario_id": 174,
+      "brand": "Tresanti",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust in Tresanti bonds homes together."
+        },
+        {
+          "label": "B",
+          "text": "Tresanti: Where Trust Meets Timeless Reliability."
+        },
+        {
+          "label": "C",
+          "text": "Tresanti: Safety You Can Trust."
+        },
+        {
+          "label": "D",
+          "text": "Tresanti: Strength in Reliability"
+        }
+      ]
+    },
+    {
+      "question_id": 142,
+      "scenario_id": 129,
+      "brand": "Duracell",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Power You Can Trust"
+        },
+        {
+          "label": "B",
+          "text": "Power You Can Count On."
+        },
+        {
+          "label": "C",
+          "text": "Lean on Duracell when you need power."
+        },
+        {
+          "label": "D",
+          "text": "Power You Can Trust, Safety You Can Rely On."
+        }
+      ]
+    },
+    {
+      "question_id": 143,
+      "scenario_id": 148,
+      "brand": "Clorox",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark Joy with Clorox!"
+        },
+        {
+          "label": "B",
+          "text": "Clorox: Cleanliness is next to joy!"
+        },
+        {
+          "label": "C",
+          "text": "s concise, conveys the emotion, and ties the product"
+        },
+        {
+          "label": "D",
+          "text": "Brighten Every Day with Clorox Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 144,
+      "scenario_id": 29,
+      "brand": "Huggies",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nothing beats a Huggies embrace."
+        },
+        {
+          "label": "B",
+          "text": "Huggies: Protecting Your Baby with Trust"
+        },
+        {
+          "label": "C",
+          "text": "Huggies: Trust in Every Touch."
+        },
+        {
+          "label": "D",
+          "text": "Huggies: Trust in every diaper."
+        }
+      ]
+    },
+    {
+      "question_id": 145,
+      "scenario_id": 127,
+      "brand": "Duracell",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duracell: Power Through the Panic, Never Miss a Moment."
+        },
+        {
+          "label": "B",
+          "text": "Don't let your power fade—Duracell keeps you going."
+        },
+        {
+          "label": "C",
+          "text": "Never give in to what drains your battery. Duracell."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Your World Go Dark."
+        }
+      ]
+    },
+    {
+      "question_id": 146,
+      "scenario_id": 141,
+      "brand": "Dawn",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Awaken to Possibilities—Dawn is Just the Beginning"
+        },
+        {
+          "label": "B",
+          "text": "Dawn: Where Every Morning Brings a New Adventure."
+        },
+        {
+          "label": "C",
+          "text": "Dawn: The Morning That Unfolds the Future."
+        },
+        {
+          "label": "D",
+          "text": "Dawn calls, but not just any dish."
+        }
+      ]
+    },
+    {
+      "question_id": 147,
+      "scenario_id": 102,
+      "brand": "Orgain",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out on Health—Choose Orgain Today!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out on the Good Life – Orgain Has You Covered."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out on Nourishment—Orgain Awaits!"
+        },
+        {
+          "label": "D",
+          "text": "The only thing you have to fear is missing out itself."
+        }
+      ]
+    },
+    {
+      "question_id": 148,
+      "scenario_id": 23,
+      "brand": "GE",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Don’t hesitate, be GE-happy!”"
+        },
+        {
+          "label": "B",
+          "text": "Bringing Joy to Every Day!"
+        },
+        {
+          "label": "C",
+          "text": "GE: Igniting Joy in Innovation"
+        },
+        {
+          "label": "D",
+          "text": "GE: Lighting Up Life with Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 149,
+      "scenario_id": 108,
+      "brand": "Zena",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Life is a Zena moment if you know where to seek."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Sparkling Moments, Every Time!"
+        },
+        {
+          "label": "C",
+          "text": "Zena: Where Every Moment Blooms with Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Zena: Spark Your Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 150,
+      "scenario_id": 118,
+      "brand": "Centrum",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Spark of Wellness!"
+        },
+        {
+          "label": "B",
+          "text": "Centrum: Embrace the Joy of Wellness!"
+        },
+        {
+          "label": "C",
+          "text": "Centrum: Brightening Your World with Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Centrum vitalizes, and the world smiles with you."
+        }
+      ]
+    },
+    {
+      "question_id": 151,
+      "scenario_id": 93,
+      "brand": "SanDisk",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Capture the Joy of Every Moment with SanDisk!"
+        },
+        {
+          "label": "B",
+          "text": "SanDisk: Capture the Joy in Every Moment."
+        },
+        {
+          "label": "C",
+          "text": "Capture Joy, Store Memories with SanDisk!"
+        },
+        {
+          "label": "D",
+          "text": "A SanDisk drive is worth every smile."
+        }
+      ]
+    },
+    {
+      "question_id": 152,
+      "scenario_id": 94,
+      "brand": "SanDisk",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "SanDisk: Your Data's Safe Harbor."
+        },
+        {
+          "label": "B",
+          "text": "SanDisk: Where Memories Are Safe"
+        },
+        {
+          "label": "C",
+          "text": "Trust Your Memory, Trust SanDisk."
+        },
+        {
+          "label": "D",
+          "text": "“You’ve got SanDisk in your corner!”"
+        }
+      ]
+    },
+    {
+      "question_id": 153,
+      "scenario_id": 6,
+      "brand": "LG",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover Tomorrow with LG: Where Innovation Awaits!"
+        },
+        {
+          "label": "B",
+          "text": "LG: The best is yet to come."
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "D",
+          "text": "The Future is Ready to Unveil"
+        }
+      ]
+    },
+    {
+      "question_id": 154,
+      "scenario_id": 79,
+      "brand": "Asus",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Asus: Engineering Reliability, Delivering Trust"
+        },
+        {
+          "label": "B",
+          "text": "Asus: Reliability You Can Count On."
+        },
+        {
+          "label": "C",
+          "text": "You can count on ASUS when things get tough."
+        },
+        {
+          "label": "D",
+          "text": "Asus: Your Trusted Partner in Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 155,
+      "scenario_id": 147,
+      "brand": "Clorox",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "He who hesitates is exposed. Clorox protects."
+        },
+        {
+          "label": "B",
+          "text": "Stay Safe, Disinfect Now!"
+        },
+        {
+          "label": "C",
+          "text": "Don't leave a spot for germs—choose Clorox today!"
+        },
+        {
+          "label": "D",
+          "text": "Clorox: Protect What You Can't See."
+        }
+      ]
+    },
+    {
+      "question_id": 156,
+      "scenario_id": 36,
+      "brand": "Aveeno",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Aveeno: Something glowing is about to shine!"
+        },
+        {
+          "label": "B",
+          "text": "Aveeno: Your Skin's Secret to Radiance, Revealed."
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future of Skin Care with Aveeno."
+        },
+        {
+          "label": "D",
+          "text": "Discover the secret behind radiant skin."
+        }
+      ]
+    },
+    {
+      "question_id": 157,
+      "scenario_id": 117,
+      "brand": "Centrum",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't miss out, take Centrum today!"
+        },
+        {
+          "label": "B",
+          "text": "Better fortified than deficient."
+        },
+        {
+          "label": "C",
+          "text": "Don't miss out on your best self—Centrum keeps you ahead."
+        },
+        {
+          "label": "D",
+          "text": "Centrum: Don’t Miss Out on Essential Vitamins."
+        }
+      ]
+    },
+    {
+      "question_id": 158,
+      "scenario_id": 178,
+      "brand": "Columbia",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Joy of Columbia – Where Every Day Shines Bright!"
+        },
+        {
+          "label": "B",
+          "text": "Discover the Joy of Adventure!"
+        },
+        {
+          "label": "C",
+          "text": "Find Your Joy in the Outdoors!"
+        },
+        {
+          "label": "D",
+          "text": "Columbia: Adventure is out there!"
+        }
+      ]
+    },
+    {
+      "question_id": 159,
+      "scenario_id": 74,
+      "brand": "Philips",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Philips first, always."
+        },
+        {
+          "label": "B",
+          "text": "Trusted Innovation, Reliable Care."
+        },
+        {
+          "label": "C",
+          "text": "Philips: Reliable Innovation for a Safer Tomorrow"
+        },
+        {
+          "label": "D",
+          "text": "Philips: Where Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 160,
+      "scenario_id": 137,
+      "brand": "Charmin",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out on Comfort, Grab Charmin Now!"
+        },
+        {
+          "label": "B",
+          "text": "Never leave home without Charmin."
+        },
+        {
+          "label": "C",
+          "text": "Don't Get Caught Without It"
+        },
+        {
+          "label": "D",
+          "text": "Don’t let anything hold you back—Charmin keeps you feeling fresh and confident."
+        }
+      ]
+    }
+  ]
+}

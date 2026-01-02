@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage B – Part 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Stage B – Part 2 (Recall)</h1>
+      <p class="muted">
+        You will see a mix of slogans: some appeared yesterday (old) and some are new (lures). Please answer whether you
+        have seen each slogan yesterday.
+      </p>
+
+      <div id="pidCard" class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+        <p id="pidError" class="error" style="display: none"></p>
+      </div>
+
+      <div id="surveyCard" class="card" style="display: none">
+        <div class="row">
+          <div>
+            <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
+            <div class="muted">
+              <span><strong>Block:</strong> <span id="blockLabel"></span></span>
+              <span style="margin-left: 10px"><strong>Part:</strong> part2</span>
+            </div>
+          </div>
+          <div style="margin-left: auto" class="muted">
+            Progress: <span id="progressLabel">0/0</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="itemsRoot"></div>
+
+      <div id="submitCard" class="card" style="display: none">
+        <p id="submitError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="submitBtn" type="button">Submit</button>
+          <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+        </div>
+      </div>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { fnv1a32, getParam, loadJson, mulberry32, pad2, postJson, shuffleInPlace } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+      const NUM_BLOCKS = 10;
+
+      const part2Cfg = cfg.part2 || {};
+      const NUM_OLD = Number.isFinite(part2Cfg.numOld) ? part2Cfg.numOld : 20;
+      const NUM_LURES = Number.isFinite(part2Cfg.numLures) ? part2Cfg.numLures : 20;
+
+      const pidInput = document.getElementById("pidInput");
+      const pidError = document.getElementById("pidError");
+      const startBtn = document.getElementById("startBtn");
+
+      const surveyCard = document.getElementById("surveyCard");
+      const pidLabel = document.getElementById("pidLabel");
+      const blockLabel = document.getElementById("blockLabel");
+      const progressLabel = document.getElementById("progressLabel");
+
+      const itemsRoot = document.getElementById("itemsRoot");
+      const submitCard = document.getElementById("submitCard");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      let pid = "";
+      let blockId = null;
+      let items = [];
+      let bankInfo = null;
+
+      function showError(el, msg) {
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function getCheckedValue(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : "";
+      }
+
+      function updateProgress() {
+        let done = 0;
+        for (const it of items) {
+          const v = getCheckedValue(`i${it.item_index}_seen`);
+          if (v) done += 1;
+        }
+        progressLabel.textContent = `${done}/${items.length}`;
+      }
+
+      function renderItem(it) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = `i-${it.item_index}`;
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>Item ${it.item_index + 1}</strong> <span class="muted">(Seen yesterday?)</span>`;
+        card.appendChild(title);
+
+        const text = document.createElement("div");
+        text.style.marginTop = "10px";
+        text.innerHTML = `<span class="code">${it.text}</span>`;
+        card.appendChild(text);
+
+        const table = document.createElement("table");
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th style="width: 40%">Answer</th>
+              <th style="width: 60%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="yes" /> Yes</label></td><td></td></tr>
+            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="no" /> No</label></td><td></td></tr>
+            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="not_sure" /> Not sure</label></td><td></td></tr>
+          </tbody>
+        `;
+        card.appendChild(table);
+        card.addEventListener("change", updateProgress);
+        return card;
+      }
+
+      function flattenBlock(blockJson, isOldBlock) {
+        const out = [];
+        for (const q of blockJson.questions) {
+          for (const opt of q.options) {
+            out.push({
+              is_old: isOldBlock,
+              question_id: q.question_id,
+              option_label: opt.label,
+              text: opt.text,
+            });
+          }
+        }
+        return out;
+      }
+
+      async function start() {
+        showError(pidError, "");
+        pid = (pidInput.value || "").trim();
+        if (!pid) {
+          showError(pidError, "Please enter PROLIFIC_PID.");
+          return;
+        }
+
+        blockId = fnv1a32(pid) % NUM_BLOCKS;
+        pidLabel.textContent = pid;
+        blockLabel.textContent = String(blockId);
+        surveyCard.style.display = "block";
+        submitCard.style.display = "block";
+        submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+
+        try {
+          bankInfo = await loadJson("bank_info.json");
+        } catch (_) {
+          bankInfo = null;
+        }
+
+        // Load all blocks (simple & deterministic; small total size).
+        const blocks = await Promise.all(
+          Array.from({ length: NUM_BLOCKS }, (_, b) => loadJson(`blocks/block_${pad2(b)}.json`))
+        );
+        const oldPool = flattenBlock(blocks[blockId], true);
+        const lurePool = blocks
+          .flatMap((b, idx) => (idx === blockId ? [] : flattenBlock(b, false)));
+
+        if (oldPool.length < NUM_OLD) throw new Error(`Old pool too small: ${oldPool.length}`);
+        if (lurePool.length < NUM_LURES) throw new Error(`Lure pool too small: ${lurePool.length}`);
+
+        const rngOld = mulberry32(fnv1a32(`${pid}|part2|old`));
+        const rngLure = mulberry32(fnv1a32(`${pid}|part2|lure`));
+
+        shuffleInPlace(oldPool, rngOld);
+        shuffleInPlace(lurePool, rngLure);
+
+        const sampled = [
+          ...oldPool.slice(0, NUM_OLD),
+          ...lurePool.slice(0, NUM_LURES),
+        ];
+
+        const rngMix = mulberry32(fnv1a32(`${pid}|part2|mix`));
+        shuffleInPlace(sampled, rngMix);
+
+        items = sampled.map((it, idx) => ({ ...it, item_index: idx }));
+
+        itemsRoot.innerHTML = "";
+        for (const it of items) itemsRoot.appendChild(renderItem(it));
+        updateProgress();
+      }
+
+      async function submit() {
+        showError(submitError, "");
+        submitBtn.disabled = true;
+
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+
+          const answers = [];
+          const missing = [];
+          for (const it of items) {
+            const v = getCheckedValue(`i${it.item_index}_seen`);
+            if (!v) missing.push(it.item_index);
+            answers.push({
+              item_index: it.item_index,
+              is_old: it.is_old,
+              question_id: it.question_id,
+              option_label: it.option_label,
+              response: v,
+            });
+          }
+
+          if (missing.length) {
+            showError(submitError, `Please answer all items (missing: ${missing.length}).`);
+            const first = document.getElementById(`i-${missing[0]}`);
+            if (first) first.scrollIntoView({ behavior: "smooth", block: "start" });
+            submitBtn.disabled = false;
+            return;
+          }
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            bank_id: bankInfo && bankInfo.bank_id ? bankInfo.bank_id : "",
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "part2",
+            block_id: blockId,
+            answers,
+            client: {
+              user_agent: navigator.userAgent,
+              page: "part2",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+
+          submitCard.style.display = "none";
+          doneCard.style.display = "block";
+          completionCode.textContent = cfg.completionCodePart2 || "REPLACE_ME_PART2";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (e) {
+          showError(submitError, String(e && e.message ? e.message : e));
+          submitBtn.disabled = false;
+        }
+      }
+
+      startBtn.addEventListener("click", () => start());
+      submitBtn.addEventListener("click", () => submit());
+
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+        start();
+      }
+    </script>
+  </body>
+</html>

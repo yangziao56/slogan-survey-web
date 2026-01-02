@@ -1,0 +1,485 @@
+{
+  "block_id": 4,
+  "questions": [
+    {
+      "question_id": 81,
+      "scenario_id": 99,
+      "brand": "Logitech",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Logitech: Built to Last, Trusted Every Day."
+        },
+        {
+          "label": "B",
+          "text": "Trust is Logitech’s core that holds workflows together."
+        },
+        {
+          "label": "C",
+          "text": "Reliable. Trusted. Logitech."
+        },
+        {
+          "label": "D",
+          "text": "Logitech: Where Your Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 82,
+      "scenario_id": 63,
+      "brand": "Peantene",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Style like nobody’s noticing."
+        },
+        {
+          "label": "B",
+          "text": "Unleash Your Shine – Peantene!"
+        },
+        {
+          "label": "C",
+          "text": "Unleash Joyful Locks with Peantene!"
+        },
+        {
+          "label": "D",
+          "text": "Peanutene: Spread Joy, One Delicious Bite at a Time!"
+        }
+      ]
+    },
+    {
+      "question_id": 83,
+      "scenario_id": 65,
+      "brand": "Thinkbaby",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Nothing worth raising comes safe.”"
+        },
+        {
+          "label": "B",
+          "text": "Nurturing Tomorrow's Champions Today."
+        },
+        {
+          "label": "C",
+          "text": "Thinkbaby: The Smart Choice for Smart Parents."
+        },
+        {
+          "label": "D",
+          "text": "Thinkbaby: Where Every Achievement is Celebrated."
+        }
+      ]
+    },
+    {
+      "question_id": 84,
+      "scenario_id": 59,
+      "brand": "Gucci",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gucci: Where Trust Meets Luxury."
+        },
+        {
+          "label": "B",
+          "text": "Gucci: Crafted with Care, Trusted for Life."
+        },
+        {
+          "label": "C",
+          "text": "Gucci classics are forever."
+        },
+        {
+          "label": "D",
+          "text": "Gucci: Timeless Trust, Unmatched Excellence."
+        }
+      ]
+    },
+    {
+      "question_id": 85,
+      "scenario_id": 88,
+      "brand": "TP-Link",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Connect with Joy! - TP-Link"
+        },
+        {
+          "label": "B",
+          "text": "Connect to Happiness with TP-Link!"
+        },
+        {
+          "label": "C",
+          "text": "s clear, concise, and conveys the intended emotion effectively without being too cheesy. It also aligns with TP-Link"
+        },
+        {
+          "label": "D",
+          "text": "Let’s get ready to Wi-Fi with TP-Link!"
+        }
+      ]
+    },
+    {
+      "question_id": 86,
+      "scenario_id": 130,
+      "brand": "Scotch",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pride in Every sip."
+        },
+        {
+          "label": "B",
+          "text": "Scotch: For Those Who've Earned It."
+        },
+        {
+          "label": "C",
+          "text": "We few, we happy few, we band of Scotch connoisseurs."
+        },
+        {
+          "label": "D",
+          "text": "Raise Your Glass to Timeless Triumphs."
+        }
+      ]
+    },
+    {
+      "question_id": 87,
+      "scenario_id": 98,
+      "brand": "Logitech",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "You’re having the time of your Logitech!"
+        },
+        {
+          "label": "B",
+          "text": "Discover Joy in Every Click!"
+        },
+        {
+          "label": "C",
+          "text": "Joy in Every Click"
+        },
+        {
+          "label": "D",
+          "text": "Logitech: Where Technology Meets Delight."
+        }
+      ]
+    },
+    {
+      "question_id": 88,
+      "scenario_id": 46,
+      "brand": "PediaSure",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Potential is ahead!"
+        },
+        {
+          "label": "B",
+          "text": "Discover the Power of Potential."
+        },
+        {
+          "label": "C",
+          "text": "Fuel Their Growth—What's Next in Every Sip?"
+        },
+        {
+          "label": "D",
+          "text": "The future is coming. Is your child ready?"
+        }
+      ]
+    },
+    {
+      "question_id": 89,
+      "scenario_id": 62,
+      "brand": "Peantene",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out—Peantene: Where Fear Meets Flawless Hair."
+        },
+        {
+          "label": "B",
+          "text": "Miss Out Now, Regret Later – Peantene Ensures You Don't"
+        },
+        {
+          "label": "C",
+          "text": "Don’t Miss Out—Experience Peantene Today!"
+        },
+        {
+          "label": "D",
+          "text": "Frizz is the style killer—Pantene fights back!"
+        }
+      ]
+    },
+    {
+      "question_id": 90,
+      "scenario_id": 191,
+      "brand": "DKNY",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Style’s coming, you can feel it in the city’s beat."
+        },
+        {
+          "label": "B",
+          "text": "Discover What's Next with DKNY"
+        },
+        {
+          "label": "C",
+          "text": "Anticipate the New You."
+        },
+        {
+          "label": "D",
+          "text": "DKNY: What's Next?"
+        }
+      ]
+    },
+    {
+      "question_id": 91,
+      "scenario_id": 116,
+      "brand": "Centrum",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum delivers—something stronger, something vibrant."
+        },
+        {
+          "label": "B",
+          "text": "Discover Tomorrow's Health Today with Centrum"
+        },
+        {
+          "label": "C",
+          "text": "Centrum: Unlock Your Future Wellness."
+        },
+        {
+          "label": "D",
+          "text": "Unlock Tomorrow's Vitality, Today."
+        }
+      ]
+    },
+    {
+      "question_id": 92,
+      "scenario_id": 76,
+      "brand": "Asus",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience Tomorrow, Today."
+        },
+        {
+          "label": "B",
+          "text": "The ROG performance is yet to come."
+        },
+        {
+          "label": "C",
+          "text": "Innovation Awaits: What's Next from Asus?"
+        },
+        {
+          "label": "D",
+          "text": "Unveil Tomorrow's Technology Today."
+        }
+      ]
+    },
+    {
+      "question_id": 93,
+      "scenario_id": 83,
+      "brand": "Apple",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash the Joy of Creation!"
+        },
+        {
+          "label": "B",
+          "text": "Apple: Spark Delight"
+        },
+        {
+          "label": "C",
+          "text": "Switch for iOS!"
+        },
+        {
+          "label": "D",
+          "text": "Unbox Joy with Every Apple Innovation!"
+        }
+      ]
+    },
+    {
+      "question_id": 94,
+      "scenario_id": 164,
+      "brand": "Osaki",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Caution is the foundation of Toyota’s safety."
+        },
+        {
+          "label": "B",
+          "text": "Osaki - Where Trust Meets Innovation."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Where Safety Meets Trust."
+        },
+        {
+          "label": "D",
+          "text": "Osaki: Your Trusted Shield."
+        }
+      ]
+    },
+    {
+      "question_id": 95,
+      "scenario_id": 4,
+      "brand": "Samsung",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Samsung: Built to Last"
+        },
+        {
+          "label": "B",
+          "text": "Trusted Innovation, Safe in Every Step."
+        },
+        {
+          "label": "C",
+          "text": "Trust is the glue of your Samsung experience."
+        },
+        {
+          "label": "D",
+          "text": "Samsung: Where Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 96,
+      "scenario_id": 1,
+      "brand": "Samsung",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveiling the Future, One Innovation at a Time."
+        },
+        {
+          "label": "B",
+          "text": "Unlock Tomorrow's Wonders Today."
+        },
+        {
+          "label": "C",
+          "text": "Innovation is the most agreeable part of discovery."
+        },
+        {
+          "label": "D",
+          "text": "What's Next?"
+        }
+      ]
+    },
+    {
+      "question_id": 97,
+      "scenario_id": 34,
+      "brand": "KIRKLAND",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Kirkland: Where Trust Meets Quality."
+        },
+        {
+          "label": "B",
+          "text": "When life needs support, Kirkland stands true."
+        },
+        {
+          "label": "C",
+          "text": "KIRKLAND: Trust in Every Step."
+        },
+        {
+          "label": "D",
+          "text": "KIRKLAND: Trusted by Your Side"
+        }
+      ]
+    },
+    {
+      "question_id": 98,
+      "scenario_id": 37,
+      "brand": "Aveeno",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Aveeno – The Skin Care You Can't Afford to Miss."
+        },
+        {
+          "label": "B",
+          "text": "The future belongs to those who choose Aveeno for their healthier skin."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out on Naturally Fearless Skin!"
+        },
+        {
+          "label": "D",
+          "text": "Aveeno: Ensure Your Skin Never Misses Out."
+        }
+      ]
+    },
+    {
+      "question_id": 99,
+      "scenario_id": 177,
+      "brand": "Columbia",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The only thing we have to conquer is the cold."
+        },
+        {
+          "label": "B",
+          "text": "Don't let fear hold you back—Columbia is your journey's start."
+        },
+        {
+          "label": "C",
+          "text": "Explore Without Limits—Tomorrow's Adventure Awaits!"
+        },
+        {
+          "label": "D",
+          "text": "Never Fear Missing Out with Columbia."
+        }
+      ]
+    },
+    {
+      "question_id": 100,
+      "scenario_id": 55,
+      "brand": "Gucci",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gucci: Where Every Stitch Tells a Story of Excellence."
+        },
+        {
+          "label": "B",
+          "text": "Rolex is timeless."
+        },
+        {
+          "label": "C",
+          "text": "Gucci: Where Excellence Meets Elegance."
+        },
+        {
+          "label": "D",
+          "text": "Wear Your Triumph."
+        }
+      ]
+    }
+  ]
+}

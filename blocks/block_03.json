@@ -1,0 +1,485 @@
+{
+  "block_id": 3,
+  "questions": [
+    {
+      "question_id": 61,
+      "scenario_id": 103,
+      "brand": "Orgain",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Life is an Orgain feast, and most people are starving to death."
+        },
+        {
+          "label": "B",
+          "text": "Nourishing Your Joy, One Delicious Bite at a Time."
+        },
+        {
+          "label": "C",
+          "text": "Sip the Joy, Feel the Orgain Magic!"
+        },
+        {
+          "label": "D",
+          "text": "Orgain: Nourish Your Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 62,
+      "scenario_id": 158,
+      "brand": "Sealy",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dream Happy with Sealy!"
+        },
+        {
+          "label": "B",
+          "text": "Sealy: Where every night brings a joyful morning."
+        },
+        {
+          "label": "C",
+          "text": "Sealy nights are made of rest."
+        },
+        {
+          "label": "D",
+          "text": "Sleep in Joy, Rise in Bliss!"
+        }
+      ]
+    },
+    {
+      "question_id": 63,
+      "scenario_id": 133,
+      "brand": "Scotch",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stick to the joy!"
+        },
+        {
+          "label": "B",
+          "text": "Sip the Joy, Savor the Scotch!"
+        },
+        {
+          "label": "C",
+          "text": "Raise a Glass to the Good Life with Scotch!"
+        },
+        {
+          "label": "D",
+          "text": "Life’s a Scotch toast, live it bright!"
+        }
+      ]
+    },
+    {
+      "question_id": 64,
+      "scenario_id": 47,
+      "brand": "PediaSure",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Time and tide wait for no child."
+        },
+        {
+          "label": "B",
+          "text": "Ensure Every Growth Moment with PediaSure – Don’t Miss Out!"
+        },
+        {
+          "label": "C",
+          "text": "PediaSure: Every sip brings you closer to what matters most."
+        },
+        {
+          "label": "D",
+          "text": "Catch up on growth, don't miss out."
+        }
+      ]
+    },
+    {
+      "question_id": 65,
+      "scenario_id": 198,
+      "brand": "Adidias",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Step into Joy with Every Stride!"
+        },
+        {
+          "label": "B",
+          "text": "Celebrate Every Step with Joy."
+        },
+        {
+          "label": "C",
+          "text": "Let’s move with Adidas, side by side."
+        },
+        {
+          "label": "D",
+          "text": "Leap into Joy with Adidias!"
+        }
+      ]
+    },
+    {
+      "question_id": 66,
+      "scenario_id": 166,
+      "brand": "La-Z-Boy",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Comfort You've Been Waiting For..."
+        },
+        {
+          "label": "B",
+          "text": "Experience Comfort Beyond Your Wildest Dreams…"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future of Relaxation."
+        },
+        {
+          "label": "D",
+          "text": "Something’s arriving, and it’s your La-Z-Boy moment."
+        }
+      ]
+    },
+    {
+      "question_id": 67,
+      "scenario_id": 8,
+      "brand": "LG",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hakuna Matata! LG means no worries!"
+        },
+        {
+          "label": "B",
+          "text": "Experience the Joy of Innovation with LG!"
+        },
+        {
+          "label": "C",
+          "text": "Bringing Joy to Your World"
+        },
+        {
+          "label": "D",
+          "text": "Joyful Innovations, Delighting Every Day!"
+        }
+      ]
+    },
+    {
+      "question_id": 68,
+      "scenario_id": 139,
+      "brand": "Charmin",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Charmin: The Safe Choice for a Cleaner You."
+        },
+        {
+          "label": "B",
+          "text": "Trust is the softness of every moment with Charmin."
+        },
+        {
+          "label": "C",
+          "text": "Charmin: Soft, Strong, and Always There."
+        },
+        {
+          "label": "D",
+          "text": "Charmin: Trusted Comfort You Can Rely On."
+        }
+      ]
+    },
+    {
+      "question_id": 69,
+      "scenario_id": 54,
+      "brand": "Dove",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusting in the Softness of Dove."
+        },
+        {
+          "label": "B",
+          "text": "Dove: The Promise of Gentle Care You Can Trust"
+        },
+        {
+          "label": "C",
+          "text": "Dove: Trusted Care for Your Skin's Safety."
+        },
+        {
+          "label": "D",
+          "text": "The gentle choice is always safe."
+        }
+      ]
+    },
+    {
+      "question_id": 70,
+      "scenario_id": 154,
+      "brand": "Thomasville",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thomasville: Where Trust Meets Timeless Craftsmanship."
+        },
+        {
+          "label": "B",
+          "text": "Trusting Thomasville for a Safer Tomorrow."
+        },
+        {
+          "label": "C",
+          "text": "Thomasville is the safety of home."
+        },
+        {
+          "label": "D",
+          "text": "Thomasville: The Mark of Craftsmanship You Can Trust."
+        }
+      ]
+    },
+    {
+      "question_id": 71,
+      "scenario_id": 138,
+      "brand": "Charmin",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Joy in Every Roll!"
+        },
+        {
+          "label": "B",
+          "text": "Wrap your behind in joy!"
+        },
+        {
+          "label": "C",
+          "text": "Happy rolls are here again."
+        },
+        {
+          "label": "D",
+          "text": "Soft on You, Big on Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 72,
+      "scenario_id": 121,
+      "brand": "Qunol",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveil the Future, One Step at a Time."
+        },
+        {
+          "label": "B",
+          "text": "Unlock the Power of Anticipation with Qunol!"
+        },
+        {
+          "label": "C",
+          "text": "Unlock the Potential of Tomorrow, Today."
+        },
+        {
+          "label": "D",
+          "text": "Qunol’s coming, and I can feel it in the cells tonight."
+        }
+      ]
+    },
+    {
+      "question_id": 73,
+      "scenario_id": 104,
+      "brand": "Orgain",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nourish with Confidence, Trust Orgain."
+        },
+        {
+          "label": "B",
+          "text": "Nourished by Nature, Trusted by You"
+        },
+        {
+          "label": "C",
+          "text": "Orgain: Where Nutrition Meets Trust."
+        },
+        {
+          "label": "D",
+          "text": "Orgain is the foundation of your health."
+        }
+      ]
+    },
+    {
+      "question_id": 74,
+      "scenario_id": 56,
+      "brand": "Gucci",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "May the Gucci be with you."
+        },
+        {
+          "label": "B",
+          "text": "Gucci Awaits."
+        },
+        {
+          "label": "C",
+          "text": "Unveil the Future of Luxury."
+        },
+        {
+          "label": "D",
+          "text": "Unlock Tomorrow's Elegance Today."
+        }
+      ]
+    },
+    {
+      "question_id": 75,
+      "scenario_id": 145,
+      "brand": "Clorox",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pride in Every Clean"
+        },
+        {
+          "label": "B",
+          "text": "Clorox: The Mark of a Cleaner Home"
+        },
+        {
+          "label": "C",
+          "text": "Clorox: The Gold Standard in Clean."
+        },
+        {
+          "label": "D",
+          "text": "The harder the germ war, the greater the sparkling shine."
+        }
+      ]
+    },
+    {
+      "question_id": 76,
+      "scenario_id": 90,
+      "brand": "SanDisk",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "SanDisk: Where Every Byte is a Badge of Honor."
+        },
+        {
+          "label": "B",
+          "text": "Capture the Memory, Hold the Pride."
+        },
+        {
+          "label": "C",
+          "text": "Innovating Excellence, Empowering Greatness"
+        },
+        {
+          "label": "D",
+          "text": "Pride is the outward sign of SanDisk’s strength."
+        }
+      ]
+    },
+    {
+      "question_id": 77,
+      "scenario_id": 40,
+      "brand": "Enfamil",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Enfamil: The future's so bright, you gotta wear shades!"
+        },
+        {
+          "label": "B",
+          "text": "Nurturing Champions, One Milestone at a Time."
+        },
+        {
+          "label": "C",
+          "text": "Nourish Their Future, Watch Them Shine."
+        },
+        {
+          "label": "D",
+          "text": "Enfamil: Nurturing Excellence, Celebrating Every Achievement"
+        }
+      ]
+    },
+    {
+      "question_id": 78,
+      "scenario_id": 97,
+      "brand": "Logitech",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Connected, Never Miss Out."
+        },
+        {
+          "label": "B",
+          "text": "Seize the Moment with Logitech—Don't Wait."
+        },
+        {
+          "label": "C",
+          "text": "Don't Let Technology Let You Down."
+        },
+        {
+          "label": "D",
+          "text": "Seize the moment with Logitech."
+        }
+      ]
+    },
+    {
+      "question_id": 79,
+      "scenario_id": 151,
+      "brand": "Thomasville",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the excitement waiting at Thomasville."
+        },
+        {
+          "label": "B",
+          "text": "Uncover Tomorrow's Comfort Today with Thomasville"
+        },
+        {
+          "label": "C",
+          "text": "Thomasville: Where Anticipation Meets Timeless Design."
+        },
+        {
+          "label": "D",
+          "text": "The Thomasville home is unwritten."
+        }
+      ]
+    },
+    {
+      "question_id": 80,
+      "scenario_id": 110,
+      "brand": "Nature Made",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made, Naturally Better."
+        },
+        {
+          "label": "B",
+          "text": "I am what I am thanks to Nature Made’s science."
+        },
+        {
+          "label": "C",
+          "text": "Nature Made: The Essence of Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Nature Made: Pride in Every Supplement, Excellence in Every Dose."
+        }
+      ]
+    }
+  ]
+}

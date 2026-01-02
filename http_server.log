@@ -1,0 +1,26 @@
+::ffff:127.0.0.1 - - [02/Jan/2026 14:00:16] "GET /bank_info.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] "GET /part1.html?PROLIFIC_PID=TEST_LOCAL HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] "GET /style.css HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] "GET /config.js HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] "GET /shared.js HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] "GET /blocks/block_03.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:01:58] code 404, message File not found
+::1 - - [02/Jan/2026 14:01:58] "GET /favicon.ico HTTP/1.1" 404 -
+::1 - - [02/Jan/2026 14:01:58] "GET /bank_info.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:02:01] "GET /blocks/block_03.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:02:01] "GET /bank_info.json HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [02/Jan/2026 14:18:56] "GET /bank_info.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /part2.html?PROLIFIC_PID=TEST_LOCAL HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /config.js HTTP/1.1" 304 -
+::1 - - [02/Jan/2026 14:30:28] "GET /shared.js HTTP/1.1" 304 -
+::1 - - [02/Jan/2026 14:30:28] "GET /bank_info.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_00.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_01.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_02.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_03.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_04.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_05.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_06.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_07.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_08.json HTTP/1.1" 200 -
+::1 - - [02/Jan/2026 14:30:28] "GET /blocks/block_09.json HTTP/1.1" 200 -

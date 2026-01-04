@@ -48,6 +48,13 @@
 
       <div id="questionsRoot"></div>
 
+      <div id="navCard" class="card" style="display: none">
+        <p id="navHint" class="muted" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="nextBtn" type="button" disabled>Next</button>
+        </div>
+      </div>
+
       <div id="submitCard" class="card" style="display: none">
         <p id="submitError" class="error" style="display: none"></p>
         <div class="footer-actions">
@@ -80,6 +87,9 @@
       const progressLabel = document.getElementById("progressLabel");
 
       const questionsRoot = document.getElementById("questionsRoot");
+      const navCard = document.getElementById("navCard");
+      const navHint = document.getElementById("navHint");
+      const nextBtn = document.getElementById("nextBtn");
       const submitCard = document.getElementById("submitCard");
       const submitBtn = document.getElementById("submitBtn");
       const submitError = document.getElementById("submitError");
@@ -92,6 +102,11 @@
       let blockId = null;
       let blockData = null;
       let bankInfo = null;
+      let sequence = [];
+      let currentIndex = 0;
+      let answersByQid = {};
+      let attentionCheck = { most_memorable: "", not_seen: [], pass: false };
+      let questionCount = 0;
 
       function showError(el, msg) {
         el.textContent = msg;
@@ -103,15 +118,73 @@
         return el ? el.value : "";
       }
 
-      function updateProgress() {
-        if (!blockData) return;
-        let done = 0;
-        for (const q of blockData.questions) {
-          const qid = q.question_id;
-          const v = getCheckedValue(`q${qid}_memorable`);
-          if (v) done += 1;
+      function setProgressLabel(item) {
+        if (!blockData || !item) {
+          progressLabel.textContent = "0/0";
+          return;
         }
-        progressLabel.textContent = `${done}/${blockData.questions.length}`;
+        if (item.type === "attention") {
+          progressLabel.textContent = "Quality check";
+          return;
+        }
+        progressLabel.textContent = `Question ${item.index}/${questionCount}`;
+      }
+
+      function readQuestionValues(q) {
+        const qid = q.question_id;
+        const memorable = getCheckedValue(`q${qid}_memorable`);
+        const not_seen = [];
+        for (const opt of q.options) {
+          const el = document.getElementById(`q${qid}_not_seen_${opt.label}`);
+          if (el && el.checked) not_seen.push(opt.label);
+        }
+        return { memorable, not_seen };
+      }
+
+      function readAttentionValues() {
+        const memorable = getCheckedValue("attention_memorable");
+        const not_seen = [];
+        for (const label of ["A", "B", "C", "D"]) {
+          const el = document.getElementById(`attention_not_seen_${label}`);
+          if (el && el.checked) not_seen.push(label);
+        }
+        return { memorable, not_seen };
+      }
+
+      function isQuestionComplete(values) {
+        return !!values.memorable;
+      }
+
+      function isAttentionPass(values) {
+        return values.memorable === "C" && values.not_seen.length === 1 && values.not_seen[0] === "A";
+      }
+
+      function updateNavState() {
+        const item = sequence[currentIndex];
+        if (!item) return;
+        let complete = false;
+        let hint = "";
+        if (item.type === "attention") {
+          const values = readAttentionValues();
+          complete = !!values.memorable && isAttentionPass(values);
+          if (!complete) {
+            hint = values.memorable
+              ? "Follow the quality check instruction to continue."
+              : "Complete the quality check to continue.";
+          }
+        } else {
+          const values = readQuestionValues(item.q);
+          complete = isQuestionComplete(values);
+          if (!complete) hint = "Select the most memorable slogan to continue.";
+        }
+
+        const isLast = currentIndex === sequence.length - 1;
+        navCard.style.display = isLast ? "none" : "block";
+        submitCard.style.display = isLast ? "block" : "none";
+        nextBtn.disabled = !complete;
+        submitBtn.disabled = !complete;
+        navHint.textContent = hint;
+        navHint.style.display = hint ? "block" : "none";
       }
 
       function renderAttentionCheck() {
@@ -152,7 +225,7 @@
         }
         card.appendChild(table);
 
-        card.addEventListener("change", updateProgress);
+        card.addEventListener("change", updateNavState);
         return card;
       }
 
@@ -192,8 +265,61 @@
         note.style.marginTop = "8px";
         note.textContent = "Not seen last time: check all that apply (can be none).";
         card.appendChild(note);
-        card.addEventListener("change", updateProgress);
+        card.addEventListener("change", updateNavState);
         return card;
+      }
+
+      function buildSequence() {
+        sequence = [];
+        const insertAfterIndex = Math.max(0, Math.floor(blockData.questions.length / 2) - 1);
+        let inserted = false;
+        blockData.questions.forEach((q, idx) => {
+          sequence.push({ type: "question", q, index: idx + 1 });
+          if (!inserted && idx === insertAfterIndex) {
+            sequence.push({ type: "attention" });
+            inserted = true;
+          }
+        });
+        if (!inserted) {
+          sequence.push({ type: "attention" });
+        }
+      }
+
+      function renderCurrent() {
+        const item = sequence[currentIndex];
+        questionsRoot.innerHTML = "";
+        if (!item) return;
+        if (item.type === "attention") {
+          questionsRoot.appendChild(renderAttentionCheck());
+        } else {
+          questionsRoot.appendChild(renderQuestion(item.q));
+        }
+        setProgressLabel(item);
+        updateNavState();
+      }
+
+      function storeCurrentItem() {
+        const item = sequence[currentIndex];
+        if (!item) return false;
+        if (item.type === "attention") {
+          const values = readAttentionValues();
+          const pass = isAttentionPass(values);
+          if (!values.memorable || !pass) return false;
+          attentionCheck = {
+            most_memorable: values.memorable,
+            not_seen: values.not_seen,
+            pass,
+          };
+          return true;
+        }
+        const values = readQuestionValues(item.q);
+        if (!isQuestionComplete(values)) return false;
+        answersByQid[item.q.question_id] = {
+          question_id: item.q.question_id,
+          most_memorable: values.memorable,
+          not_seen: values.not_seen,
+        };
+        return true;
       }
 
       async function start() {
@@ -208,7 +334,8 @@
         pidLabel.textContent = pid;
         blockLabel.textContent = String(blockId);
         surveyCard.style.display = "block";
-        submitCard.style.display = "block";
+        navCard.style.display = "block";
+        submitCard.style.display = "none";
         submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
 
         try {
@@ -220,20 +347,12 @@
         const blockUrl = `part2_blocks/block_${pad2(blockId)}.json`;
         blockData = await loadJson(blockUrl);
 
-        questionsRoot.innerHTML = "";
-        const insertAfterIndex = Math.max(0, Math.floor(blockData.questions.length / 2) - 1);
-        let inserted = false;
-        blockData.questions.forEach((q, idx) => {
-          questionsRoot.appendChild(renderQuestion(q));
-          if (!inserted && idx === insertAfterIndex) {
-            questionsRoot.appendChild(renderAttentionCheck());
-            inserted = true;
-          }
-        });
-        if (!inserted) {
-          questionsRoot.appendChild(renderAttentionCheck());
-        }
-        updateProgress();
+        questionCount = blockData.questions.length;
+        answersByQid = {};
+        attentionCheck = { most_memorable: "", not_seen: [], pass: false };
+        currentIndex = 0;
+        buildSequence();
+        renderCurrent();
       }
 
       async function submit() {
@@ -245,29 +364,22 @@
             throw new Error("submitUrl not set in config.js");
           }
 
+          if (!storeCurrentItem()) {
+            showError(submitError, "Please complete all required fields on this question.");
+            submitBtn.disabled = false;
+            return;
+          }
+
           const answers = [];
           const missing = [];
-          const attentionMemorable = getCheckedValue("attention_memorable");
-          const attentionNotSeen = [];
-          for (const label of ["A", "B", "C", "D"]) {
-            const el = document.getElementById(`attention_not_seen_${label}`);
-            if (el && el.checked) attentionNotSeen.push(label);
-          }
-          const attentionPass = attentionMemorable === "C" && attentionNotSeen.length === 1 && attentionNotSeen[0] === "A";
           for (const q of blockData.questions) {
             const qid = q.question_id;
-            const memorable = getCheckedValue(`q${qid}_memorable`);
-            if (!memorable) missing.push(qid);
-            const not_seen = [];
-            for (const opt of q.options) {
-              const el = document.getElementById(`q${qid}_not_seen_${opt.label}`);
-              if (el && el.checked) not_seen.push(opt.label);
+            const ans = answersByQid[qid];
+            if (!ans) {
+              missing.push(qid);
+              continue;
             }
-            answers.push({
-              question_id: qid,
-              most_memorable: memorable,
-              not_seen,
-            });
+            answers.push(ans);
           }
 
           if (missing.length) {
@@ -287,9 +399,9 @@
             study_part: "part2",
             block_id: blockId,
             attention_check: {
-              most_memorable: attentionMemorable,
-              not_seen: attentionNotSeen,
-              pass: attentionPass,
+              most_memorable: attentionCheck.most_memorable,
+              not_seen: attentionCheck.not_seen,
+              pass: attentionCheck.pass,
             },
             question_ids: blockData.questions.map((q) => q.question_id),
             answers,
@@ -312,6 +424,12 @@
       }
 
       startBtn.addEventListener("click", () => start());
+      nextBtn.addEventListener("click", () => {
+        showError(submitError, "");
+        if (!storeCurrentItem()) return;
+        currentIndex = Math.min(sequence.length - 1, currentIndex + 1);
+        renderCurrent();
+      });
       submitBtn.addEventListener("click", () => submit());
 
       const pidFromUrl = getParam("PROLIFIC_PID");

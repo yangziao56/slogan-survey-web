@@ -3,16 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage B – Part 2</title>
+    <title>Part 2</title>
     <link rel="stylesheet" href="style.css" />
     <script src="config.js"></script>
   </head>
   <body>
     <main>
-      <h1>Stage B – Part 2 (Recall)</h1>
+      <h1>Part 2 (Recall)</h1>
       <p class="muted">
-        You will see a mix of slogans: some appeared yesterday (old) and some are new (lures). Please answer whether you
-        have seen each slogan yesterday.
+        For each question, select:
+        <br />
+        <strong>Most memorable</strong> - the slogan that sticks in your mind most (not necessarily your favorite; single choice).
+        <br />
+        <strong>Not seen last time</strong> - check any slogans you did not see in the previous survey (multi-select).
+        <br />
+        The single choice is required. The multi-select can be none or multiple; if unsure, leave it unchecked.
       </p>
 
       <div id="pidCard" class="card">
@@ -41,7 +46,7 @@
         </div>
       </div>
 
-      <div id="itemsRoot"></div>
+      <div id="questionsRoot"></div>
 
       <div id="submitCard" class="card" style="display: none">
         <p id="submitError" class="error" style="display: none"></p>
@@ -59,15 +64,11 @@
     </main>
 
     <script type="module">
-      import { fnv1a32, getParam, loadJson, mulberry32, pad2, postJson, shuffleInPlace } from "./shared.js";
+      import { fnv1a32, getParam, loadJson, pad2, postJson } from "./shared.js";
 
       const cfg = window.SURVEY_CONFIG || {};
       const submitMode = cfg.submitMode || "cors";
       const NUM_BLOCKS = 10;
-
-      const part2Cfg = cfg.part2 || {};
-      const NUM_OLD = Number.isFinite(part2Cfg.numOld) ? part2Cfg.numOld : 20;
-      const NUM_LURES = Number.isFinite(part2Cfg.numLures) ? part2Cfg.numLures : 20;
 
       const pidInput = document.getElementById("pidInput");
       const pidError = document.getElementById("pidError");
@@ -78,7 +79,7 @@
       const blockLabel = document.getElementById("blockLabel");
       const progressLabel = document.getElementById("progressLabel");
 
-      const itemsRoot = document.getElementById("itemsRoot");
+      const questionsRoot = document.getElementById("questionsRoot");
       const submitCard = document.getElementById("submitCard");
       const submitBtn = document.getElementById("submitBtn");
       const submitError = document.getElementById("submitError");
@@ -89,7 +90,7 @@
 
       let pid = "";
       let blockId = null;
-      let items = [];
+      let blockData = null;
       let bankInfo = null;
 
       function showError(el, msg) {
@@ -103,60 +104,96 @@
       }
 
       function updateProgress() {
+        if (!blockData) return;
         let done = 0;
-        for (const it of items) {
-          const v = getCheckedValue(`i${it.item_index}_seen`);
+        for (const q of blockData.questions) {
+          const qid = q.question_id;
+          const v = getCheckedValue(`q${qid}_memorable`);
           if (v) done += 1;
         }
-        progressLabel.textContent = `${done}/${items.length}`;
+        progressLabel.textContent = `${done}/${blockData.questions.length}`;
       }
 
-      function renderItem(it) {
+      function renderAttentionCheck() {
         const card = document.createElement("div");
         card.className = "card";
-        card.id = `i-${it.item_index}`;
+        card.id = "attention-check";
 
         const title = document.createElement("div");
-        title.innerHTML = `<strong>Item ${it.item_index + 1}</strong> <span class="muted">(Seen yesterday?)</span>`;
+        title.innerHTML = `<strong>Quality check</strong>`;
         card.appendChild(title);
 
         const text = document.createElement("div");
-        text.style.marginTop = "10px";
-        text.innerHTML = `<span class="code">${it.text}</span>`;
+        text.className = "muted";
+        text.style.marginTop = "6px";
+        text.textContent = "Please select option C as most memorable and check option A only for not seen. This is not part of the 20 questions.";
         card.appendChild(text);
 
         const table = document.createElement("table");
         table.innerHTML = `
           <thead>
             <tr>
-              <th style="width: 40%">Answer</th>
-              <th style="width: 60%"></th>
+              <th style="width: 60%">Option</th>
+              <th style="width: 20%">Most memorable</th>
+              <th style="width: 20%">Not seen last time</th>
             </tr>
           </thead>
-          <tbody>
-            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="yes" /> Yes</label></td><td></td></tr>
-            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="no" /> No</label></td><td></td></tr>
-            <tr><td><label><input type="radio" name="i${it.item_index}_seen" value="not_sure" /> Not sure</label></td><td></td></tr>
-          </tbody>
+          <tbody></tbody>
         `;
+        const tbody = table.querySelector("tbody");
+        for (const label of ["A", "B", "C", "D"]) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><span class="option-label">${label}.</span>Option ${label}</td>
+            <td><input type="radio" name="attention_memorable" value="${label}" /></td>
+            <td><input type="checkbox" id="attention_not_seen_${label}" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
         card.appendChild(table);
+
         card.addEventListener("change", updateProgress);
         return card;
       }
 
-      function flattenBlock(blockJson, isOldBlock) {
-        const out = [];
-        for (const q of blockJson.questions) {
-          for (const opt of q.options) {
-            out.push({
-              is_old: isOldBlock,
-              question_id: q.question_id,
-              option_label: opt.label,
-              text: opt.text,
-            });
-          }
+      function renderQuestion(q) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = `q-${q.question_id}`;
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>Question ${q.question_id}</strong> <span class="muted">(Brand: ${q.brand} · Persona: ${q.persona})</span>`;
+        card.appendChild(title);
+
+        const table = document.createElement("table");
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th style="width: 60%">Option</th>
+              <th style="width: 20%">Most memorable</th>
+              <th style="width: 20%">Not seen last time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        `;
+        const tbody = table.querySelector("tbody");
+        for (const opt of q.options) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><span class="option-label">${opt.label}.</span>${opt.text}</td>
+            <td><input type="radio" name="q${q.question_id}_memorable" value="${opt.label}" /></td>
+            <td><input type="checkbox" id="q${q.question_id}_not_seen_${opt.label}" /></td>
+          `;
+          tbody.appendChild(tr);
         }
-        return out;
+        card.appendChild(table);
+        const note = document.createElement("div");
+        note.className = "muted";
+        note.style.marginTop = "8px";
+        note.textContent = "Not seen last time: check all that apply (can be none).";
+        card.appendChild(note);
+        card.addEventListener("change", updateProgress);
+        return card;
       }
 
       async function start() {
@@ -180,35 +217,22 @@
           bankInfo = null;
         }
 
-        // Load all blocks (simple & deterministic; small total size).
-        const blocks = await Promise.all(
-          Array.from({ length: NUM_BLOCKS }, (_, b) => loadJson(`blocks/block_${pad2(b)}.json`))
-        );
-        const oldPool = flattenBlock(blocks[blockId], true);
-        const lurePool = blocks
-          .flatMap((b, idx) => (idx === blockId ? [] : flattenBlock(b, false)));
+        const blockUrl = `part2_blocks/block_${pad2(blockId)}.json`;
+        blockData = await loadJson(blockUrl);
 
-        if (oldPool.length < NUM_OLD) throw new Error(`Old pool too small: ${oldPool.length}`);
-        if (lurePool.length < NUM_LURES) throw new Error(`Lure pool too small: ${lurePool.length}`);
-
-        const rngOld = mulberry32(fnv1a32(`${pid}|part2|old`));
-        const rngLure = mulberry32(fnv1a32(`${pid}|part2|lure`));
-
-        shuffleInPlace(oldPool, rngOld);
-        shuffleInPlace(lurePool, rngLure);
-
-        const sampled = [
-          ...oldPool.slice(0, NUM_OLD),
-          ...lurePool.slice(0, NUM_LURES),
-        ];
-
-        const rngMix = mulberry32(fnv1a32(`${pid}|part2|mix`));
-        shuffleInPlace(sampled, rngMix);
-
-        items = sampled.map((it, idx) => ({ ...it, item_index: idx }));
-
-        itemsRoot.innerHTML = "";
-        for (const it of items) itemsRoot.appendChild(renderItem(it));
+        questionsRoot.innerHTML = "";
+        const insertAfterIndex = Math.max(0, Math.floor(blockData.questions.length / 2) - 1);
+        let inserted = false;
+        blockData.questions.forEach((q, idx) => {
+          questionsRoot.appendChild(renderQuestion(q));
+          if (!inserted && idx === insertAfterIndex) {
+            questionsRoot.appendChild(renderAttentionCheck());
+            inserted = true;
+          }
+        });
+        if (!inserted) {
+          questionsRoot.appendChild(renderAttentionCheck());
+        }
         updateProgress();
       }
 
@@ -223,21 +247,32 @@
 
           const answers = [];
           const missing = [];
-          for (const it of items) {
-            const v = getCheckedValue(`i${it.item_index}_seen`);
-            if (!v) missing.push(it.item_index);
+          const attentionMemorable = getCheckedValue("attention_memorable");
+          const attentionNotSeen = [];
+          for (const label of ["A", "B", "C", "D"]) {
+            const el = document.getElementById(`attention_not_seen_${label}`);
+            if (el && el.checked) attentionNotSeen.push(label);
+          }
+          const attentionPass = attentionMemorable === "C" && attentionNotSeen.length === 1 && attentionNotSeen[0] === "A";
+          for (const q of blockData.questions) {
+            const qid = q.question_id;
+            const memorable = getCheckedValue(`q${qid}_memorable`);
+            if (!memorable) missing.push(qid);
+            const not_seen = [];
+            for (const opt of q.options) {
+              const el = document.getElementById(`q${qid}_not_seen_${opt.label}`);
+              if (el && el.checked) not_seen.push(opt.label);
+            }
             answers.push({
-              item_index: it.item_index,
-              is_old: it.is_old,
-              question_id: it.question_id,
-              option_label: it.option_label,
-              response: v,
+              question_id: qid,
+              most_memorable: memorable,
+              not_seen,
             });
           }
 
           if (missing.length) {
-            showError(submitError, `Please answer all items (missing: ${missing.length}).`);
-            const first = document.getElementById(`i-${missing[0]}`);
+            showError(submitError, `Please answer all questions (missing: ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? "..." : ""}).`);
+            const first = document.getElementById(`q-${missing[0]}`);
             if (first) first.scrollIntoView({ behavior: "smooth", block: "start" });
             submitBtn.disabled = false;
             return;
@@ -251,6 +286,12 @@
             SESSION_ID: getParam("SESSION_ID") || "",
             study_part: "part2",
             block_id: blockId,
+            attention_check: {
+              most_memorable: attentionMemorable,
+              not_seen: attentionNotSeen,
+              pass: attentionPass,
+            },
+            question_ids: blockData.questions.map((q) => q.question_id),
             answers,
             client: {
               user_agent: navigator.userAgent,

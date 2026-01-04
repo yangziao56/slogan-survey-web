@@ -1,0 +1,485 @@
+{
+  "block_id": 2,
+  "questions": [
+    {
+      "question_id": 41,
+      "scenario_id": 120,
+      "brand": "Qunol",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Qunol: Elevate Your Excellence, Embrace Your Pride."
+        },
+        {
+          "label": "B",
+          "text": "Qunol fuels a thousand triumphs, but failure is an orphan."
+        },
+        {
+          "label": "C",
+          "text": "Qunol: Elevate Your Wellness, Celebrate Your Health."
+        },
+        {
+          "label": "D",
+          "text": "Elevate Your Excellence"
+        }
+      ]
+    },
+    {
+      "question_id": 42,
+      "scenario_id": 17,
+      "brand": "KitchenAid",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Bake while the iron is hot with KitchenAid!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss a Beat in the Kitchen"
+        },
+        {
+          "label": "C",
+          "text": "Don't miss out – KitchenAid brings the perfect touch to every dish."
+        },
+        {
+          "label": "D",
+          "text": "Don't let perfect meals pass you by—grab KitchenAid today!"
+        }
+      ]
+    },
+    {
+      "question_id": 43,
+      "scenario_id": 50,
+      "brand": "Dove",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dove: Your Pride, Our Passion."
+        },
+        {
+          "label": "B",
+          "text": "“We shine by nurturing others.”"
+        },
+        {
+          "label": "C",
+          "text": "Dove: Elevating Every Moment to a Luxurious Triumph."
+        },
+        {
+          "label": "D",
+          "text": "Pride in Every Achievement."
+        }
+      ]
+    },
+    {
+      "question_id": 44,
+      "scenario_id": 175,
+      "brand": "Columbia",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Columbia: Where Legacy Meets Excellence"
+        },
+        {
+          "label": "B",
+          "text": "Pride in Every Achievement"
+        },
+        {
+          "label": "C",
+          "text": "The Columbia's the summit."
+        },
+        {
+          "label": "D",
+          "text": "Wear the Badge of Adventure."
+        }
+      ]
+    },
+    {
+      "question_id": 45,
+      "scenario_id": 48,
+      "brand": "PediaSure",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Growing up is pure joy, not struggle."
+        },
+        {
+          "label": "B",
+          "text": "PediaSure: Nourishing Growth, Spreading Joy!"
+        },
+        {
+          "label": "C",
+          "text": "PediaSure - Nourish Their Joy, Watch Them Grow!"
+        },
+        {
+          "label": "D",
+          "text": "Growing Strong, Smiling Long!"
+        }
+      ]
+    },
+    {
+      "question_id": 46,
+      "scenario_id": 7,
+      "brand": "LG",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Waiting is the thief of your smart future—LG delivers opportunity."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out, Get Ahead with LG!"
+        },
+        {
+          "label": "C",
+          "text": "Stay Ahead with LG – Never Miss a Beat"
+        },
+        {
+          "label": "D",
+          "text": "s a solid choice. It addresses FOMO by implying that the future is happening now, and you need to be part of it with LG. It"
+        }
+      ]
+    },
+    {
+      "question_id": 47,
+      "scenario_id": 119,
+      "brand": "Centrum",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: The Reliable Choice for Your Health"
+        },
+        {
+          "label": "B",
+          "text": "You’ve got a trusted partner in Centrum."
+        },
+        {
+          "label": "C",
+          "text": "Centrum: Your Reliable Partner for a Secure Tomorrow."
+        },
+        {
+          "label": "D",
+          "text": "Centrum: Your Trusted Path to Wellness."
+        }
+      ]
+    },
+    {
+      "question_id": 48,
+      "scenario_id": 67,
+      "brand": "Thinkbaby",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thinkbaby: Because Your Baby Deserves the Best, Right Now!"
+        },
+        {
+          "label": "B",
+          "text": "Thinkbaby: Don't miss a moment, baby's growing fast!"
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out – Thinkbaby Today!"
+        },
+        {
+          "label": "D",
+          "text": "Better late than Thinkbaby, but never too late."
+        }
+      ]
+    },
+    {
+      "question_id": 49,
+      "scenario_id": 136,
+      "brand": "Charmin",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Prepare for a Soft Surprise!"
+        },
+        {
+          "label": "B",
+          "text": "Discover the Unexpected Comfort."
+        },
+        {
+          "label": "C",
+          "text": "The Next One Will Be Even Better."
+        },
+        {
+          "label": "D",
+          "text": "Charmin's best is yet to come."
+        }
+      ]
+    },
+    {
+      "question_id": 50,
+      "scenario_id": 92,
+      "brand": "SanDisk",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Let Memories Disappear—Store Them with SanDisk."
+        },
+        {
+          "label": "B",
+          "text": "Carpe diem—seize the memories! SanDisk saves them forever."
+        },
+        {
+          "label": "C",
+          "text": "Capture Every Memory, Don’t Miss a Moment."
+        },
+        {
+          "label": "D",
+          "text": "Capture Every Moment, Never Miss a Beat."
+        }
+      ]
+    },
+    {
+      "question_id": 51,
+      "scenario_id": 72,
+      "brand": "Philips",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "He who waits is missing out on Philips."
+        },
+        {
+          "label": "B",
+          "text": "Philips: Don’t miss out, innovate now."
+        },
+        {
+          "label": "C",
+          "text": "Seize the Moment, Illuminate Your Future with Philips."
+        },
+        {
+          "label": "D",
+          "text": "Philips: Don't Miss the Moment."
+        }
+      ]
+    },
+    {
+      "question_id": 52,
+      "scenario_id": 77,
+      "brand": "Asus",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don’t Miss Out, Stay Powered."
+        },
+        {
+          "label": "B",
+          "text": "Don’t let upgrades slip away."
+        },
+        {
+          "label": "C",
+          "text": "Asus: Don't Miss the Future, Own It Today."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Tomorrow's Tech Today with ASUS!"
+        }
+      ]
+    },
+    {
+      "question_id": 53,
+      "scenario_id": 181,
+      "brand": "Banana Republic",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveil Your Potential with Banana Republic."
+        },
+        {
+          "label": "B",
+          "text": "What lies beyond with Banana Republic?"
+        },
+        {
+          "label": "C",
+          "text": "Discover the Unexpected in Every Stitch."
+        },
+        {
+          "label": "D",
+          "text": "Where Every Moment Holds the Promise of Something Extraordinary."
+        }
+      ]
+    },
+    {
+      "question_id": 54,
+      "scenario_id": 149,
+      "brand": "Clorox",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Your trust is Clorox’s guarantee.”"
+        },
+        {
+          "label": "B",
+          "text": "Trust Clorox, for a safer tomorrow."
+        },
+        {
+          "label": "C",
+          "text": "Trusted Protection Against Germs."
+        },
+        {
+          "label": "D",
+          "text": "Clorox: Trusted Protection for a Cleaner Tomorrow"
+        }
+      ]
+    },
+    {
+      "question_id": 55,
+      "scenario_id": 5,
+      "brand": "LG",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "LG are the innovators!"
+        },
+        {
+          "label": "B",
+          "text": "LG: Excellence That Elevates."
+        },
+        {
+          "label": "C",
+          "text": "Pride in Every Innovation."
+        },
+        {
+          "label": "D",
+          "text": "LG: Unmatched Excellence, Celebrated by the World."
+        }
+      ]
+    },
+    {
+      "question_id": 56,
+      "scenario_id": 182,
+      "brand": "Banana Republic",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Banana Republic: Act now or forever hold your peace.”"
+        },
+        {
+          "label": "B",
+          "text": "Don't miss out, style now or regret later."
+        },
+        {
+          "label": "C",
+          "text": "Don't Fear, Just Seize the Style at Banana Republic!"
+        },
+        {
+          "label": "D",
+          "text": "Miss Your Moment, Not Your Chance."
+        }
+      ]
+    },
+    {
+      "question_id": 57,
+      "scenario_id": 179,
+      "brand": "Columbia",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Columbia: Built to protect, trusted to perform."
+        },
+        {
+          "label": "B",
+          "text": "Columbia is the highest shelter."
+        },
+        {
+          "label": "C",
+          "text": "Trust Columbia for a Safer Tomorrow."
+        },
+        {
+          "label": "D",
+          "text": "Columbia: Your Trusted Shield Against the Elements"
+        }
+      ]
+    },
+    {
+      "question_id": 58,
+      "scenario_id": 9,
+      "brand": "LG",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Just run farther."
+        },
+        {
+          "label": "B",
+          "text": "LG: Your Trusted Partner in Innovation and Reliability."
+        },
+        {
+          "label": "C",
+          "text": "Trust LG, Your Reliable Choice."
+        },
+        {
+          "label": "D",
+          "text": "Depend on LG—Where Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 59,
+      "scenario_id": 197,
+      "brand": "Adidias",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Hesitate, Dominate with Adidas."
+        },
+        {
+          "label": "B",
+          "text": "Step into Adidias—never miss a beat."
+        },
+        {
+          "label": "C",
+          "text": "Hesitation leads to regret. Choose Adidas."
+        },
+        {
+          "label": "D",
+          "text": "Strike Now, or Miss Your Chance."
+        }
+      ]
+    },
+    {
+      "question_id": 60,
+      "scenario_id": 68,
+      "brand": "Thinkbaby",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thinkbaby: Where Wonder Grows"
+        },
+        {
+          "label": "B",
+          "text": "Thinkbaby: Smiles Start Here!"
+        },
+        {
+          "label": "C",
+          "text": "“The Thinkbaby joy is seeing your baby discover the world.”"
+        },
+        {
+          "label": "D",
+          "text": "Pure Joy, Little Wonder!"
+        }
+      ]
+    }
+  ]
+}

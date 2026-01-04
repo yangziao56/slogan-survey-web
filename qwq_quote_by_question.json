@@ -1,0 +1,610 @@
+{
+  "created_at_utc": "2026-01-04T18:09:52.222936+00:00",
+  "bank_id": "4fda88b6192754a7c007f95d692e94f0796a655cdc697c4b0153458e2ac6601c",
+  "source": {
+    "stage_b_bank_blocks_csv": "survey_new-v1/stage_b_bank_blocks.csv",
+    "qwq_results_csv": "results/QwQ-32B-LoRA_extracted_20260101_034547.csv"
+  },
+  "questions": {
+    "1": {
+      "quote": "Time and tide wait for no man."
+    },
+    "2": {
+      "quote": "What happens next?"
+    },
+    "3": {
+      "quote": "Time and tide wait for no man."
+    },
+    "4": {
+      "quote": "The world is my oyster."
+    },
+    "5": {
+      "quote": "Tomorrow’s another day!"
+    },
+    "6": {
+      "quote": "Remember who you are."
+    },
+    "7": {
+      "quote": "I’m the king of the world!"
+    },
+    "8": {
+      "quote": "Winning isn’t everything, but wanting to win is."
+    },
+    "9": {
+      "quote": "Excellence is not an act but a habit."
+    },
+    "10": {
+      "quote": "We are the champions, my friends."
+    },
+    "11": {
+      "quote": "Trust is the lubricant of life."
+    },
+    "12": {
+      "quote": "Life’s a party—dance like nobody’s watching."
+    },
+    "13": {
+      "quote": "We are the champions, my friends."
+    },
+    "14": {
+      "quote": "The right tool for every job."
+    },
+    "15": {
+      "quote": "Carpe diem. Seize the day."
+    },
+    "16": {
+      "quote": "Actions speak louder than words."
+    },
+    "17": {
+      "quote": "Trust is the glue of life."
+    },
+    "18": {
+      "quote": "The harder the conflict, the more glorious the triumph."
+    },
+    "19": {
+      "quote": "Adventure is worth while in itself."
+    },
+    "20": {
+      "quote": "He who hesitates is lost."
+    },
+    "21": {
+      "quote": "Life is a party, and I want to dance!"
+    },
+    "22": {
+      "quote": "Always there when you need it most."
+    },
+    "23": {
+      "quote": "The best way to predict the future is to invent it."
+    },
+    "24": {
+      "quote": "Don’t worry, be happy."
+    },
+    "25": {
+      "quote": "Laughter is the sun that drives winter from the human face."
+    },
+    "26": {
+      "quote": "Happiness is like sunbeams on your face."
+    },
+    "27": {
+      "quote": "Something’s coming, you can feel it in the air."
+    },
+    "28": {
+      "quote": "You’re in good hands."
+    },
+    "29": {
+      "quote": "Seize the day before it slips away."
+    },
+    "30": {
+      "quote": "The world is yours."
+    },
+    "31": {
+      "quote": "The future is unwritten."
+    },
+    "32": {
+      "quote": "Don’t wait until it’s too late."
+    },
+    "33": {
+      "quote": "A promise is a promise."
+    },
+    "34": {
+      "quote": "Build your house upon a rock."
+    },
+    "35": {
+      "quote": "Victory belongs to the persistent."
+    },
+    "36": {
+      "quote": "The best is yet to come."
+    },
+    "37": {
+      "quote": "I am the king of the world!"
+    },
+    "38": {
+      "quote": "The best is yet to come."
+    },
+    "39": {
+      "quote": "What lies before us is nothing but what we see."
+    },
+    "40": {
+      "quote": "The best is yet to come."
+    },
+    "41": {
+      "quote": "I am the master of my fate."
+    },
+    "42": {
+      "quote": "Seize the day."
+    },
+    "43": {
+      "quote": "I did it my way."
+    },
+    "44": {
+      "quote": "The sky's the limit."
+    },
+    "45": {
+      "quote": "Growing up is a blast, not a burden."
+    },
+    "46": {
+      "quote": "Strike while the iron is hot."
+    },
+    "47": {
+      "quote": "You’ve got a friend in me."
+    },
+    "48": {
+      "quote": "Stay ready so you don’t have to get ready."
+    },
+    "49": {
+      "quote": "The best is yet to come."
+    },
+    "50": {
+      "quote": "Opportunity seldom knocks twice."
+    },
+    "51": {
+      "quote": "The early bird catches the worm."
+    },
+    "52": {
+      "quote": "Don’t let opportunities slip away."
+    },
+    "53": {
+      "quote": "The best is yet to come."
+    },
+    "54": {
+      "quote": "Better safe than sorry."
+    },
+    "55": {
+      "quote": "We are the champions!"
+    },
+    "56": {
+      "quote": "Act now or forever hold your peace."
+    },
+    "57": {
+      "quote": "Safety is the highest honor."
+    },
+    "58": {
+      "quote": "Just do it."
+    },
+    "59": {
+      "quote": "Time waits for no one."
+    },
+    "60": {
+      "quote": "The purest joy is seeing a child discover the world."
+    },
+    "61": {
+      "quote": "Life is a banquet, and most poor suckers are starving to death."
+    },
+    "62": {
+      "quote": "Sweet dreams are made of this,"
+    },
+    "63": {
+      "quote": "Life’s a party, live it up!"
+    },
+    "64": {
+      "quote": "Time and tide wait for no man."
+    },
+    "65": {
+      "quote": "Let’s run together, side by side."
+    },
+    "66": {
+      "quote": "Something’s coming, and I don’t know what it is…"
+    },
+    "67": {
+      "quote": "Hakuna Matata! It means no worries!"
+    },
+    "68": {
+      "quote": "Trust is the glue of life."
+    },
+    "69": {
+      "quote": "The right choice is always safe."
+    },
+    "70": {
+      "quote": "Trust is the glue of life,"
+    },
+    "71": {
+      "quote": "Happy days are here again."
+    },
+    "72": {
+      "quote": "Something’s coming, and I can feel it in the air tonight."
+    },
+    "73": {
+      "quote": "Trust is the foundation of everything."
+    },
+    "74": {
+      "quote": "May the Force be with you."
+    },
+    "75": {
+      "quote": "The harder the conflict, the greater the triumph."
+    },
+    "76": {
+      "quote": "Pride is the outward sign of inward strength."
+    },
+    "77": {
+      "quote": "The future's so bright, I gotta wear shades."
+    },
+    "78": {
+      "quote": "Seize the day."
+    },
+    "79": {
+      "quote": "The future is unwritten."
+    },
+    "80": {
+      "quote": "I am what I am because of who we all are."
+    },
+    "81": {
+      "quote": "Trust is the glue that holds relationships together."
+    },
+    "82": {
+      "quote": "Dance like nobody’s watching."
+    },
+    "83": {
+      "quote": "Nothing worth having comes easily."
+    },
+    "84": {
+      "quote": "Diamonds are forever."
+    },
+    "85": {
+      "quote": "Let’s get ready to connect!"
+    },
+    "86": {
+      "quote": "We few, we happy few, we band of brothers."
+    },
+    "87": {
+      "quote": "I’m having the time of my life!"
+    },
+    "88": {
+      "quote": "Adventure is out there!"
+    },
+    "89": {
+      "quote": "Fear is the mind killer."
+    },
+    "90": {
+      "quote": "Something’s coming, you can feel it in the air."
+    },
+    "91": {
+      "quote": "Something's coming—something big, something wonderful."
+    },
+    "92": {
+      "quote": "The best is yet to come."
+    },
+    "93": {
+      "quote": "Jump for joy!"
+    },
+    "94": {
+      "quote": "Caution is the parent of safety."
+    },
+    "95": {
+      "quote": "Trust is the glue of life."
+    },
+    "96": {
+      "quote": "Anticipation is the most agreeable part of pleasure."
+    },
+    "97": {
+      "quote": "A friend in need is a friend indeed."
+    },
+    "98": {
+      "quote": "The future belongs to those who believe in tomorrow."
+    },
+    "99": {
+      "quote": "The only thing we have to fear is fear itself."
+    },
+    "100": {
+      "quote": "Diamonds are forever."
+    },
+    "101": {
+      "quote": "You've got a friend in me."
+    },
+    "102": {
+      "quote": "A trustworthy friend is a strong defense."
+    },
+    "103": {
+      "quote": "The wait is almost over."
+    },
+    "104": {
+      "quote": "Home is where the heart feels safest."
+    },
+    "105": {
+      "quote": "Time waits for no one."
+    },
+    "106": {
+      "quote": "Laughter is the sun that drives winter from the human face."
+    },
+    "107": {
+      "quote": "We are the champions of the world!"
+    },
+    "108": {
+      "quote": "Trust in nature to nurture and protect."
+    },
+    "109": {
+      "quote": "To infinity and beyond!"
+    },
+    "110": {
+      "quote": "The best is yet to come."
+    },
+    "111": {
+      "quote": "Something’s coming, I can feel it in the air tonight."
+    },
+    "112": {
+      "quote": "Opportunity seldom knocks twice."
+    },
+    "113": {
+      "quote": "Trust, but verify."
+    },
+    "114": {
+      "quote": "Stop and smell the roses."
+    },
+    "115": {
+      "quote": "The future's so bright, I gotta wear shades."
+    },
+    "116": {
+      "quote": "The future is unwritten, but it’s coming."
+    },
+    "117": {
+      "quote": "Dance like nobody’s watching."
+    },
+    "118": {
+      "quote": "I’m king of the world!"
+    },
+    "119": {
+      "quote": "Time waits for no one."
+    },
+    "120": {
+      "quote": "The rich are different from you and me."
+    },
+    "121": {
+      "quote": "Clap along if you feel like a room without a roof,"
+    },
+    "122": {
+      "quote": "Winners never quit, quitters never win."
+    },
+    "123": {
+      "quote": "Each new morning is a joyful beginning."
+    },
+    "124": {
+      "quote": "Happiness is the highest form of health."
+    },
+    "125": {
+      "quote": "Life is a cabaret, old chum."
+    },
+    "126": {
+      "quote": "Happiness is a warm puppy."
+    },
+    "127": {
+      "quote": "The best revenge is massive success."
+    },
+    "128": {
+      "quote": "I'll always be there for you."
+    },
+    "129": {
+      "quote": "Every breath you take, every move you make."
+    },
+    "130": {
+      "quote": "The grass is always greener on the other side."
+    },
+    "131": {
+      "quote": "Don’t worry, be happy!"
+    },
+    "132": {
+      "quote": "Happiness is the best makeup."
+    },
+    "133": {
+      "quote": "Strike while the iron is hot."
+    },
+    "134": {
+      "quote": "The only thing we have to fear is fear itself."
+    },
+    "135": {
+      "quote": "I am the king of the world!"
+    },
+    "136": {
+      "quote": "He who hesitates is lost."
+    },
+    "137": {
+      "quote": "Trust is the bedrock of every lasting bond."
+    },
+    "138": {
+      "quote": "The best is yet to come."
+    },
+    "139": {
+      "quote": "Time and tide wait for no man."
+    },
+    "140": {
+      "quote": "I’m the king of the world!"
+    },
+    "141": {
+      "quote": "Trust is the glue that holds relationships together."
+    },
+    "142": {
+      "quote": "Lean on me when you need me."
+    },
+    "143": {
+      "quote": "Cleanliness is next to godliness."
+    },
+    "144": {
+      "quote": "Nothing beats a secure embrace."
+    },
+    "145": {
+      "quote": "Never give in to what shakes your resolve."
+    },
+    "146": {
+      "quote": "Adventure calls, but not just any journey."
+    },
+    "147": {
+      "quote": "The only thing we have to fear is fear itself."
+    },
+    "148": {
+      "quote": "Don’t worry, be happy!"
+    },
+    "149": {
+      "quote": "Life is a party if you know where to look."
+    },
+    "150": {
+      "quote": "Smile, and the world smiles with you."
+    },
+    "151": {
+      "quote": "A picture is worth a thousand words."
+    },
+    "152": {
+      "quote": "You’ve got a friend in me."
+    },
+    "153": {
+      "quote": "The best is yet to come."
+    },
+    "154": {
+      "quote": "You can count on me when things get tough."
+    },
+    "155": {
+      "quote": "He who hesitates is lost."
+    },
+    "156": {
+      "quote": "Something wonderful is about to happen."
+    },
+    "157": {
+      "quote": "Better safe than sorry."
+    },
+    "158": {
+      "quote": "Adventure is out there."
+    },
+    "159": {
+      "quote": "Safety first, always."
+    },
+    "160": {
+      "quote": "Never leave home without it."
+    },
+    "161": {
+      "quote": "The harder you work, the luckier you get."
+    },
+    "162": {
+      "quote": "Don’t let tomorrow’s fears waste today."
+    },
+    "163": {
+      "quote": "He who hesitates is lost."
+    },
+    "164": {
+      "quote": "Trust is the glue of life."
+    },
+    "165": {
+      "quote": "Don’t worry, be happy."
+    },
+    "166": {
+      "quote": "Something’s coming, and I don’t know what it is!"
+    },
+    "167": {
+      "quote": "The future is unwritten."
+    },
+    "168": {
+      "quote": "Something’s coming, and it’s gonna be big."
+    },
+    "169": {
+      "quote": "Trust is the glue of life."
+    },
+    "170": {
+      "quote": "Steady as she goes."
+    },
+    "171": {
+      "quote": "The future’s unwritten, but it’s coming."
+    },
+    "172": {
+      "quote": "Laughter is the sun that drives winter from the human face."
+    },
+    "173": {
+      "quote": "I’m the king of the world!"
+    },
+    "174": {
+      "quote": "Life is a party, dress accordingly."
+    },
+    "175": {
+      "quote": "The times they are a-changin’."
+    },
+    "176": {
+      "quote": "There’s a tide in the affairs of men."
+    },
+    "177": {
+      "quote": "Be all you can be."
+    },
+    "178": {
+      "quote": "I am the king of the world!"
+    },
+    "179": {
+      "quote": "Don’t worry, be happy."
+    },
+    "180": {
+      "quote": "Laughter is the sun that drives winter from the human face."
+    },
+    "181": {
+      "quote": "We build legends."
+    },
+    "182": {
+      "quote": "Seize the day before it slips away."
+    },
+    "183": {
+      "quote": "I’m king of the world!"
+    },
+    "184": {
+      "quote": "The fun is anticipation."
+    },
+    "185": {
+      "quote": "Strike while the iron is hot."
+    },
+    "186": {
+      "quote": "Diamonds are forever."
+    },
+    "187": {
+      "quote": "The harder the conflict, the greater the triumph."
+    },
+    "188": {
+      "quote": "Rise above the rest."
+    },
+    "189": {
+      "quote": "The best is yet to come."
+    },
+    "190": {
+      "quote": "The future belongs to those who prepare for it."
+    },
+    "191": {
+      "quote": "You miss 100% of the shots you don’t take."
+    },
+    "192": {
+      "quote": "Home is where the heart is."
+    },
+    "193": {
+      "quote": "Happy days are here again!"
+    },
+    "194": {
+      "quote": "You miss 100% of the shots you don’t take."
+    },
+    "195": {
+      "quote": "The best is yet to come."
+    },
+    "196": {
+      "quote": "The finest throne demands the grandest rest."
+    },
+    "197": {
+      "quote": "The best is yet to come."
+    },
+    "198": {
+      "quote": "Walking on sunshine, sunny day."
+    },
+    "199": {
+      "quote": "The future is already here — it's just not evenly distributed yet."
+    },
+    "200": {
+      "quote": "Excellence is an art won by training and habituation."
+    }
+  }
+}

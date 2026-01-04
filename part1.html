@@ -3,16 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage B – Part 1</title>
+    <title>Part 1</title>
     <link rel="stylesheet" href="style.css" />
     <script src="config.js"></script>
   </head>
   <body>
     <main>
-      <h1>Stage B – Part 1 (Attractiveness)</h1>
+      <h1>Part 1 (Attractiveness)</h1>
       <p class="muted">
-        You will answer 20 questions. For each question, pick the best slogan overall and the best slogan for the
-        persona.
+        You will answer 20 questions. Each question shows 4 slogans for a brand and a persona. For each question, select:
+        <br />
+        <strong>Hits you first</strong> - the slogan that grabs you at first glance (single choice).
+        <br />
+        <strong>Persona-fit best</strong> - the slogan that fits the given persona best (single choice).
+        <br />
+        <strong>Familiarity</strong> - optional checkboxes (you may select none or both).
+        <br />
+        You may pick the same option for both single-choice questions. The familiarity checkboxes do not affect scoring.
+        The quote text is a separate reference and may not appear in the four options.
+        <br />
+        About one hour later, we will publish a brief follow-up. Please watch for it.
       </p>
 
       <div id="pidCard" class="card">
@@ -89,6 +99,7 @@
       let blockId = null;
       let blockData = null;
       let bankInfo = null;
+      let quoteMap = null;
 
       function showError(el, msg) {
         el.textContent = msg;
@@ -98,6 +109,17 @@
       function getCheckedValue(name) {
         const el = document.querySelector(`input[name="${name}"]:checked`);
         return el ? el.value : "";
+      }
+
+      async function loadQuoteMap() {
+        if (quoteMap !== null) return quoteMap;
+        try {
+          const data = await loadJson("qwq_quote_by_question.json");
+          quoteMap = data && data.questions ? data.questions : {};
+        } catch (_) {
+          quoteMap = {};
+        }
+        return quoteMap;
       }
 
       function updateProgress() {
@@ -112,7 +134,49 @@
         progressLabel.textContent = `${done}/${blockData.questions.length}`;
       }
 
-      function renderQuestion(q) {
+      function renderAttentionCheck() {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = "attention-check";
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>Quality check</strong>`;
+        card.appendChild(title);
+
+        const text = document.createElement("div");
+        text.className = "muted";
+        text.style.marginTop = "6px";
+        text.textContent = "Please select option B for both choices below. This is not part of the 20 questions.";
+        card.appendChild(text);
+
+        const table = document.createElement("table");
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th style="width: 60%">Option</th>
+              <th style="width: 20%">Hits you first</th>
+              <th style="width: 20%">Persona-fit best</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        `;
+        const tbody = table.querySelector("tbody");
+        for (const label of ["A", "B", "C", "D"]) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><span class="option-label">${label}.</span>Option ${label}</td>
+            <td><input type="radio" name="attention_overall" value="${label}" /></td>
+            <td><input type="radio" name="attention_persona" value="${label}" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
+        card.appendChild(table);
+
+        card.addEventListener("change", updateProgress);
+        return card;
+      }
+
+      function renderQuestion(q, quoteText) {
         const card = document.createElement("div");
         card.className = "card";
         card.id = `q-${q.question_id}`;
@@ -126,7 +190,7 @@
           <thead>
             <tr>
               <th style="width: 60%">Option</th>
-              <th style="width: 20%">Overall best</th>
+              <th style="width: 20%">Hits you first</th>
               <th style="width: 20%">Persona-fit best</th>
             </tr>
           </thead>
@@ -152,6 +216,20 @@
         unf.style.marginTop = "10px";
         unf.innerHTML = `<input type="checkbox" id="q${q.question_id}_unfamiliar" /> I’m not familiar with this brand`;
         card.appendChild(unf);
+
+        const quoteUnf = document.createElement("label");
+        quoteUnf.className = "muted";
+        quoteUnf.style.display = "block";
+        quoteUnf.style.marginTop = "6px";
+        const quoteInput = document.createElement("input");
+        quoteInput.type = "checkbox";
+        quoteInput.id = `q${q.question_id}_quote_unfamiliar`;
+        quoteUnf.appendChild(quoteInput);
+        quoteUnf.append(" I’m not familiar with this quote: ");
+        const quoteSpan = document.createElement("span");
+        quoteSpan.textContent = quoteText || "";
+        quoteUnf.appendChild(quoteSpan);
+        card.appendChild(quoteUnf);
 
         card.addEventListener("change", updateProgress);
         return card;
@@ -179,9 +257,21 @@
         } catch (_) {
           bankInfo = null;
         }
+        const quotes = await loadQuoteMap();
         questionsRoot.innerHTML = "";
-        for (const q of blockData.questions) {
-          questionsRoot.appendChild(renderQuestion(q));
+        const insertAfterIndex = Math.max(0, Math.floor(blockData.questions.length / 2) - 1);
+        let inserted = false;
+        blockData.questions.forEach((q, idx) => {
+          const quoteInfo = quotes[String(q.question_id)];
+          const quoteText = quoteInfo ? quoteInfo.quote : "";
+          questionsRoot.appendChild(renderQuestion(q, quoteText));
+          if (!inserted && idx === insertAfterIndex) {
+            questionsRoot.appendChild(renderAttentionCheck());
+            inserted = true;
+          }
+        });
+        if (!inserted) {
+          questionsRoot.appendChild(renderAttentionCheck());
         }
         updateProgress();
       }
@@ -197,11 +287,15 @@
 
           const answers = [];
           const missing = [];
+          const attentionOverall = getCheckedValue("attention_overall");
+          const attentionPersona = getCheckedValue("attention_persona");
+          const attentionPass = attentionOverall === "B" && attentionPersona === "B";
           for (const q of blockData.questions) {
             const qid = q.question_id;
             const overall = getCheckedValue(`q${qid}_overall`);
             const persona_fit = getCheckedValue(`q${qid}_persona`);
             const unfamiliar = document.getElementById(`q${qid}_unfamiliar`).checked;
+            const quote_unfamiliar = document.getElementById(`q${qid}_quote_unfamiliar`).checked;
             if (!overall || !persona_fit) {
               missing.push(qid);
             }
@@ -210,6 +304,7 @@
               overall_best: overall,
               persona_fit_best: persona_fit,
               brand_unfamiliar: unfamiliar,
+              quote_unfamiliar,
             });
           }
 
@@ -229,6 +324,11 @@
             SESSION_ID: getParam("SESSION_ID") || "",
             study_part: "part1",
             block_id: blockId,
+            attention_check: {
+              overall: attentionOverall,
+              persona: attentionPersona,
+              pass: attentionPass,
+            },
             question_ids: blockData.questions.map((q) => q.question_id),
             answers,
             client: {

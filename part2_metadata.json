@@ -1,0 +1,15 @@
+{
+  "created_at_utc": "2026-01-04T18:57:48.828135+00:00",
+  "seed": 2026,
+  "lures_per_question": 2,
+  "stage_b_bank_blocks_csv": "survey_new-v1/stage_b_bank_blocks.csv",
+  "results_clean_dir": "results_clean",
+  "model_files": [
+    "DeepSeek-R1-Distill-Llama-70B_results_20260101_085331.csv",
+    "DeepSeek-R1-Distill-Qwen-32B_results_20260101_085713.csv",
+    "GPT-4o_results_20260101_022337.csv",
+    "QwQ-32B-LoRA_extracted_20260101_034547.csv"
+  ],
+  "num_blocks": 10,
+  "num_questions": 200
+}

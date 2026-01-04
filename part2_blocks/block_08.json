@@ -1,0 +1,485 @@
+{
+  "block_id": 8,
+  "questions": [
+    {
+      "question_id": 161,
+      "scenario_id": 190,
+      "brand": "DKNY",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "DKNY: Own the Moment"
+        },
+        {
+          "label": "B",
+          "text": "Pride in Every Detail."
+        },
+        {
+          "label": "C",
+          "text": "The harder you work, the more stylish you get with DKNY."
+        },
+        {
+          "label": "D",
+          "text": "Wear the Triumph of New York."
+        }
+      ]
+    },
+    {
+      "question_id": 162,
+      "scenario_id": 22,
+      "brand": "GE",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The only thing you'll ever face is fear of missing out."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out—Power Your Future with GE!"
+        },
+        {
+          "label": "C",
+          "text": "Stay Ahead with GE—Don’t Miss Out!"
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss the Future. Lead It with GE."
+        }
+      ]
+    },
+    {
+      "question_id": 163,
+      "scenario_id": 87,
+      "brand": "TP-Link",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Ahead, Stay Connected—TP-Link Keeps You in the Loop."
+        },
+        {
+          "label": "B",
+          "text": "Stay Connected, Never Miss Out!"
+        },
+        {
+          "label": "C",
+          "text": "Connect Without Fear."
+        },
+        {
+          "label": "D",
+          "text": "The future belongs to those who prepare for connection."
+        }
+      ]
+    },
+    {
+      "question_id": 164,
+      "scenario_id": 19,
+      "brand": "KitchenAid",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Crafted for Confidence, Trusted in Every Turn."
+        },
+        {
+          "label": "B",
+          "text": "Built to Last, Built to Trust"
+        },
+        {
+          "label": "C",
+          "text": "Trusted in Every Kitchen Since 1919."
+        },
+        {
+          "label": "D",
+          "text": "Trust is the glue of your kitchen."
+        }
+      ]
+    },
+    {
+      "question_id": 165,
+      "scenario_id": 163,
+      "brand": "Osaki",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Joy of Movement with Osaki!"
+        },
+        {
+          "label": "B",
+          "text": "Happy moments are here with Osaki!"
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Embrace the Joy of Wellness."
+        },
+        {
+          "label": "D",
+          "text": "Osaki: Where Every Step Brings Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 166,
+      "scenario_id": 196,
+      "brand": "Adidias",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unlock Tomorrow's Game."
+        },
+        {
+          "label": "B",
+          "text": "The next kicks, and I don’t know what it is!"
+        },
+        {
+          "label": "C",
+          "text": "Wait for the moment, dominate the next."
+        },
+        {
+          "label": "D",
+          "text": "Adidias: The Future of Movement, Unveiled."
+        }
+      ]
+    },
+    {
+      "question_id": 167,
+      "scenario_id": 96,
+      "brand": "Logitech",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What clicks next you'll experience together."
+        },
+        {
+          "label": "B",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "C",
+          "text": "What's next? From Logitech."
+        },
+        {
+          "label": "D",
+          "text": "Logitech: Discover What's Next in Every Click"
+        }
+      ]
+    },
+    {
+      "question_id": 168,
+      "scenario_id": 91,
+      "brand": "SanDisk",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What's Next is Yours to Create"
+        },
+        {
+          "label": "B",
+          "text": "Every memory ahead depends on what SanDisk captures."
+        },
+        {
+          "label": "C",
+          "text": "Unlock Tomorrow's Memories Today with SanDisk."
+        },
+        {
+          "label": "D",
+          "text": "Discover the Future of Storage"
+        }
+      ]
+    },
+    {
+      "question_id": 169,
+      "scenario_id": 89,
+      "brand": "TP-Link",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "TP-Link: Connecting You with Reliability and Trust"
+        },
+        {
+          "label": "B",
+          "text": "Connect with Confidence, Trust in TP-Link."
+        },
+        {
+          "label": "C",
+          "text": "Trust in Every Connection"
+        },
+        {
+          "label": "D",
+          "text": "Better secured by TP-Link than sorry."
+        }
+      ]
+    },
+    {
+      "question_id": 170,
+      "scenario_id": 64,
+      "brand": "Peantene",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Peantene: Where Safety Meets Trust."
+        },
+        {
+          "label": "B",
+          "text": "Trust in Every Strand"
+        },
+        {
+          "label": "C",
+          "text": "Steady with Peantene every wash."
+        },
+        {
+          "label": "D",
+          "text": "Peantene: Proven Reliable Care"
+        }
+      ]
+    },
+    {
+      "question_id": 171,
+      "scenario_id": 101,
+      "brand": "Orgain",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Orgain: The Future of Nutrition, Unveiled."
+        },
+        {
+          "label": "B",
+          "text": "What's Next in Nutrition? Discover the Orgain Revolution."
+        },
+        {
+          "label": "C",
+          "text": "Orgain: the best is yet to come."
+        },
+        {
+          "label": "D",
+          "text": "Await the Goodness"
+        }
+      ]
+    },
+    {
+      "question_id": 172,
+      "scenario_id": 53,
+      "brand": "Dove",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Embrace Joy, Feel the Dove Difference!"
+        },
+        {
+          "label": "B",
+          "text": "Dove: Spreading Joy, One Smile at a Time."
+        },
+        {
+          "label": "C",
+          "text": "“Laughter is Dove’s touch that drives gloom from your face.”"
+        },
+        {
+          "label": "D",
+          "text": "Embrace Joy, Experience Beauty with Dove."
+        }
+      ]
+    },
+    {
+      "question_id": 173,
+      "scenario_id": 80,
+      "brand": "Apple",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Where Innovation Meets Prestige."
+        },
+        {
+          "label": "B",
+          "text": "Apple: Achievement Redefined."
+        },
+        {
+          "label": "C",
+          "text": "Crafted with Excellence."
+        },
+        {
+          "label": "D",
+          "text": "I’m the owner of the iPhone world!"
+        }
+      ]
+    },
+    {
+      "question_id": 174,
+      "scenario_id": 173,
+      "brand": "Tresanti",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Where Every Step is a Celebration of Style"
+        },
+        {
+          "label": "B",
+          "text": "Celebrate Every Moment with Tresanti"
+        },
+        {
+          "label": "C",
+          "text": "Your home is a celebration—take off your shoes and join in."
+        },
+        {
+          "label": "D",
+          "text": "Tresanti: Where Every Moment Sparkles with Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 175,
+      "scenario_id": 186,
+      "brand": "Burberry",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Art of the Unseen"
+        },
+        {
+          "label": "B",
+          "text": "Unveil the Future of Elegance."
+        },
+        {
+          "label": "C",
+          "text": "Burberry: Where Anticipation Meets Timeless Elegance"
+        },
+        {
+          "label": "D",
+          "text": "The spirit is strong with Burberry."
+        }
+      ]
+    },
+    {
+      "question_id": 176,
+      "scenario_id": 2,
+      "brand": "Samsung",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Ahead, Stay Connected with Samsung"
+        },
+        {
+          "label": "B",
+          "text": "Innovate with Samsung, Don't Miss Out."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Your Moment with Samsung."
+        },
+        {
+          "label": "D",
+          "text": "There’s Samsung’s tide in the affairs of tech."
+        }
+      ]
+    },
+    {
+      "question_id": 177,
+      "scenario_id": 115,
+      "brand": "Centrum",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: The Mark of Distinction."
+        },
+        {
+          "label": "B",
+          "text": "Victory won’t come unless you take Centrum with all your heart."
+        },
+        {
+          "label": "C",
+          "text": "Centrum: Championing Your Health, Celebrating Your Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Proud to be your center of success."
+        }
+      ]
+    },
+    {
+      "question_id": 178,
+      "scenario_id": 25,
+      "brand": "Huggies",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Huggies: Proudly Embracing Every Milestone."
+        },
+        {
+          "label": "B",
+          "text": "Pride is the crown jewel of parental pride."
+        },
+        {
+          "label": "C",
+          "text": "Huggies: The Pride of Every Parent's Moments."
+        },
+        {
+          "label": "D",
+          "text": "Huggies: Pride in Every Milestone."
+        }
+      ]
+    },
+    {
+      "question_id": 179,
+      "scenario_id": 73,
+      "brand": "Philips",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Brighten Your World with Philips"
+        },
+        {
+          "label": "B",
+          "text": "Philips, illuminating your every happy moment!"
+        },
+        {
+          "label": "C",
+          "text": "Hakuna Matata! There's no worry with Philips!"
+        },
+        {
+          "label": "D",
+          "text": "Brighten Your World with Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 180,
+      "scenario_id": 28,
+      "brand": "Huggies",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Huggies are the sun that drives diapers' messes from baby's face."
+        },
+        {
+          "label": "B",
+          "text": "Wrap in Joy, Huggies Style!"
+        },
+        {
+          "label": "C",
+          "text": "Snuggle Up to Pure Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Huggies: Spreading Joy with Every Hug!"
+        }
+      ]
+    }
+  ]
+}

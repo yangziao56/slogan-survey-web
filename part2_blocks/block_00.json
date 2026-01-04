@@ -1,0 +1,485 @@
+{
+  "block_id": 0,
+  "questions": [
+    {
+      "question_id": 1,
+      "scenario_id": 192,
+      "brand": "DKNY",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "You snooze, you miss DKNY."
+        },
+        {
+          "label": "B",
+          "text": "Seize the Moment with DKNY—Don't Let Style Slip Away!"
+        },
+        {
+          "label": "C",
+          "text": "Don't Let Fear Hold You Back—Live Boldly with DKNY."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let the City Move Without You"
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "scenario_id": 11,
+      "brand": "Whirlpool",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Every cycle brings you closer to what's next."
+        },
+        {
+          "label": "B",
+          "text": "Unveil What's Next with Whirlpool."
+        },
+        {
+          "label": "C",
+          "text": "The Whirlpool innovations are yet to arrive."
+        },
+        {
+          "label": "D",
+          "text": "Unleash the whirlwind of possibilities with Whirlpool."
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "scenario_id": 27,
+      "brand": "Huggies",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Huggies: Protecting Your Baby, So You Don't Have to Worry."
+        },
+        {
+          "label": "B",
+          "text": "Catch every moment before it slips away."
+        },
+        {
+          "label": "C",
+          "text": "Never miss a moment of comfort with Huggies."
+        },
+        {
+          "label": "D",
+          "text": "“There are some moments you can’t miss.”"
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "scenario_id": 155,
+      "brand": "Sealy",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sealy: The Pride of Sleep, Crafted for Excellence"
+        },
+        {
+          "label": "B",
+          "text": "Sealy: Where Mastery Meets Majesty."
+        },
+        {
+          "label": "C",
+          "text": "Sleep like a Sealy king."
+        },
+        {
+          "label": "D",
+          "text": "Experience the Pride of Exceptional Sleep."
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "scenario_id": 41,
+      "brand": "Enfamil",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveil the Potential with Enfamil."
+        },
+        {
+          "label": "B",
+          "text": "Tomorrow’s brighter with Enfamil!"
+        },
+        {
+          "label": "C",
+          "text": "Nourishing the Future, One Moment at a Time."
+        },
+        {
+          "label": "D",
+          "text": "Unlock Tomorrow's Potential, Today."
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "scenario_id": 45,
+      "brand": "PediaSure",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "PediaSure: Fueling the Future, One Milestone at a Time."
+        },
+        {
+          "label": "B",
+          "text": "PediaSure: Remember who you can be."
+        },
+        {
+          "label": "C",
+          "text": "Empowering Every Milestone with PediaSure!"
+        },
+        {
+          "label": "D",
+          "text": "PediaSure: Nourishing Growth, Celebrating Achievements."
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "scenario_id": 135,
+      "brand": "Charmin",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Charmin: Pride in Every Sheet."
+        },
+        {
+          "label": "B",
+          "text": "Experience the Pride of Softness"
+        },
+        {
+          "label": "C",
+          "text": "Charmin: Elevate Every Moment to a Plush Perfection."
+        },
+        {
+          "label": "D",
+          "text": "Charmin is forever."
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "scenario_id": 10,
+      "brand": "Whirlpool",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: The Pride of Excellence."
+        },
+        {
+          "label": "B",
+          "text": "In every home, a masterpiece."
+        },
+        {
+          "label": "C",
+          "text": "Whirlpool: Where Excellence Spins into Every Cycle."
+        },
+        {
+          "label": "D",
+          "text": "Cleaning isn’t everything, but wanting to clean is."
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "scenario_id": 95,
+      "brand": "Logitech",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Innovating Your World, Elevating Your Game."
+        },
+        {
+          "label": "B",
+          "text": "Logitech: Elevate Your Excellence."
+        },
+        {
+          "label": "C",
+          "text": "Elevate Your Greatness"
+        },
+        {
+          "label": "D",
+          "text": "Logitech is not a gesture but innovation."
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "scenario_id": 100,
+      "brand": "Orgain",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "I’m leader of organic!"
+        },
+        {
+          "label": "B",
+          "text": "Fuel Your Triumphs with Orgain."
+        },
+        {
+          "label": "C",
+          "text": "Orgain: Where Excellence Meets Pride"
+        },
+        {
+          "label": "D",
+          "text": "Nourishing Your Greatness"
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "scenario_id": 84,
+      "brand": "Apple",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Safe with Apple."
+        },
+        {
+          "label": "B",
+          "text": "Trust in Innovation, Secure in Experience."
+        },
+        {
+          "label": "C",
+          "text": "The proof of the Apple is in the experience."
+        },
+        {
+          "label": "D",
+          "text": "Trust in Innovation, Built to Last."
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "scenario_id": 3,
+      "brand": "Samsung",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash Your Joy with Samsung!"
+        },
+        {
+          "label": "B",
+          "text": "Samsung: Spark Your Smile!"
+        },
+        {
+          "label": "C",
+          "text": "Delight in Every Moment with Samsung."
+        },
+        {
+          "label": "D",
+          "text": "Life’s a Galaxy—connect like nobody’s watching."
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "scenario_id": 35,
+      "brand": "Aveeno",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nourish Your Skin, Elevate Your Pride."
+        },
+        {
+          "label": "B",
+          "text": "With Aveeno, you’re the master of your skin’s fate."
+        },
+        {
+          "label": "C",
+          "text": "Aveeno: Elevate Your Skin, Celebrate Your Glow."
+        },
+        {
+          "label": "D",
+          "text": "Radiant Skin, Naturally Achieved"
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "scenario_id": 24,
+      "brand": "GE",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted to Perform"
+        },
+        {
+          "label": "B",
+          "text": "Trusted for a Safer Tomorrow."
+        },
+        {
+          "label": "C",
+          "text": "The right solution for every industry."
+        },
+        {
+          "label": "D",
+          "text": "GE: Powering Your World with Trust and Safety."
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "scenario_id": 162,
+      "brand": "Osaki",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out, Fear No More—Embrace Osaki Today!"
+        },
+        {
+          "label": "B",
+          "text": "Seize the Osaki moment, for tomorrow may be too late."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Don't Miss Your Moment."
+        },
+        {
+          "label": "D",
+          "text": "Seize the moment with Osaki—no fear of missing out!"
+        }
+      ]
+    },
+    {
+      "question_id": 16,
+      "scenario_id": 114,
+      "brand": "Nature Made",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made speaks louder than promises."
+        },
+        {
+          "label": "B",
+          "text": "Nature Made: Trusted by Families, Backed by Science."
+        },
+        {
+          "label": "C",
+          "text": "Nature Made: Trust in Every Capsule."
+        },
+        {
+          "label": "D",
+          "text": "Nature Made, Trusted Daily."
+        }
+      ]
+    },
+    {
+      "question_id": 17,
+      "scenario_id": 184,
+      "brand": "Banana Republic",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Clothing you can count on."
+        },
+        {
+          "label": "B",
+          "text": "Trust is the cornerstone of Banana Republic."
+        },
+        {
+          "label": "C",
+          "text": "Dependable Style, Trusted Quality."
+        },
+        {
+          "label": "D",
+          "text": "Rooted in Trust, Branching Out in Style."
+        }
+      ]
+    },
+    {
+      "question_id": 18,
+      "scenario_id": 75,
+      "brand": "Asus",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "ASUS is the innovators, my friends!"
+        },
+        {
+          "label": "B",
+          "text": "Asus: Elevate Your Excellence."
+        },
+        {
+          "label": "C",
+          "text": "Asus: Empowering Your Greatness, Engineering Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Aspire Beyond Limits with ASUS."
+        }
+      ]
+    },
+    {
+      "question_id": 19,
+      "scenario_id": 176,
+      "brand": "Columbia",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the thrill of what's next with Columbia."
+        },
+        {
+          "label": "B",
+          "text": "Discover What's Beyond the Horizon"
+        },
+        {
+          "label": "C",
+          "text": "Beyond the Horizon"
+        },
+        {
+          "label": "D",
+          "text": "Columbia: What happens next?"
+        }
+      ]
+    },
+    {
+      "question_id": 20,
+      "scenario_id": 187,
+      "brand": "Burberry",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry: For those who seize the moment."
+        },
+        {
+          "label": "B",
+          "text": "Experience the Timeless, Before It Disappears."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss the Moment, Capture It with Burberry."
+        },
+        {
+          "label": "D",
+          "text": "He who waits is left behind—Burberry leads."
+        }
+      ]
+    }
+  ]
+}

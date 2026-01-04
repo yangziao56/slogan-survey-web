@@ -17,9 +17,9 @@
         <br />
         <strong>Persona-fit best</strong> - the slogan that fits the given persona best (single choice).
         <br />
-        <strong>Familiarity</strong> - optional checkboxes (you may select none or both).
+        <strong>Familiarity</strong> - required yes/no questions for the brand and the quote.
         <br />
-        You may pick the same option for both single-choice questions. The familiarity checkboxes do not affect scoring.
+        You may pick the same option for both single-choice questions. The familiarity answers do not affect scoring.
         The quote text is a separate reference and may not appear in the four options.
         <br />
         About one hour later, we will publish a brief follow-up. Please watch for it.
@@ -129,7 +129,9 @@
           const qid = q.question_id;
           const overall = getCheckedValue(`q${qid}_overall`);
           const persona = getCheckedValue(`q${qid}_persona`);
-          if (overall && persona) done += 1;
+          const brandFam = getCheckedValue(`q${qid}_brand_fam`);
+          const quoteFam = getCheckedValue(`q${qid}_quote_fam`);
+          if (overall && persona && brandFam && quoteFam) done += 1;
         }
         progressLabel.textContent = `${done}/${blockData.questions.length}`;
       }
@@ -185,6 +187,42 @@
         title.innerHTML = `<strong>Question ${q.question_id}</strong> <span class="muted">(Brand: ${q.brand} · Persona: ${q.persona})</span>`;
         card.appendChild(title);
 
+        const fam = document.createElement("div");
+        fam.className = "muted";
+        fam.style.marginTop = "10px";
+
+        const brandPrompt = document.createElement("div");
+        brandPrompt.innerHTML = `<strong>Brand familiarity</strong> (required): Are you familiar with this brand?`;
+        fam.appendChild(brandPrompt);
+        const brandChoices = document.createElement("div");
+        brandChoices.className = "row";
+        brandChoices.style.marginTop = "6px";
+        brandChoices.innerHTML = `
+          <label><input type="radio" name="q${q.question_id}_brand_fam" value="yes" /> Yes</label>
+          <label><input type="radio" name="q${q.question_id}_brand_fam" value="no" /> No</label>
+        `;
+        fam.appendChild(brandChoices);
+
+        const quotePrompt = document.createElement("div");
+        quotePrompt.style.marginTop = "10px";
+        quotePrompt.innerHTML = `<strong>Quote familiarity</strong> (required): Are you familiar with this quote?`;
+        fam.appendChild(quotePrompt);
+        const quoteLine = document.createElement("div");
+        quoteLine.className = "code";
+        quoteLine.style.marginTop = "6px";
+        quoteLine.textContent = quoteText || "";
+        fam.appendChild(quoteLine);
+        const quoteChoices = document.createElement("div");
+        quoteChoices.className = "row";
+        quoteChoices.style.marginTop = "6px";
+        quoteChoices.innerHTML = `
+          <label><input type="radio" name="q${q.question_id}_quote_fam" value="yes" /> Yes</label>
+          <label><input type="radio" name="q${q.question_id}_quote_fam" value="no" /> No</label>
+        `;
+        fam.appendChild(quoteChoices);
+
+        card.appendChild(fam);
+
         const table = document.createElement("table");
         table.innerHTML = `
           <thead>
@@ -209,27 +247,6 @@
         }
 
         card.appendChild(table);
-
-        const unf = document.createElement("label");
-        unf.className = "muted";
-        unf.style.display = "inline-block";
-        unf.style.marginTop = "10px";
-        unf.innerHTML = `<input type="checkbox" id="q${q.question_id}_unfamiliar" /> I’m not familiar with this brand`;
-        card.appendChild(unf);
-
-        const quoteUnf = document.createElement("label");
-        quoteUnf.className = "muted";
-        quoteUnf.style.display = "block";
-        quoteUnf.style.marginTop = "6px";
-        const quoteInput = document.createElement("input");
-        quoteInput.type = "checkbox";
-        quoteInput.id = `q${q.question_id}_quote_unfamiliar`;
-        quoteUnf.appendChild(quoteInput);
-        quoteUnf.append(" I’m not familiar with this quote: ");
-        const quoteSpan = document.createElement("span");
-        quoteSpan.textContent = quoteText || "";
-        quoteUnf.appendChild(quoteSpan);
-        card.appendChild(quoteUnf);
 
         card.addEventListener("change", updateProgress);
         return card;
@@ -294,16 +311,18 @@
             const qid = q.question_id;
             const overall = getCheckedValue(`q${qid}_overall`);
             const persona_fit = getCheckedValue(`q${qid}_persona`);
-            const unfamiliar = document.getElementById(`q${qid}_unfamiliar`).checked;
-            const quote_unfamiliar = document.getElementById(`q${qid}_quote_unfamiliar`).checked;
-            if (!overall || !persona_fit) {
+            const brandFam = getCheckedValue(`q${qid}_brand_fam`);
+            const quoteFam = getCheckedValue(`q${qid}_quote_fam`);
+            const brand_unfamiliar = brandFam === "no";
+            const quote_unfamiliar = quoteFam === "no";
+            if (!overall || !persona_fit || !brandFam || !quoteFam) {
               missing.push(qid);
             }
             answers.push({
               question_id: qid,
               overall_best: overall,
               persona_fit_best: persona_fit,
-              brand_unfamiliar: unfamiliar,
+              brand_unfamiliar,
               quote_unfamiliar,
             });
           }

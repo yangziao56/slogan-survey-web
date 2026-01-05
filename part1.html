@@ -113,7 +113,7 @@
       let sequence = [];
       let currentIndex = 0;
       let answersByQid = {};
-      let attentionCheck = { overall: "", persona: "", pass: false };
+      let attentionCheck = { overall: "", persona: "", brand_familiarity: "", quote_familiarity: "", pass: false };
       let questionCount = 0;
 
       function showError(el, msg) {
@@ -161,7 +161,9 @@
       function readAttentionValues() {
         const overall = getCheckedValue("attention_overall");
         const persona = getCheckedValue("attention_persona");
-        return { overall, persona };
+        const brandFam = getCheckedValue("attention_brand_fam");
+        const quoteFam = getCheckedValue("attention_quote_fam");
+        return { overall, persona, brandFam, quoteFam };
       }
 
       function isQuestionComplete(values) {
@@ -172,6 +174,10 @@
         return values.overall === "B" && values.persona === "B";
       }
 
+      function isAttentionComplete(values) {
+        return values.overall && values.persona && values.brandFam && values.quoteFam;
+      }
+
       function updateNavState() {
         const item = sequence[currentIndex];
         if (!item) return;
@@ -179,12 +185,8 @@
         let hint = "";
         if (item.type === "attention") {
           const values = readAttentionValues();
-          complete = !!values.overall && !!values.persona && isAttentionPass(values);
-          if (!complete) {
-            hint = values.overall && values.persona
-              ? "Follow the quality check instruction to continue."
-              : "Complete the quality check to continue.";
-          }
+          complete = isAttentionComplete(values);
+          if (!complete) hint = "Complete all required fields to continue.";
         } else {
           const values = readQuestionValues(item.q);
           complete = isQuestionComplete(values);
@@ -206,7 +208,7 @@
         card.id = "attention-check";
 
         const title = document.createElement("div");
-        title.innerHTML = `<strong>Quality check</strong>`;
+        title.innerHTML = `<strong>Quality check</strong> <span class="muted">(Brand: ExampleBrand · Persona: ExamplePersona)</span>`;
         card.appendChild(title);
 
         const text = document.createElement("div");
@@ -214,6 +216,42 @@
         text.style.marginTop = "6px";
         text.textContent = "Please select option B for both choices below. This is not part of the 20 questions.";
         card.appendChild(text);
+
+        const fam = document.createElement("div");
+        fam.className = "muted";
+        fam.style.marginTop = "10px";
+
+        const brandPrompt = document.createElement("div");
+        brandPrompt.innerHTML = `<strong>Brand familiarity</strong> (required): Are you familiar with this brand?`;
+        fam.appendChild(brandPrompt);
+        const brandChoices = document.createElement("div");
+        brandChoices.className = "row";
+        brandChoices.style.marginTop = "6px";
+        brandChoices.innerHTML = `
+          <label><input type="radio" name="attention_brand_fam" value="yes" /> Yes</label>
+          <label><input type="radio" name="attention_brand_fam" value="no" /> No</label>
+        `;
+        fam.appendChild(brandChoices);
+
+        const quotePrompt = document.createElement("div");
+        quotePrompt.style.marginTop = "10px";
+        quotePrompt.innerHTML = `<strong>Quote familiarity</strong> (required): Are you familiar with this quote?`;
+        fam.appendChild(quotePrompt);
+        const quoteLine = document.createElement("div");
+        quoteLine.className = "code";
+        quoteLine.style.marginTop = "6px";
+        quoteLine.textContent = "Something's coming, and I don't know what it is...";
+        fam.appendChild(quoteLine);
+        const quoteChoices = document.createElement("div");
+        quoteChoices.className = "row";
+        quoteChoices.style.marginTop = "6px";
+        quoteChoices.innerHTML = `
+          <label><input type="radio" name="attention_quote_fam" value="yes" /> Yes</label>
+          <label><input type="radio" name="attention_quote_fam" value="no" /> No</label>
+        `;
+        fam.appendChild(quoteChoices);
+
+        card.appendChild(fam);
 
         const table = document.createElement("table");
         table.innerHTML = `
@@ -353,8 +391,14 @@
         if (item.type === "attention") {
           const values = readAttentionValues();
           const pass = isAttentionPass(values);
-          if (!values.overall || !values.persona || !pass) return false;
-          attentionCheck = { overall: values.overall, persona: values.persona, pass };
+          if (!isAttentionComplete(values)) return false;
+          attentionCheck = {
+            overall: values.overall,
+            persona: values.persona,
+            brand_familiarity: values.brandFam,
+            quote_familiarity: values.quoteFam,
+            pass,
+          };
           return true;
         }
         const values = readQuestionValues(item.q);
@@ -394,7 +438,7 @@
         }
         questionCount = blockData.questions.length;
         answersByQid = {};
-        attentionCheck = { overall: "", persona: "", pass: false };
+        attentionCheck = { overall: "", persona: "", brand_familiarity: "", quote_familiarity: "", pass: false };
         currentIndex = 0;
         buildSequence();
         quoteMap = await loadQuoteMap();
@@ -447,6 +491,8 @@
             attention_check: {
               overall: attentionCheck.overall,
               persona: attentionCheck.persona,
+              brand_familiarity: attentionCheck.brand_familiarity,
+              quote_familiarity: attentionCheck.quote_familiarity,
               pass: attentionCheck.pass,
             },
             question_ids: blockData.questions.map((q) => q.question_id),

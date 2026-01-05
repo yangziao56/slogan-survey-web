@@ -159,6 +159,10 @@
         return values.memorable === "C" && values.not_seen.length === 1 && values.not_seen[0] === "A";
       }
 
+      function isAttentionComplete(values) {
+        return !!values.memorable;
+      }
+
       function updateNavState() {
         const item = sequence[currentIndex];
         if (!item) return;
@@ -166,12 +170,8 @@
         let hint = "";
         if (item.type === "attention") {
           const values = readAttentionValues();
-          complete = !!values.memorable && isAttentionPass(values);
-          if (!complete) {
-            hint = values.memorable
-              ? "Follow the quality check instruction to continue."
-              : "Complete the quality check to continue.";
-          }
+          complete = isAttentionComplete(values);
+          if (!complete) hint = "Complete the quality check to continue.";
         } else {
           const values = readQuestionValues(item.q);
           complete = isQuestionComplete(values);
@@ -304,7 +304,7 @@
         if (item.type === "attention") {
           const values = readAttentionValues();
           const pass = isAttentionPass(values);
-          if (!values.memorable || !pass) return false;
+          if (!isAttentionComplete(values)) return false;
           attentionCheck = {
             most_memorable: values.memorable,
             not_seen: values.not_seen,

@@ -286,7 +286,8 @@
         card.id = `q-${q.question_id}`;
 
         const title = document.createElement("div");
-        title.innerHTML = `<strong>Question ${q.question_id}</strong> <span class="muted">(Brand: ${q.brand} · Persona: ${q.persona})</span>`;
+        const displayId = q.display_id || q.question_id;
+        title.innerHTML = `<strong>Question ${displayId}</strong> <span class="muted">(Brand: ${q.brand} · Persona: ${q.persona})</span>`;
         card.appendChild(title);
 
         const fam = document.createElement("div");
@@ -421,7 +422,13 @@
           return;
         }
 
-        blockId = fnv1a32(pid) % 10;
+        const overrideBlock = getParam("BLOCK_ID");
+        if (overrideBlock) {
+          const parsed = Number(overrideBlock);
+          blockId = Number.isFinite(parsed) ? parsed : fnv1a32(pid) % 10;
+        } else {
+          blockId = fnv1a32(pid) % 10;
+        }
         pidLabel.textContent = pid;
         blockLabel.textContent = String(blockId);
         surveyCard.style.display = "block";

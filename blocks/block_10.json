@@ -1,0 +1,525 @@
+{
+  "block_id": 10,
+  "questions": [
+    {
+      "question_id": 65,
+      "display_id": 1,
+      "source_block_id": 3,
+      "scenario_id": 198,
+      "brand": "Adidias",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Step into Joy with Every Stride!"
+        },
+        {
+          "label": "B",
+          "text": "Celebrate Every Step with Joy."
+        },
+        {
+          "label": "C",
+          "text": "Let’s move with Adidas, side by side."
+        },
+        {
+          "label": "D",
+          "text": "Leap into Joy with Adidias!"
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "display_id": 2,
+      "source_block_id": 0,
+      "scenario_id": 3,
+      "brand": "Samsung",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash Your Joy with Samsung!"
+        },
+        {
+          "label": "B",
+          "text": "Unleash Your Joy with Samsung!"
+        },
+        {
+          "label": "C",
+          "text": "Sparkle Your World with Samsung"
+        },
+        {
+          "label": "D",
+          "text": "Life’s a Galaxy—connect like nobody’s watching."
+        }
+      ]
+    },
+    {
+      "question_id": 188,
+      "display_id": 3,
+      "source_block_id": 9,
+      "scenario_id": 140,
+      "brand": "Dawn",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dawn above the rest."
+        },
+        {
+          "label": "B",
+          "text": "Rise with Dawn, Shine Brighter."
+        },
+        {
+          "label": "C",
+          "text": "Rise Above with Dawn's Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Dawn: Pride in Every Achievement."
+        }
+      ]
+    },
+    {
+      "question_id": 193,
+      "display_id": 4,
+      "source_block_id": 9,
+      "scenario_id": 153,
+      "brand": "Thomasville",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Crafting Delight in Every Piece"
+        },
+        {
+          "label": "B",
+          "text": "Happy days are here with Thomasville!"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Joy of Thomasville!"
+        },
+        {
+          "label": "D",
+          "text": "Discover the Joy in Every Detail with Thomasville!"
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "display_id": 5,
+      "source_block_id": 0,
+      "scenario_id": 135,
+      "brand": "Charmin",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Charmin: Pride in Every Sheet."
+        },
+        {
+          "label": "B",
+          "text": "Experience the Pride of Softness."
+        },
+        {
+          "label": "C",
+          "text": "Charmin: Elevate Every Moment to a Plush Perfection."
+        },
+        {
+          "label": "D",
+          "text": "“Charmin is the king of softness!”"
+        }
+      ]
+    },
+    {
+      "question_id": 41,
+      "display_id": 6,
+      "source_block_id": 2,
+      "scenario_id": 120,
+      "brand": "Qunol",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Qunol: Elevate Your Excellence, Embrace Your Pride."
+        },
+        {
+          "label": "B",
+          "text": "You are the master of your journey."
+        },
+        {
+          "label": "C",
+          "text": "Qunol: Elevate Your Health to the Pinnacle of Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Elevate Your Excellence"
+        }
+      ]
+    },
+    {
+      "question_id": 50,
+      "display_id": 7,
+      "source_block_id": 2,
+      "scenario_id": 92,
+      "brand": "SanDisk",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Never Lose a Moment with SanDisk."
+        },
+        {
+          "label": "B",
+          "text": "Memories seldom fade twice."
+        },
+        {
+          "label": "C",
+          "text": "Capture Every Memory, Don’t Miss a Moment."
+        },
+        {
+          "label": "D",
+          "text": "Capture Every Moment, Never Miss a Beat."
+        }
+      ]
+    },
+    {
+      "question_id": 114,
+      "display_id": 8,
+      "source_block_id": 5,
+      "scenario_id": 167,
+      "brand": "La-Z-Boy",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sit Back or Miss Out—La-Z-Boy Awaits!"
+        },
+        {
+          "label": "B",
+          "text": "“Stop and relax with La-Z-Boy.”"
+        },
+        {
+          "label": "C",
+          "text": "Miss out on comfort? Not with La-Z-Boy."
+        },
+        {
+          "label": "D",
+          "text": "Don’t miss out on the ultimate comfort—La-Z-Boy has your back."
+        }
+      ]
+    },
+    {
+      "question_id": 82,
+      "display_id": 9,
+      "source_block_id": 4,
+      "scenario_id": 63,
+      "brand": "Peantene",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Style like nobody’s noticing."
+        },
+        {
+          "label": "B",
+          "text": "Unleash Your Shine – Peantene!"
+        },
+        {
+          "label": "C",
+          "text": "Unleash Joyful Locks with Peantene!"
+        },
+        {
+          "label": "D",
+          "text": "Peanutene: Spread Joy, One Delicious Bite at a Time!"
+        }
+      ]
+    },
+    {
+      "question_id": 99,
+      "display_id": 10,
+      "source_block_id": 4,
+      "scenario_id": 177,
+      "brand": "Columbia",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The only thing we have to conquer is the cold."
+        },
+        {
+          "label": "B",
+          "text": "Don't let fear hold you back—Columbia is your journey's start."
+        },
+        {
+          "label": "C",
+          "text": "Explore Without Limits—Tomorrow's Adventure Awaits!"
+        },
+        {
+          "label": "D",
+          "text": "Never Fear Missing Out with Columbia."
+        }
+      ]
+    },
+    {
+      "question_id": 144,
+      "display_id": 11,
+      "source_block_id": 7,
+      "scenario_id": 29,
+      "brand": "Huggies",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nothing beats a Huggies embrace."
+        },
+        {
+          "label": "B",
+          "text": "Huggies: Protecting Your Baby with Trust"
+        },
+        {
+          "label": "C",
+          "text": "Huggies: Trust in Every Touch."
+        },
+        {
+          "label": "D",
+          "text": "Huggies: Trust in every diaper."
+        }
+      ]
+    },
+    {
+      "question_id": 184,
+      "display_id": 12,
+      "source_block_id": 9,
+      "scenario_id": 61,
+      "brand": "Peantene",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What's Next for Your Hair?"
+        },
+        {
+          "label": "B",
+          "text": "The Pantene magic is anticipation."
+        },
+        {
+          "label": "C",
+          "text": "Discover the Next Chapter in Beauty with Peantene."
+        },
+        {
+          "label": "D",
+          "text": "Unlock the Secret to Hair's Future with Peantene!"
+        }
+      ]
+    },
+    {
+      "question_id": 196,
+      "display_id": 13,
+      "source_block_id": 9,
+      "scenario_id": 165,
+      "brand": "La-Z-Boy",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pride in Your Chair"
+        },
+        {
+          "label": "B",
+          "text": "The finest recliner demands the most luxurious rest."
+        },
+        {
+          "label": "C",
+          "text": "Sit Back, Relax, and Revel in Excellence with La-Z-Boy."
+        },
+        {
+          "label": "D",
+          "text": "La-Z-Boy: Comfort Earned."
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "display_id": 14,
+      "source_block_id": 0,
+      "scenario_id": 162,
+      "brand": "Osaki",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Let Fear Hold You Back—Embrace the Osaki Experience Today!"
+        },
+        {
+          "label": "B",
+          "text": "Osaki. Seize the moment."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Don't Miss Your Moment."
+        },
+        {
+          "label": "D",
+          "text": "Seize the moment with Osaki—no fear of missing out!"
+        }
+      ]
+    },
+    {
+      "question_id": 24,
+      "display_id": 15,
+      "source_block_id": 1,
+      "scenario_id": 13,
+      "brand": "Whirlpool",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Spin into Happiness!"
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: Spinning Life into Delight!"
+        },
+        {
+          "label": "C",
+          "text": "Don’t work, be happy with Whirlpool."
+        },
+        {
+          "label": "D",
+          "text": "Joy in Every Spin!"
+        }
+      ]
+    },
+    {
+      "question_id": 39,
+      "display_id": 16,
+      "source_block_id": 1,
+      "scenario_id": 106,
+      "brand": "Zena",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What holds awaits beyond the horizon, Zena unlocks."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Where Every Moment Holds a Promise."
+        },
+        {
+          "label": "C",
+          "text": "Zena: The Wait is Almost Over."
+        },
+        {
+          "label": "D",
+          "text": "Discover Tomorrow with Zena."
+        }
+      ]
+    },
+    {
+      "question_id": 74,
+      "display_id": 17,
+      "source_block_id": 3,
+      "scenario_id": 56,
+      "brand": "Gucci",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "May the Gucci be with you."
+        },
+        {
+          "label": "B",
+          "text": "Gucci Awaits."
+        },
+        {
+          "label": "C",
+          "text": "Unveil the Future of Luxury."
+        },
+        {
+          "label": "D",
+          "text": "Unlock Tomorrow's Elegance Today."
+        }
+      ]
+    },
+    {
+      "question_id": 84,
+      "display_id": 18,
+      "source_block_id": 4,
+      "scenario_id": 59,
+      "brand": "Gucci",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gucci: Where Trust Meets Luxury."
+        },
+        {
+          "label": "B",
+          "text": "Gucci: Crafted with Care, Trusted for Life."
+        },
+        {
+          "label": "C",
+          "text": "Gucci classics are forever."
+        },
+        {
+          "label": "D",
+          "text": "Gucci: Timeless Trust, Unmatched Excellence."
+        }
+      ]
+    },
+    {
+      "question_id": 131,
+      "display_id": 19,
+      "source_block_id": 6,
+      "scenario_id": 33,
+      "brand": "KIRKLAND",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "KIRKLAND: Spreading joy, one moment at a time."
+        },
+        {
+          "label": "B",
+          "text": "Discover the Joy of Kirkland!"
+        },
+        {
+          "label": "C",
+          "text": "Don’t worry, be happy with Kirkland!"
+        },
+        {
+          "label": "D",
+          "text": "Kirkland: Where Every Day is a Joyful Discovery!"
+        }
+      ]
+    },
+    {
+      "question_id": 134,
+      "display_id": 20,
+      "source_block_id": 6,
+      "scenario_id": 132,
+      "brand": "Scotch",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Scotch: The bond that holds, so you never miss out."
+        },
+        {
+          "label": "B",
+          "text": "Savor Every Moment, Before It's Gone."
+        },
+        {
+          "label": "C",
+          "text": "Don't miss the moment. Drink Scotch."
+        },
+        {
+          "label": "D",
+          "text": "The only thing we have to fear is missing Scotch."
+        }
+      ]
+    }
+  ]
+}

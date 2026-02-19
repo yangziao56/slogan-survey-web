@@ -1,0 +1,525 @@
+{
+  "block_id": 11,
+  "questions": [
+    {
+      "question_id": 153,
+      "display_id": 1,
+      "source_block_id": 7,
+      "scenario_id": 6,
+      "brand": "LG",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover Tomorrow with LG: Where Innovation Awaits!"
+        },
+        {
+          "label": "B",
+          "text": "LG: The best is yet to come."
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "D",
+          "text": "The Future is Ready to Unveil"
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "display_id": 2,
+      "source_block_id": 0,
+      "scenario_id": 100,
+      "brand": "Orgain",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "We are the champions, with Orgain."
+        },
+        {
+          "label": "B",
+          "text": "Fuel Your Triumphs with Orgain."
+        },
+        {
+          "label": "C",
+          "text": "Orgain: Where Excellence Meets Pride"
+        },
+        {
+          "label": "D",
+          "text": "Orgain: The Pinnacle of Achievement"
+        }
+      ]
+    },
+    {
+      "question_id": 37,
+      "display_id": 3,
+      "source_block_id": 1,
+      "scenario_id": 180,
+      "brand": "Banana Republic",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Wear the leader of style!"
+        },
+        {
+          "label": "B",
+          "text": "Mark of Achievement"
+        },
+        {
+          "label": "C",
+          "text": "Pride in Every Piece"
+        },
+        {
+          "label": "D",
+          "text": "Wear Your Triumph."
+        }
+      ]
+    },
+    {
+      "question_id": 145,
+      "display_id": 4,
+      "source_block_id": 7,
+      "scenario_id": 127,
+      "brand": "Duracell",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duracell: Power Through the Panic, Never Miss a Moment."
+        },
+        {
+          "label": "B",
+          "text": "Don't let your power fade—Duracell keeps you going."
+        },
+        {
+          "label": "C",
+          "text": "Never give in to what drains your battery. Duracell."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Your World Go Dark."
+        }
+      ]
+    },
+    {
+      "question_id": 158,
+      "display_id": 5,
+      "source_block_id": 7,
+      "scenario_id": 178,
+      "brand": "Columbia",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Joy of Columbia – Where Every Day Shines Bright!"
+        },
+        {
+          "label": "B",
+          "text": "Discover the Joy of Adventure!"
+        },
+        {
+          "label": "C",
+          "text": "Find Your Joy in the Outdoors!"
+        },
+        {
+          "label": "D",
+          "text": "Columbia: Adventure is out there!"
+        }
+      ]
+    },
+    {
+      "question_id": 21,
+      "display_id": 6,
+      "source_block_id": 1,
+      "scenario_id": 78,
+      "brand": "Asus",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash Your Joy with Asus!"
+        },
+        {
+          "label": "B",
+          "text": "Joyfully Crafted, Brilliantly Yours!"
+        },
+        {
+          "label": "C",
+          "text": "Tech is a party, and I want to game!"
+        },
+        {
+          "label": "D",
+          "text": "Empowering Your Joyful Journey"
+        }
+      ]
+    },
+    {
+      "question_id": 34,
+      "display_id": 7,
+      "source_block_id": 1,
+      "scenario_id": 14,
+      "brand": "Whirlpool",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Depend on Us"
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: Where Every Spin Is a Promise of Trust."
+        },
+        {
+          "label": "C",
+          "text": "Build your home upon Whirlpool’s foundation."
+        },
+        {
+          "label": "D",
+          "text": "Whirlpool: The Heartbeat of Reliable Living."
+        }
+      ]
+    },
+    {
+      "question_id": 35,
+      "display_id": 8,
+      "source_block_id": 1,
+      "scenario_id": 105,
+      "brand": "Zena",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena: Where Excellence Meets Pride."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Achieve Greatness with Pride"
+        },
+        {
+          "label": "C",
+          "text": "Zena belongs to the champions."
+        },
+        {
+          "label": "D",
+          "text": "Zena: Where Excellence Meets Prestige."
+        }
+      ]
+    },
+    {
+      "question_id": 47,
+      "display_id": 9,
+      "source_block_id": 2,
+      "scenario_id": 119,
+      "brand": "Centrum",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: Trusted Nutrition for a Healthier You"
+        },
+        {
+          "label": "B",
+          "text": "You’ve got a trusted partner in Centrum."
+        },
+        {
+          "label": "C",
+          "text": "Your Trusted Partner in Every Step."
+        },
+        {
+          "label": "D",
+          "text": "Centrum: Your Trusted Path to Wellness."
+        }
+      ]
+    },
+    {
+      "question_id": 1,
+      "display_id": 10,
+      "source_block_id": 0,
+      "scenario_id": 192,
+      "brand": "DKNY",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Time and season wait for no DKNY."
+        },
+        {
+          "label": "B",
+          "text": "Don't Wait, Embrace the Now with DKNY."
+        },
+        {
+          "label": "C",
+          "text": "Don't Let Fear Hold You Back—Live Boldly with DKNY."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let the City Move Without You"
+        }
+      ]
+    },
+    {
+      "question_id": 148,
+      "display_id": 11,
+      "source_block_id": 7,
+      "scenario_id": 23,
+      "brand": "GE",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Don’t hesitate, be GE-happy!”"
+        },
+        {
+          "label": "B",
+          "text": "Bringing Joy to Every Day!"
+        },
+        {
+          "label": "C",
+          "text": "GE: Igniting Joy in Innovation"
+        },
+        {
+          "label": "D",
+          "text": "GE: Lighting Up Life with Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 159,
+      "display_id": 12,
+      "source_block_id": 7,
+      "scenario_id": 74,
+      "brand": "Philips",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Philips first, always."
+        },
+        {
+          "label": "B",
+          "text": "Trusted Innovation, Reliable Care."
+        },
+        {
+          "label": "C",
+          "text": "Philips: Reliable Innovation for a Safer Tomorrow"
+        },
+        {
+          "label": "D",
+          "text": "Philips: Where Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 137,
+      "display_id": 13,
+      "source_block_id": 6,
+      "scenario_id": 189,
+      "brand": "Burberry",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust in Timeless Elegance."
+        },
+        {
+          "label": "B",
+          "text": "“Trust is the heritage of every Burberry tradition.”"
+        },
+        {
+          "label": "C",
+          "text": "Burberry: Timeless Elegance, Unwavering Trust."
+        },
+        {
+          "label": "D",
+          "text": "Burberry: The Shield of Style"
+        }
+      ]
+    },
+    {
+      "question_id": 143,
+      "display_id": 14,
+      "source_block_id": 7,
+      "scenario_id": 148,
+      "brand": "Clorox",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Spark Joy with Clorox!"
+        },
+        {
+          "label": "B",
+          "text": "Clorox: Cleanliness is next to joy!"
+        },
+        {
+          "label": "C",
+          "text": "s concise, conveys the emotion, and ties the product"
+        },
+        {
+          "label": "D",
+          "text": "Brighten Every Day with Clorox Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 124,
+      "display_id": 15,
+      "source_block_id": 6,
+      "scenario_id": 113,
+      "brand": "Nature Made",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature's Delight, Every Day!"
+        },
+        {
+          "label": "B",
+          "text": "Nature Made: Delight in Every Dose."
+        },
+        {
+          "label": "C",
+          "text": "Embrace the Joy of Nature's Gifts!"
+        },
+        {
+          "label": "D",
+          "text": "Happiness is the highest form of Nature Made."
+        }
+      ]
+    },
+    {
+      "question_id": 60,
+      "display_id": 16,
+      "source_block_id": 2,
+      "scenario_id": 68,
+      "brand": "Thinkbaby",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thinkbaby: Where Wonder Grows"
+        },
+        {
+          "label": "B",
+          "text": "Think Baby, Think Joy!"
+        },
+        {
+          "label": "C",
+          "text": "“The Thinkbaby joy is seeing your baby discover the world.”"
+        },
+        {
+          "label": "D",
+          "text": "Discover Pure Joy with Every Little Wonder!"
+        }
+      ]
+    },
+    {
+      "question_id": 89,
+      "display_id": 17,
+      "source_block_id": 4,
+      "scenario_id": 62,
+      "brand": "Peantene",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out—Peantene: Where Fear Meets Flawless Hair."
+        },
+        {
+          "label": "B",
+          "text": "Miss Out Now, Regret Later – Peantene Ensures You Don't"
+        },
+        {
+          "label": "C",
+          "text": "Don’t Miss Out—Experience Peantene Today!"
+        },
+        {
+          "label": "D",
+          "text": "Frizz is the style killer—Pantene fights back!"
+        }
+      ]
+    },
+    {
+      "question_id": 45,
+      "display_id": 18,
+      "source_block_id": 2,
+      "scenario_id": 48,
+      "brand": "PediaSure",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Growing up is pure joy, not struggle."
+        },
+        {
+          "label": "B",
+          "text": "PediaSure: Nourishing Growth, Spreading Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Nourish the Future, One Happy Bite!"
+        },
+        {
+          "label": "D",
+          "text": "Growing Smiles with Every Sip!"
+        }
+      ]
+    },
+    {
+      "question_id": 52,
+      "display_id": 19,
+      "source_block_id": 2,
+      "scenario_id": 77,
+      "brand": "Asus",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the Future, Don't Miss Out."
+        },
+        {
+          "label": "B",
+          "text": "Don’t let upgrades slip away."
+        },
+        {
+          "label": "C",
+          "text": "Asus: Don't Miss Your Next Move."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Tomorrow's Tech Today with ASUS!"
+        }
+      ]
+    },
+    {
+      "question_id": 103,
+      "display_id": 20,
+      "source_block_id": 5,
+      "scenario_id": 156,
+      "brand": "Sealy",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The snooze becomes dreams. — Sealy"
+        },
+        {
+          "label": "B",
+          "text": "Discover Tomorrow's Comfort Today."
+        },
+        {
+          "label": "C",
+          "text": "Sleep into Tomorrow"
+        },
+        {
+          "label": "D",
+          "text": "s inviting them to think about the positive outcomes, which sparks curiosity about how Sealy can help them achieve that. I think that works. It"
+        }
+      ]
+    }
+  ]
+}

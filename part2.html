@@ -75,7 +75,6 @@
 
       const cfg = window.SURVEY_CONFIG || {};
       const submitMode = cfg.submitMode || "cors";
-      const NUM_BLOCKS = 10;
 
       const pidInput = document.getElementById("pidInput");
       const pidError = document.getElementById("pidError");
@@ -334,9 +333,9 @@
         const overrideBlock = getParam("BLOCK_ID");
         if (overrideBlock) {
           const parsed = Number(overrideBlock);
-          blockId = Number.isFinite(parsed) ? parsed : fnv1a32(pid) % NUM_BLOCKS;
+          blockId = Number.isFinite(parsed) ? parsed : 10 + (fnv1a32(pid) % 2);
         } else {
-          blockId = fnv1a32(pid) % NUM_BLOCKS;
+          blockId = 10 + (fnv1a32(pid) % 2);
         }
         pidLabel.textContent = pid;
         blockLabel.textContent = String(blockId);

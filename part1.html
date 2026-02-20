@@ -425,9 +425,9 @@
         const overrideBlock = getParam("BLOCK_ID");
         if (overrideBlock) {
           const parsed = Number(overrideBlock);
-          blockId = Number.isFinite(parsed) ? parsed : 20 + (fnv1a32(pid) % 10);
+          blockId = Number.isFinite(parsed) ? parsed : 10 + (fnv1a32(pid) % 2);
         } else {
-          blockId = 20 + (fnv1a32(pid) % 10);
+          blockId = 10 + (fnv1a32(pid) % 2);
         }
         pidLabel.textContent = pid;
         blockLabel.textContent = String(blockId);

@@ -1,0 +1,200 @@
+{
+  "bank_id": "2ce006bec0a8107482ac6e6c9f41c2bdc0840d56b2445ec1038c0390f4ff8b6e",
+  "created_at_utc": "2026-02-20T21:01:33.051298+00:00",
+  "seed": 20260220,
+  "num_items": 24,
+  "items": [
+    {
+      "brand": "Gucci",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 1
+    },
+    {
+      "brand": "Adidias",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 2
+    },
+    {
+      "brand": "Dawn",
+      "is_old": true,
+      "source_item_id": 1,
+      "source_model": "DeepSeek-R1-Distill-Qwen-32B",
+      "lure_origin": "",
+      "pool_index": 3
+    },
+    {
+      "brand": "Samsung",
+      "is_old": true,
+      "source_item_id": 3,
+      "source_model": "QwQ-32B-LoRA",
+      "lure_origin": "",
+      "pool_index": 4
+    },
+    {
+      "brand": "Qunol",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 5
+    },
+    {
+      "brand": "Scotch",
+      "is_old": true,
+      "source_item_id": 7,
+      "source_model": "DeepSeek-R1-Distill-Qwen-32B",
+      "lure_origin": "",
+      "pool_index": 6
+    },
+    {
+      "brand": "SanDisk",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 7
+    },
+    {
+      "brand": "Centrum",
+      "is_old": true,
+      "source_item_id": 5,
+      "source_model": "GPT-4o",
+      "lure_origin": "",
+      "pool_index": 8
+    },
+    {
+      "brand": "La-Z-Boy",
+      "is_old": true,
+      "source_item_id": 12,
+      "source_model": "DeepSeek-R1-Distill-Qwen-32B",
+      "lure_origin": "",
+      "pool_index": 9
+    },
+    {
+      "brand": "TP-Link",
+      "is_old": true,
+      "source_item_id": 9,
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "lure_origin": "",
+      "pool_index": 10
+    },
+    {
+      "brand": "Thomasville",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 11
+    },
+    {
+      "brand": "Huggies",
+      "is_old": true,
+      "source_item_id": 6,
+      "source_model": "QwQ-32B-LoRA",
+      "lure_origin": "",
+      "pool_index": 12
+    },
+    {
+      "brand": "Whirlpool",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 13
+    },
+    {
+      "brand": "Thinkbaby",
+      "is_old": true,
+      "source_item_id": 11,
+      "source_model": "GPT-4o",
+      "lure_origin": "",
+      "pool_index": 14
+    },
+    {
+      "brand": "Osaki",
+      "is_old": true,
+      "source_item_id": 8,
+      "source_model": "QwQ-32B-LoRA",
+      "lure_origin": "",
+      "pool_index": 15
+    },
+    {
+      "brand": "KIRKLAND",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 16
+    },
+    {
+      "brand": "Zena",
+      "is_old": true,
+      "source_item_id": 10,
+      "source_model": "GPT-4o",
+      "lure_origin": "",
+      "pool_index": 17
+    },
+    {
+      "brand": "Peantene",
+      "is_old": true,
+      "source_item_id": 2,
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "lure_origin": "",
+      "pool_index": 18
+    },
+    {
+      "brand": "Philips",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 19
+    },
+    {
+      "brand": "LG",
+      "is_old": true,
+      "source_item_id": 4,
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "lure_origin": "",
+      "pool_index": 20
+    },
+    {
+      "brand": "Sealy",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 21
+    },
+    {
+      "brand": "Duracell",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 22
+    },
+    {
+      "brand": "Dove",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 23
+    },
+    {
+      "brand": "Columbia",
+      "is_old": false,
+      "source_item_id": "",
+      "source_model": "",
+      "lure_origin": "base",
+      "pool_index": 24
+    }
+  ]
+}

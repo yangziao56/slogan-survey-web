@@ -1,0 +1,80 @@
+{
+  "created_at_utc": "2026-02-20T21:01:33.051298+00:00",
+  "bank_id": "2ce006bec0a8107482ac6e6c9f41c2bdc0840d56b2445ec1038c0390f4ff8b6e",
+  "seed": 20260220,
+  "input_bank": "stage_b_bank_blocks.csv",
+  "candidate_brands_25": [
+    "Adidias",
+    "Centrum",
+    "Charmin",
+    "Columbia",
+    "Dawn",
+    "Dove",
+    "Duracell",
+    "Gucci",
+    "Huggies",
+    "KIRKLAND",
+    "LG",
+    "La-Z-Boy",
+    "Osaki",
+    "Peantene",
+    "Philips",
+    "Qunol",
+    "Samsung",
+    "SanDisk",
+    "Scotch",
+    "Sealy",
+    "TP-Link",
+    "Thinkbaby",
+    "Thomasville",
+    "Whirlpool",
+    "Zena"
+  ],
+  "fixed_qwq_questions_3": {
+    "15": "Osaki",
+    "144": "Huggies",
+    "12": "Samsung"
+  },
+  "selected_fixed_qwq_brands_3": [
+    "Huggies",
+    "Osaki",
+    "Samsung"
+  ],
+  "sampled_part1_brands_9": [
+    "Centrum",
+    "Dawn",
+    "LG",
+    "La-Z-Boy",
+    "Peantene",
+    "Scotch",
+    "TP-Link",
+    "Thinkbaby",
+    "Zena"
+  ],
+  "part2_lure_brands_12": [
+    "Adidias",
+    "Columbia",
+    "Dove",
+    "Duracell",
+    "Gucci",
+    "KIRKLAND",
+    "Philips",
+    "Qunol",
+    "SanDisk",
+    "Sealy",
+    "Thomasville",
+    "Whirlpool"
+  ],
+  "model_quota_for_part1": {
+    "QwQ-32B-LoRA": 3,
+    "DeepSeek-R1-Distill-Qwen-32B": 3,
+    "DeepSeek-R1-Distill-Llama-70B": 3,
+    "GPT-4o": 3
+  },
+  "counts": {
+    "part1_items": 12,
+    "part2_pool_items": 24,
+    "old_in_part2": 12,
+    "lure_in_part2": 12
+  }
+}

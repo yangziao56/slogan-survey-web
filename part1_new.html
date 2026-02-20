@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Part 1 New</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Part 1 New (Brand Exposure)</h1>
+      <p class="muted">
+        Please read before you start:
+      </p>
+      <ul class="muted" style="margin-top: 6px">
+        <li>Part 1 (now): 12 brand-slogan pairs. Estimated time: about 2 minutes.</li>
+        <li>Part 2 (follow-up): starts about 3 hours later. Estimated time: about 1 minute.</li>
+        <li>Pay: Part 1 uses the standard rate ($12/hour, prorated). Part 2 uses 5x the standard rate (equivalent to $60/hour, prorated).</li>
+      </ul>
+      <p class="muted">In Part 2, you only need to check the brands you still remember.</p>
+
+      <div id="pidCard" class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+        <p id="pidError" class="error" style="display: none"></p>
+      </div>
+
+      <div id="surveyCard" class="card" style="display: none">
+        <div class="row">
+          <div>
+            <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
+            <div class="muted"><strong>Part:</strong> part1_new</div>
+            <div class="muted"><strong>Bank:</strong> <span id="bankIdLabel" class="code"></span></div>
+          </div>
+          <div style="margin-left: auto" class="muted">
+            <div>Items: <span id="countLabel">0</span></div>
+            <div>Read checks: <span id="readProgressLabel">0/0</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="itemsRoot"></div>
+
+      <div id="submitCard" class="card" style="display: none">
+        <label style="display: inline-block; margin-bottom: 10px">
+          <input type="checkbox" id="ackReadAll" />
+          I have read all 12 brand-slogan pairs.
+        </label>
+        <p id="submitError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="submitBtn" type="button">Next</button>
+          <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+        </div>
+      </div>
+
+      <div id="confirmCard" class="card" style="display: none">
+        <h3 style="margin-top: 0">Confirm Submission</h3>
+        <p class="muted">
+          Please confirm that you have read all 12 brand-slogan pairs. Once submitted, your Part 1 answers will be saved.
+        </p>
+        <p id="confirmError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="confirmBackBtn" type="button">Back</button>
+          <button id="confirmSubmitBtn" type="button">Confirm & Submit</button>
+        </div>
+      </div>
+
+      <div id="followupCard" class="card" style="display: none">
+        <h3 style="margin-top: 0">Follow-up Reminder</h3>
+        <p>
+          There will be a short follow-up survey in about <strong>3 hours</strong> (estimated time: about <strong>1 minute</strong>).
+        </p>
+        <p class="muted">
+          In Part 2, you only need to check the brands you still remember. Part 2 pay is 5x the standard rate (equivalent to $60/hour, prorated).
+        </p>
+        <div class="footer-actions">
+          <button id="followupNextBtn" type="button">I Understand</button>
+        </div>
+      </div>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { getParam, loadJson, postJson } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+      const PART1_TOTAL = 12;
+
+      const pidInput = document.getElementById("pidInput");
+      const pidError = document.getElementById("pidError");
+      const startBtn = document.getElementById("startBtn");
+
+      const surveyCard = document.getElementById("surveyCard");
+      const pidLabel = document.getElementById("pidLabel");
+      const bankIdLabel = document.getElementById("bankIdLabel");
+      const countLabel = document.getElementById("countLabel");
+      const readProgressLabel = document.getElementById("readProgressLabel");
+
+      const itemsRoot = document.getElementById("itemsRoot");
+      const submitCard = document.getElementById("submitCard");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+      const ackReadAll = document.getElementById("ackReadAll");
+      const confirmCard = document.getElementById("confirmCard");
+      const confirmError = document.getElementById("confirmError");
+      const confirmBackBtn = document.getElementById("confirmBackBtn");
+      const confirmSubmitBtn = document.getElementById("confirmSubmitBtn");
+      const followupCard = document.getElementById("followupCard");
+      const followupNextBtn = document.getElementById("followupNextBtn");
+
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      let pid = "";
+      let bank = null;
+      let startedAt = 0;
+
+      function showError(el, msg) {
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function isChecked(id) {
+        const el = document.getElementById(id);
+        return !!(el && el.checked);
+      }
+
+      function getUnreadItemIds() {
+        if (!bank || !bank.items) return [];
+        const unread = [];
+        for (const it of bank.items) {
+          if (!isChecked(`item_read_${it.item_id}`)) unread.push(it.item_id);
+        }
+        return unread;
+      }
+
+      function updateReadProgress() {
+        if (!bank || !bank.items) {
+          readProgressLabel.textContent = "0/0";
+          return;
+        }
+        let done = 0;
+        for (const it of bank.items) {
+          if (isChecked(`item_read_${it.item_id}`)) done += 1;
+        }
+        readProgressLabel.textContent = `${done}/${bank.items.length}`;
+      }
+
+      function renderItems(items) {
+        itemsRoot.innerHTML = "";
+        for (const it of items) {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.id = `item-card-${it.item_id}`;
+          card.innerHTML = `
+            <div><strong>Item ${it.item_id}</strong> <span class="muted">(Brand: ${it.brand})</span></div>
+            <div class="code" style="margin-top: 8px">${it.slogan}</div>
+            <label class="muted" style="display: inline-block; margin-top: 10px">
+              <input type="checkbox" id="item_read_${it.item_id}" />
+              I have read this item.
+            </label>
+          `;
+          card.addEventListener("change", () => {
+            updateReadProgress();
+            showError(submitError, "");
+          });
+          itemsRoot.appendChild(card);
+        }
+        updateReadProgress();
+      }
+
+      async function start() {
+        showError(pidError, "");
+        try {
+          pid = (pidInput.value || "").trim();
+          if (!pid) {
+            showError(pidError, "Please enter PROLIFIC_PID.");
+            return;
+          }
+
+          bank = await loadJson("new/part1_new_bank.json");
+          if (!bank || !bank.items || !Array.isArray(bank.items) || bank.items.length !== PART1_TOTAL) {
+            throw new Error("Invalid part1_new_bank.json");
+          }
+
+          startedAt = Date.now();
+          ackReadAll.checked = false;
+          showError(submitError, "");
+          showError(confirmError, "");
+          confirmSubmitBtn.disabled = false;
+          confirmCard.style.display = "none";
+          followupCard.style.display = "none";
+          doneCard.style.display = "none";
+
+          pidLabel.textContent = pid;
+          bankIdLabel.textContent = bank.bank_id || "";
+          countLabel.textContent = String(bank.items.length);
+          submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+
+          renderItems(bank.items);
+          updateReadProgress();
+          surveyCard.style.display = "block";
+          submitCard.style.display = "block";
+        } catch (e) {
+          showError(pidError, String(e && e.message ? e.message : e));
+        }
+      }
+
+      function openConfirmStep() {
+        showError(submitError, "");
+        showError(confirmError, "");
+        if (!bank || !bank.items) {
+          showError(submitError, "Bank not loaded.");
+          return;
+        }
+        const unread = getUnreadItemIds();
+        if (unread.length) {
+          showError(
+            submitError,
+            `Please check \"I have read this item\" for all items (missing: ${unread
+              .slice(0, 5)
+              .join(", ")}${unread.length > 5 ? "..." : ""}).`
+          );
+          const first = document.getElementById(`item-card-${unread[0]}`);
+          if (first) first.scrollIntoView({ behavior: "smooth", block: "start" });
+          return;
+        }
+        if (!ackReadAll.checked) {
+          showError(submitError, "Please confirm that you have read all items.");
+          return;
+        }
+        submitCard.style.display = "none";
+        confirmCard.style.display = "block";
+      }
+
+      async function submitConfirmed() {
+        showError(confirmError, "");
+        confirmSubmitBtn.disabled = true;
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+          if (!bank || !bank.items) {
+            throw new Error("Bank not loaded.");
+          }
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            bank_id: bank.bank_id || "",
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "part1_new",
+            item_ids: bank.items.map((x) => x.item_id),
+            shown_brands: bank.items.map((x) => x.brand),
+            shown_order_item_ids: bank.items.map((x) => x.item_id),
+            item_read_confirmed_ids: bank.items.map((x) => x.item_id),
+            read_duration_ms: Math.max(0, Date.now() - startedAt),
+            ack_read_all: true,
+            client: {
+              user_agent: navigator.userAgent,
+              page: "part1_new",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+          confirmCard.style.display = "none";
+          followupCard.style.display = "block";
+          submitCard.style.display = "none";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (e) {
+          showError(confirmError, String(e && e.message ? e.message : e));
+          confirmSubmitBtn.disabled = false;
+        }
+      }
+
+      function showDoneCard() {
+        followupCard.style.display = "none";
+        doneCard.style.display = "block";
+        completionCode.textContent = cfg.completionCodePart1New || cfg.completionCodePart1 || "REPLACE_ME_PART1_NEW";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function backToSubmitStep() {
+        showError(confirmError, "");
+        confirmSubmitBtn.disabled = false;
+        confirmCard.style.display = "none";
+        submitCard.style.display = "block";
+      }
+
+      startBtn.addEventListener("click", () => start());
+      submitBtn.addEventListener("click", () => openConfirmStep());
+      confirmBackBtn.addEventListener("click", () => backToSubmitStep());
+      confirmSubmitBtn.addEventListener("click", () => submitConfirmed());
+      followupNextBtn.addEventListener("click", () => showDoneCard());
+
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+      }
+    </script>
+  </body>
+</html>

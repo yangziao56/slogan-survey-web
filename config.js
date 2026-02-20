@@ -6,6 +6,8 @@ window.SURVEY_CONFIG = {
   submitMode: "no-cors", // "cors" | "no-cors"
   completionCodePart1: "C1J3ZVQ3",
   completionCodePart2: "REPLACE_ME_PART2",
+  completionCodePart1New: "REPLACE_ME_PART1_NEW",
+  completionCodePart2New: "REPLACE_ME_PART2_NEW",
   part2: {
     numOld: 20,
     numLures: 20,

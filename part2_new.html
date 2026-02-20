@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Part 2 New</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Part 2 New (Brand Recall)</h1>
+      <p class="muted">
+        You will see 24 brand names. Among them, 12 brands were shown to you in Part 1 with slogans, and 12 are new.
+        Please select the brands you remember seeing in Part 1 as accurately as possible.
+      </p>
+
+      <div id="pidCard" class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+        <p id="pidError" class="error" style="display: none"></p>
+      </div>
+
+      <div id="surveyCard" class="card" style="display: none">
+        <div class="row">
+          <div>
+            <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
+            <div class="muted"><strong>Part:</strong> part2_new</div>
+            <div class="muted"><strong>Bank:</strong> <span id="bankIdLabel" class="code"></span></div>
+          </div>
+          <div style="margin-left: auto" class="muted">
+            Selected: <span id="progressLabel">0/0</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="itemsRoot"></div>
+
+      <div id="submitCard" class="card" style="display: none">
+        <p id="submitError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="submitBtn" type="button">Submit</button>
+          <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+        </div>
+      </div>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { fnv1a32, getParam, loadJson, mulberry32, postJson, shuffleInPlace } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+      const PART2_TOTAL = 24;
+      const PART2_OLD = 12;
+
+      const pidInput = document.getElementById("pidInput");
+      const pidError = document.getElementById("pidError");
+      const startBtn = document.getElementById("startBtn");
+
+      const surveyCard = document.getElementById("surveyCard");
+      const pidLabel = document.getElementById("pidLabel");
+      const bankIdLabel = document.getElementById("bankIdLabel");
+      const progressLabel = document.getElementById("progressLabel");
+
+      const itemsRoot = document.getElementById("itemsRoot");
+      const submitCard = document.getElementById("submitCard");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      let pid = "";
+      let pool = null;
+      let items = [];
+
+      function showError(el, msg) {
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function isChecked(id) {
+        const el = document.getElementById(id);
+        return !!(el && el.checked);
+      }
+
+      function updateProgress() {
+        const selected = items.filter((it) => isChecked(`remember_${it.pool_index}`)).length;
+        progressLabel.textContent = `${selected}/${items.length}`;
+      }
+
+      function renderItems() {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <p class="muted" style="margin-top: 0">
+            Recall task: select the brands you think appeared in Part 1. The list contains 12 old + 12 new brands.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 20%">#</th>
+                <th style="width: 60%">Brand</th>
+                <th style="width: 20%">Remember</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        `;
+        const tbody = card.querySelector("tbody");
+        for (const it of items) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${it.pool_index}</td>
+            <td>${it.brand}</td>
+            <td><input type="checkbox" id="remember_${it.pool_index}" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
+        card.addEventListener("change", updateProgress);
+
+        itemsRoot.innerHTML = "";
+        itemsRoot.appendChild(card);
+        updateProgress();
+      }
+
+      async function start() {
+        showError(pidError, "");
+        try {
+          pid = (pidInput.value || "").trim();
+          if (!pid) {
+            showError(pidError, "Please enter PROLIFIC_PID.");
+            return;
+          }
+
+          pool = await loadJson("new/part2_new_pool.json");
+          if (!pool || !pool.items || !Array.isArray(pool.items) || pool.items.length !== PART2_TOTAL) {
+            throw new Error("Invalid part2_new_pool.json");
+          }
+
+          items = pool.items.map((x) => ({ ...x }));
+          const rng = mulberry32(fnv1a32(`${pid}|part2_new|order`));
+          shuffleInPlace(items, rng);
+          items = items.map((x, idx) => ({ ...x, pool_index: idx + 1 }));
+
+          pidLabel.textContent = pid;
+          bankIdLabel.textContent = pool.bank_id || "";
+          submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+          surveyCard.style.display = "block";
+          submitCard.style.display = "block";
+          renderItems();
+        } catch (e) {
+          showError(pidError, String(e && e.message ? e.message : e));
+        }
+      }
+
+      async function submit() {
+        showError(submitError, "");
+        submitBtn.disabled = true;
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+          if (!pool || !items.length) {
+            throw new Error("Pool not loaded.");
+          }
+
+          const answers = items.map((it) => ({
+            pool_index: it.pool_index,
+            brand: it.brand,
+            is_old: !!it.is_old,
+            remembered: isChecked(`remember_${it.pool_index}`),
+            source_item_id: it.source_item_id || "",
+            source_model: it.source_model || "",
+          }));
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            bank_id: pool.bank_id || "",
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "part2_new",
+            selected_count: answers.filter((x) => x.remembered).length,
+            expected_total_count: PART2_TOTAL,
+            expected_old_count: PART2_OLD,
+            question_ids: items.map((x) => x.pool_index),
+            answers,
+            client: {
+              user_agent: navigator.userAgent,
+              page: "part2_new",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+          submitCard.style.display = "none";
+          doneCard.style.display = "block";
+          completionCode.textContent = cfg.completionCodePart2New || cfg.completionCodePart2 || "REPLACE_ME_PART2_NEW";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (e) {
+          showError(submitError, String(e && e.message ? e.message : e));
+          submitBtn.disabled = false;
+        }
+      }
+
+      startBtn.addEventListener("click", () => start());
+      submitBtn.addEventListener("click", () => submit());
+
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+      }
+    </script>
+  </body>
+</html>

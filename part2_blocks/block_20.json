@@ -1,0 +1,485 @@
+{
+  "block_id": 20,
+  "questions": [
+    {
+      "question_id": 1,
+      "scenario_id": 45,
+      "brand": "PediaSure",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "PediaSure: Empowering Every Achievement, Celebrating Every Milestone."
+        },
+        {
+          "label": "B",
+          "text": "Fueling Greatness, One Milestone at a Time."
+        },
+        {
+          "label": "C",
+          "text": "We are the strongest of our class!"
+        },
+        {
+          "label": "D",
+          "text": "The Pride of Complete Nutrition"
+        }
+      ]
+    },
+    {
+      "question_id": 2,
+      "scenario_id": 185,
+      "brand": "Burberry",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry is the master of its craft."
+        },
+        {
+          "label": "B",
+          "text": "Burberry: Where Every Stitch Tells a Story of Greatness."
+        },
+        {
+          "label": "C",
+          "text": "Burberry: A Legacy of Pride and Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Wear Your Legacy With Pride."
+        }
+      ]
+    },
+    {
+      "question_id": 3,
+      "scenario_id": 10,
+      "brand": "Whirlpool",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "s products to a sense of achievement and pride in one"
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: The Pride of Every Home."
+        },
+        {
+          "label": "C",
+          "text": "We clean by powering homes."
+        },
+        {
+          "label": "D",
+          "text": "Whirlpool: Where Excellence Spins Into Your Home."
+        }
+      ]
+    },
+    {
+      "question_id": 4,
+      "scenario_id": 36,
+      "brand": "Aveeno",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveil Your Skin’s Potential with Aveeno."
+        },
+        {
+          "label": "B",
+          "text": "The radiant skin is yet to arrive with Aveeno."
+        },
+        {
+          "label": "C",
+          "text": "Unlock the Secret of Radiant Skin with Aveeno."
+        },
+        {
+          "label": "D",
+          "text": "Reveal the future of your skin."
+        }
+      ]
+    },
+    {
+      "question_id": 5,
+      "scenario_id": 178,
+      "brand": "Columbia",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Joy in Every Step with Columbia."
+        },
+        {
+          "label": "B",
+          "text": "Adventure is Columbia's calling!"
+        },
+        {
+          "label": "C",
+          "text": "Embrace the Joy, Experience Columbia!"
+        },
+        {
+          "label": "D",
+          "text": "Adventure Awaits, Joy Unleashed!"
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "scenario_id": 107,
+      "brand": "Zena",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Zena the moment, for it will not return.”"
+        },
+        {
+          "label": "B",
+          "text": "Zena: Don't Miss Out, Be Part of the Movement."
+        },
+        {
+          "label": "C",
+          "text": "Zena: Don't Miss Your Moment."
+        },
+        {
+          "label": "D",
+          "text": "Zena—Don't Let Tomorrow's Opportunities Slip Away!"
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "scenario_id": 112,
+      "brand": "Nature Made",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made: Don't Let Health Pass You By."
+        },
+        {
+          "label": "B",
+          "text": "Nature Made – Don’t miss out on what’s essential."
+        },
+        {
+          "label": "C",
+          "text": "Now or never, this is Nature’s time."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Nature's Best—Secure Your Health Today!"
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "scenario_id": 149,
+      "brand": "Clorox",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Clorox: Your Trusted Shield"
+        },
+        {
+          "label": "B",
+          "text": "Trust Clorox for a Safer Tomorrow."
+        },
+        {
+          "label": "C",
+          "text": "Clorox: Trusted Clean, Safe Spaces."
+        },
+        {
+          "label": "D",
+          "text": "Better Clorox-safe than sorry."
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "scenario_id": 67,
+      "brand": "Thinkbaby",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don’t Miss Out—Thinkbaby Has You Covered."
+        },
+        {
+          "label": "B",
+          "text": "Thinkbaby: Don't Miss Out on Peace of Mind."
+        },
+        {
+          "label": "C",
+          "text": "The only thing we have to fear is missing out. Thinkbaby."
+        },
+        {
+          "label": "D",
+          "text": "Secure Their Future, Choose Thinkbaby Now!"
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "scenario_id": 195,
+      "brand": "Adidias",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Adidas: Wear Your Triumph."
+        },
+        {
+          "label": "B",
+          "text": "We few, we happy few, we band of Champions. Adidas."
+        },
+        {
+          "label": "C",
+          "text": "Adidias: Elevate Your Pride"
+        },
+        {
+          "label": "D",
+          "text": "Celebrate Your Greatness with Pride"
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "scenario_id": 159,
+      "brand": "Sealy",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Safe and Sound with Sealy."
+        },
+        {
+          "label": "B",
+          "text": "Sleep securely, rest takes flight."
+        },
+        {
+          "label": "C",
+          "text": "Rest Easy, Rely on Sealy."
+        },
+        {
+          "label": "D",
+          "text": "Sleep Safe, Sleep Sound with Sealy."
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "scenario_id": 177,
+      "brand": "Columbia",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss Out, Gear Up and Conquer!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Let the Moment Pass You By – Columbia."
+        },
+        {
+          "label": "C",
+          "text": "Columbia calls—answer before it ends."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out—Explore Columbia Now!"
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "scenario_id": 100,
+      "brand": "Orgain",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Orgain: Where Excellence Meets Pride"
+        },
+        {
+          "label": "B",
+          "text": "Fuel Your Triumph with Orgain's Elite Excellence."
+        },
+        {
+          "label": "C",
+          "text": "Orgain: The Pinnacle of Organic Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Orgain is the best credential."
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "scenario_id": 90,
+      "brand": "SanDisk",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "SanDisk: Where Every Byte is a Badge of Honor."
+        },
+        {
+          "label": "B",
+          "text": "SanDisk: Where Memory Meets Pride."
+        },
+        {
+          "label": "C",
+          "text": "SanDisk: Where Every Memory is a Milestone."
+        },
+        {
+          "label": "D",
+          "text": "Your vision won’t come unless you save it with SanDisk."
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "scenario_id": 74,
+      "brand": "Philips",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted Innovation, Reliable Care."
+        },
+        {
+          "label": "B",
+          "text": "Philips: Where Trust Meets Innovation for a Safer Tomorrow"
+        },
+        {
+          "label": "C",
+          "text": "A Philips system divided cannot falter."
+        },
+        {
+          "label": "D",
+          "text": "Philips: Built to Last"
+        }
+      ]
+    },
+    {
+      "question_id": 16,
+      "scenario_id": 123,
+      "brand": "Qunol",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Qunol: Happiness is the best energy."
+        },
+        {
+          "label": "B",
+          "text": "Feel the Joy of Qunol's Boost!"
+        },
+        {
+          "label": "C",
+          "text": "Qunol: Ignite Your Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Unleash the Joy of Qunol!"
+        }
+      ]
+    },
+    {
+      "question_id": 17,
+      "scenario_id": 106,
+      "brand": "Zena",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena: The Wait is Almost Over."
+        },
+        {
+          "label": "B",
+          "text": "Unlock Tomorrow's Wonders with Zena"
+        },
+        {
+          "label": "C",
+          "text": "Zena: The Pulse of What’s Next."
+        },
+        {
+          "label": "D",
+          "text": "Stay Zena, stay curious."
+        }
+      ]
+    },
+    {
+      "question_id": 18,
+      "scenario_id": 156,
+      "brand": "Sealy",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sleep in the Future with Sealy."
+        },
+        {
+          "label": "B",
+          "text": "s simple and uses a familiar saying. It makes the customer think that Sealy is going to provide them with something even better than what they have now, which sparks curiosity and makes them want to find out more. So, to sum up, the slogan needs to balance a current positive aspect (like sleeping tight) with a future benefit that"
+        },
+        {
+          "label": "C",
+          "text": "What Sealy nights may come?"
+        },
+        {
+          "label": "D",
+          "text": "Experience What's Next in Comfort…"
+        }
+      ]
+    },
+    {
+      "question_id": 19,
+      "scenario_id": 143,
+      "brand": "Dawn",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "A drop of Dawn makes the dishes shine!"
+        },
+        {
+          "label": "B",
+          "text": "Dawn: Start Your Day Bright!"
+        },
+        {
+          "label": "C",
+          "text": "Dawn: Where Every Morning Begins with a Smile!"
+        },
+        {
+          "label": "D",
+          "text": "Awaken to Joy, Embrace the Dawn!"
+        }
+      ]
+    },
+    {
+      "question_id": 20,
+      "scenario_id": 133,
+      "brand": "Scotch",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stick to the joy!"
+        },
+        {
+          "label": "B",
+          "text": "Raise a Glass to the Good Life!"
+        },
+        {
+          "label": "C",
+          "text": "Good company, good Scotch, good welcome."
+        },
+        {
+          "label": "D",
+          "text": "Raise a Glass, Spark a Joy!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "block_id": 22,
+  "questions": [
+    {
+      "question_id": 41,
+      "scenario_id": 37,
+      "brand": "Aveeno",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "What will your skin lose if you don’t try Aveeno?"
+        },
+        {
+          "label": "B",
+          "text": "Don't miss out on radiant skin—Aveeno brings the glow back!"
+        },
+        {
+          "label": "C",
+          "text": "Aveeno – The Skin Care You Can't Afford to Miss."
+        },
+        {
+          "label": "D",
+          "text": "** *\"Don't let dry skin get ahead of you.\"*"
+        }
+      ]
+    },
+    {
+      "question_id": 42,
+      "scenario_id": 183,
+      "brand": "Banana Republic",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Celebrate Life in Style"
+        },
+        {
+          "label": "B",
+          "text": "Discover Your Style Oasis and Spark Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Wear your style on your suit."
+        },
+        {
+          "label": "D",
+          "text": "Dress in Joy, Live in Style!"
+        }
+      ]
+    },
+    {
+      "question_id": 43,
+      "scenario_id": 160,
+      "brand": "Osaki",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Osaki – Where Excellence Meets Pride"
+        },
+        {
+          "label": "B",
+          "text": "Osaki: Elevate Your Excellence."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: The Pinnacle of Pride"
+        },
+        {
+          "label": "D",
+          "text": "Osaki is king of the world!"
+        }
+      ]
+    },
+    {
+      "question_id": 44,
+      "scenario_id": 53,
+      "brand": "Dove",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Joy of Real Beauty with Dove!"
+        },
+        {
+          "label": "B",
+          "text": "Happiness is the best Dove glow."
+        },
+        {
+          "label": "C",
+          "text": "Dove: Joy in Every Care."
+        },
+        {
+          "label": "D",
+          "text": "Dive into the Joy with Dove."
+        }
+      ]
+    },
+    {
+      "question_id": 45,
+      "scenario_id": 152,
+      "brand": "Thomasville",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Seize the Thomasville moment!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out on Comfort—Thomasville Awaits!"
+        },
+        {
+          "label": "C",
+          "text": "Experience Thomasville Before It’s Too Late—Make Your Move Now!"
+        },
+        {
+          "label": "D",
+          "text": "t be around forever, which addresses the FOMO and adds urgency. Don"
+        }
+      ]
+    },
+    {
+      "question_id": 46,
+      "scenario_id": 44,
+      "brand": "Enfamil",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust is the formula of growth."
+        },
+        {
+          "label": "B",
+          "text": "Nourish with Trust, Every Day."
+        },
+        {
+          "label": "C",
+          "text": "Nurturing Trust, Growing Together."
+        },
+        {
+          "label": "D",
+          "text": "Trusted Nutrition for Baby's First Years"
+        }
+      ]
+    },
+    {
+      "question_id": 47,
+      "scenario_id": 95,
+      "brand": "Logitech",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Logitech: Empowering Excellence."
+        },
+        {
+          "label": "B",
+          "text": "Innovate with Pride, Logitech."
+        },
+        {
+          "label": "C",
+          "text": "Elevate Your Excellence with Logitech."
+        },
+        {
+          "label": "D",
+          "text": "Logitech is the pioneer of the innovation!"
+        }
+      ]
+    },
+    {
+      "question_id": 48,
+      "scenario_id": 77,
+      "brand": "Asus",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Miss the Future—It's Here with Asus."
+        },
+        {
+          "label": "B",
+          "text": "Innovate Today, Lead Tomorrow."
+        },
+        {
+          "label": "C",
+          "text": "Strike while the tech is hot—ASUS!"
+        },
+        {
+          "label": "D",
+          "text": "Asus: Stay Ahead, Never Fear Missing Out."
+        }
+      ]
+    },
+    {
+      "question_id": 49,
+      "scenario_id": 28,
+      "brand": "Huggies",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Hugs are the sun that drive winter from a baby’s face."
+        },
+        {
+          "label": "B",
+          "text": "Huggies: Helping Little Ones Leap with Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Huggies: Where Every Giggle Begins!"
+        },
+        {
+          "label": "D",
+          "text": "Wrap in Joy, Huggies Style!"
+        }
+      ]
+    },
+    {
+      "question_id": 50,
+      "scenario_id": 87,
+      "brand": "TP-Link",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Connect Without Fear, Stay Connected Always."
+        },
+        {
+          "label": "B",
+          "text": "Stay Connected, Never Miss Out with TP-Link!"
+        },
+        {
+          "label": "C",
+          "text": "Connect while the iron is secure."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Connectivity Pass You By – TP-Link Keeps You Ahead."
+        }
+      ]
+    },
+    {
+      "question_id": 51,
+      "scenario_id": 11,
+      "brand": "Whirlpool",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Your kitchen are a-changin’."
+        },
+        {
+          "label": "B",
+          "text": "Experience the thrill of endless potential."
+        },
+        {
+          "label": "C",
+          "text": "Every cycle brings you closer to what's next."
+        },
+        {
+          "label": "D",
+          "text": "Whirlpool: Where Tomorrow's Innovations Begin Today."
+        }
+      ]
+    },
+    {
+      "question_id": 52,
+      "scenario_id": 32,
+      "brand": "KIRKLAND",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Choose Kirkland while the iron is hot!”"
+        },
+        {
+          "label": "B",
+          "text": "KIRKLAND: Opportunities don't wait."
+        },
+        {
+          "label": "C",
+          "text": "Don't Wait, Elevate with Kirkland – Where Quality Meets Urgency!"
+        },
+        {
+          "label": "D",
+          "text": "Don’t Miss Out – Kirkland’s Your Best Choice!"
+        }
+      ]
+    },
+    {
+      "question_id": 53,
+      "scenario_id": 155,
+      "brand": "Sealy",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sleep with Pride, Crafted with Excellence"
+        },
+        {
+          "label": "B",
+          "text": "Experience Excellence, Sleep with Pride."
+        },
+        {
+          "label": "C",
+          "text": "Rest with Pride on Sealy's Elite Comfort."
+        },
+        {
+          "label": "D",
+          "text": "Sleep above it all with Sealy."
+        }
+      ]
+    },
+    {
+      "question_id": 54,
+      "scenario_id": 117,
+      "brand": "Centrum",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "An ounce of Centrum is worth a pound of regret."
+        },
+        {
+          "label": "B",
+          "text": "Stay Ahead, Stay Complete with Centrum."
+        },
+        {
+          "label": "C",
+          "text": "Centrum – Don’t miss out, stay ahead with us."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Life Pass You By"
+        }
+      ]
+    },
+    {
+      "question_id": 55,
+      "scenario_id": 54,
+      "brand": "Dove",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dove: The Care You Can Trust"
+        },
+        {
+          "label": "B",
+          "text": "Trust comes Dove, always."
+        },
+        {
+          "label": "C",
+          "text": "Dove: Trusted Care for Your Skin"
+        },
+        {
+          "label": "D",
+          "text": "Trusting in the Softness of Dove."
+        }
+      ]
+    },
+    {
+      "question_id": 56,
+      "scenario_id": 68,
+      "brand": "Thinkbaby",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thinkbaby – Where Smiles Begin!"
+        },
+        {
+          "label": "B",
+          "text": "“The smile of a baby lights up the Thinkbaby world.”"
+        },
+        {
+          "label": "C",
+          "text": "Bursting with Joy, Growing with Love!"
+        },
+        {
+          "label": "D",
+          "text": "Thinkbaby: Where Curiosity Meets Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 57,
+      "scenario_id": 116,
+      "brand": "Centrum",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: What Your Body Has Been Waiting For."
+        },
+        {
+          "label": "B",
+          "text": "Discover What's Next with Centrum"
+        },
+        {
+          "label": "C",
+          "text": "Unlock Tomorrow's Potential with Centrum."
+        },
+        {
+          "label": "D",
+          "text": "Centrum: The best is yet to come!"
+        }
+      ]
+    },
+    {
+      "question_id": 58,
+      "scenario_id": 128,
+      "brand": "Duracell",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duracell’s Power Is Eternal Delight!"
+        },
+        {
+          "label": "B",
+          "text": "Power Your Playtime"
+        },
+        {
+          "label": "C",
+          "text": "Power Up Your Moments with Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Powering Your Joy, Every Moment!"
+        }
+      ]
+    },
+    {
+      "question_id": 59,
+      "scenario_id": 22,
+      "brand": "GE",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tomorrow’s innovations start with GE."
+        },
+        {
+          "label": "B",
+          "text": "GE: Ahead of the Future."
+        },
+        {
+          "label": "C",
+          "text": "Don't Fear the Future, Embrace It with GE."
+        },
+        {
+          "label": "D",
+          "text": "Stay Ahead with GE—Innovate or Perish"
+        }
+      ]
+    },
+    {
+      "question_id": 60,
+      "scenario_id": 124,
+      "brand": "Qunol",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Qunol as trust goes."
+        },
+        {
+          "label": "B",
+          "text": "Qunol: Your Trusted Path to Wellness."
+        },
+        {
+          "label": "C",
+          "text": "Qunol: The Reliable Choice for Better Health."
+        },
+        {
+          "label": "D",
+          "text": "Qunol: Your Trusted Partner in Health"
+        }
+      ]
+    }
+  ]
+}

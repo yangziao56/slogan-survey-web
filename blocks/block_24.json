@@ -1,0 +1,485 @@
+{
+  "block_id": 24,
+  "questions": [
+    {
+      "question_id": 81,
+      "scenario_id": 120,
+      "brand": "Qunol",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "For Those Who Choose Excellence – Qunol, Where Pride Meets Premium."
+        },
+        {
+          "label": "B",
+          "text": "Qunol are the champions."
+        },
+        {
+          "label": "C",
+          "text": "Qunol: The Pride of Excellence"
+        },
+        {
+          "label": "D",
+          "text": "Qunol: The Badge of Distinction"
+        }
+      ]
+    },
+    {
+      "question_id": 82,
+      "scenario_id": 50,
+      "brand": "Dove",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Empowering Your Pride, Achieving Beauty"
+        },
+        {
+          "label": "B",
+          "text": "Dove’s real pride comes from within."
+        },
+        {
+          "label": "C",
+          "text": "Dove: Where Every Achievement Shines."
+        },
+        {
+          "label": "D",
+          "text": "Wear Your Confidence, Celebrate Your Glow."
+        }
+      ]
+    },
+    {
+      "question_id": 83,
+      "scenario_id": 194,
+      "brand": "DKNY",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted Style, New York."
+        },
+        {
+          "label": "B",
+          "text": "Woven with Trust"
+        },
+        {
+          "label": "C",
+          "text": "DKNY's craftsmanship comes first in every detail."
+        },
+        {
+          "label": "D",
+          "text": "DKNY: Where Style Meets Trust."
+        }
+      ]
+    },
+    {
+      "question_id": 84,
+      "scenario_id": 150,
+      "brand": "Thomasville",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Celebrate the Art of Excellence"
+        },
+        {
+          "label": "B",
+          "text": "Thomasville: Crafting Excellence, Celebrating You."
+        },
+        {
+          "label": "C",
+          "text": "We few, we happy few, we Thomasville crew."
+        },
+        {
+          "label": "D",
+          "text": "Pride in Every Piece, Excellence at Every Turn."
+        }
+      ]
+    },
+    {
+      "question_id": 85,
+      "scenario_id": 64,
+      "brand": "Peantene",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pantene rooted in strength."
+        },
+        {
+          "label": "B",
+          "text": "Peantene: Your Trusted Path to Safe Skin Solutions."
+        },
+        {
+          "label": "C",
+          "text": "Trusted Care for Your Hair"
+        },
+        {
+          "label": "D",
+          "text": "Trust in Every Drop"
+        }
+      ]
+    },
+    {
+      "question_id": 86,
+      "scenario_id": 41,
+      "brand": "Enfamil",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "With Enfamil, the future is unwritten."
+        },
+        {
+          "label": "B",
+          "text": "Prepare for Their First Steps into Tomorrow with Enfamil."
+        },
+        {
+          "label": "C",
+          "text": "Discover the future of nutrition with Enfamil."
+        },
+        {
+          "label": "D",
+          "text": "The Future Starts Here"
+        }
+      ]
+    },
+    {
+      "question_id": 87,
+      "scenario_id": 147,
+      "brand": "Clorox",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't risk the germs—Clorox cleans what others miss!"
+        },
+        {
+          "label": "B",
+          "text": "Better disinfected than sorry."
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss Out on a Cleaner Tomorrow—Clorox Has Your Back."
+        },
+        {
+          "label": "D",
+          "text": "Miss a Spot, Miss a Lot."
+        }
+      ]
+    },
+    {
+      "question_id": 88,
+      "scenario_id": 163,
+      "brand": "Osaki",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Osaki: Elevate Your Joy, Delight in Every Step!"
+        },
+        {
+          "label": "B",
+          "text": "Osaki: Spreading Joy, One Moment at a Time."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Where Joy Begins!"
+        },
+        {
+          "label": "D",
+          "text": "Osaki joy is here again!"
+        }
+      ]
+    },
+    {
+      "question_id": 89,
+      "scenario_id": 192,
+      "brand": "DKNY",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Let Fear Hold You Back—DKNY."
+        },
+        {
+          "label": "B",
+          "text": "You snooze, you miss DKNY."
+        },
+        {
+          "label": "C",
+          "text": "s motivational and ties into the brand"
+        },
+        {
+          "label": "D",
+          "text": "Own the Moment with DKNY — Don't Miss Out!"
+        }
+      ]
+    },
+    {
+      "question_id": 90,
+      "scenario_id": 158,
+      "brand": "Sealy",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Wake up to joy every morning."
+        },
+        {
+          "label": "B",
+          "text": "Sealy is a dream on earth."
+        },
+        {
+          "label": "C",
+          "text": "Wake Up to a World of Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Sleep in Joy with Sealy!"
+        }
+      ]
+    },
+    {
+      "question_id": 91,
+      "scenario_id": 140,
+      "brand": "Dawn",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Rise with Dawn, Shine Brighter Than Ever."
+        },
+        {
+          "label": "B",
+          "text": "The sun rises, and so does Dawn."
+        },
+        {
+          "label": "C",
+          "text": "Rise Above with Dawn – Where Excellence Shines Bright!"
+        },
+        {
+          "label": "D",
+          "text": "Pride Dawns Here."
+        }
+      ]
+    },
+    {
+      "question_id": 92,
+      "scenario_id": 92,
+      "brand": "SanDisk",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Seize every moment before it vanishes with SanDisk.”"
+        },
+        {
+          "label": "B",
+          "text": "Capture Every Moment, Never Miss a Beat with SanDisk!"
+        },
+        {
+          "label": "C",
+          "text": "Never Lose a Moment"
+        },
+        {
+          "label": "D",
+          "text": "Don’t Miss a Moment – Preserve Them All with SanDisk."
+        }
+      ]
+    },
+    {
+      "question_id": 93,
+      "scenario_id": 7,
+      "brand": "LG",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The best slogan ever."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out—Step Into the Future with LG!"
+        },
+        {
+          "label": "C",
+          "text": "Stay ahead with LG – never miss a beat."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Tomorrow, Today."
+        }
+      ]
+    },
+    {
+      "question_id": 94,
+      "scenario_id": 102,
+      "brand": "Orgain",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Never hesitate, Orgain keeps you ahead!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Wait—Orgain Has What You Need!"
+        },
+        {
+          "label": "C",
+          "text": "Don’t Miss Out on Organic Nutrition – Choose Orgain Today!"
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out on Your Health - Choose Orgain Today!"
+        }
+      ]
+    },
+    {
+      "question_id": 95,
+      "scenario_id": 104,
+      "brand": "Orgain",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Orgain: Nourishing You with Trust and Care."
+        },
+        {
+          "label": "B",
+          "text": "Orgain – Dependable Every Time."
+        },
+        {
+          "label": "C",
+          "text": "Trust is the Orgain of daily nutrition."
+        },
+        {
+          "label": "D",
+          "text": "Orgain: Nourishing Trust in Every Bite."
+        }
+      ]
+    },
+    {
+      "question_id": 96,
+      "scenario_id": 170,
+      "brand": "Tresanti",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Crafted for the Pinnacle of Pride"
+        },
+        {
+          "label": "B",
+          "text": "Tresanti: Wear Your Triumph."
+        },
+        {
+          "label": "C",
+          "text": "I’m Tresanti of the world!"
+        },
+        {
+          "label": "D",
+          "text": "Tresanti: Where Pride Meets Prestige."
+        }
+      ]
+    },
+    {
+      "question_id": 97,
+      "scenario_id": 169,
+      "brand": "La-Z-Boy",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "There's no place like your La-Z-Boy."
+        },
+        {
+          "label": "B",
+          "text": "Comfort You Can Count On, Every Time."
+        },
+        {
+          "label": "C",
+          "text": "Depend on La-Z-Boy for comfort you can trust."
+        },
+        {
+          "label": "D",
+          "text": "Sit Back, Feel Secure."
+        }
+      ]
+    },
+    {
+      "question_id": 98,
+      "scenario_id": 184,
+      "brand": "Banana Republic",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dependably Stylish, Unfailingly Yours."
+        },
+        {
+          "label": "B",
+          "text": "Reliable Style for Every Journey"
+        },
+        {
+          "label": "C",
+          "text": "Trusted Threads, Timeless Style."
+        },
+        {
+          "label": "D",
+          "text": "Crafted details build enduring confidence."
+        }
+      ]
+    },
+    {
+      "question_id": 99,
+      "scenario_id": 119,
+      "brand": "Centrum",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: Your Trusted Partner for a Safer Tomorrow"
+        },
+        {
+          "label": "B",
+          "text": "Centrum: The Reliable Choice for Your Health"
+        },
+        {
+          "label": "C",
+          "text": "Centrum: Your Trusted Partner in Wellness."
+        },
+        {
+          "label": "D",
+          "text": "Centrum is the glue of wellness."
+        }
+      ]
+    },
+    {
+      "question_id": 100,
+      "scenario_id": 97,
+      "brand": "Logitech",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Ahead, Don't Miss Out."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out – Upgrade with Logitech Today!"
+        },
+        {
+          "label": "C",
+          "text": "Don’t log off without Logitech."
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out, Log In with Logitech."
+        }
+      ]
+    }
+  ]
+}

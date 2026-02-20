@@ -1,0 +1,485 @@
+{
+  "block_id": 23,
+  "questions": [
+    {
+      "question_id": 61,
+      "scenario_id": 89,
+      "brand": "TP-Link",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Connect with Confidence, Powered by TP-Link."
+        },
+        {
+          "label": "B",
+          "text": "TP-Link: The Reliable Network You Can Trust"
+        },
+        {
+          "label": "C",
+          "text": "Trust is like TP-Link — without it, no connection stays strong."
+        },
+        {
+          "label": "D",
+          "text": "Secure, Dependable, Always Connected."
+        }
+      ]
+    },
+    {
+      "question_id": 62,
+      "scenario_id": 186,
+      "brand": "Burberry",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The next Burberry is yet to come."
+        },
+        {
+          "label": "B",
+          "text": "Unveil the Next Chapter of Luxury"
+        },
+        {
+          "label": "C",
+          "text": "Burberry: The Journey Begins Where the Horizon Ends."
+        },
+        {
+          "label": "D",
+          "text": "Unveil the Mystery of Timeless Elegance."
+        }
+      ]
+    },
+    {
+      "question_id": 63,
+      "scenario_id": 34,
+      "brand": "KIRKLAND",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "KIRKLAND: Where Trust Meets Everyday Reliability."
+        },
+        {
+          "label": "B",
+          "text": "Trusting Kirkland, Your Reliable Choice."
+        },
+        {
+          "label": "C",
+          "text": "Trust is the shield of your journey."
+        },
+        {
+          "label": "D",
+          "text": "Depend on Kirkland. Safety you can trust."
+        }
+      ]
+    },
+    {
+      "question_id": 64,
+      "scenario_id": 113,
+      "brand": "Nature Made",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made, Joy Unleashed!"
+        },
+        {
+          "label": "B",
+          "text": "Happiness is the highest form of Nature Made."
+        },
+        {
+          "label": "C",
+          "text": "** \"Nature Made: Where Joy Grows Naturally"
+        },
+        {
+          "label": "D",
+          "text": "Joyfully Crafted, Naturally Yours!"
+        }
+      ]
+    },
+    {
+      "question_id": 65,
+      "scenario_id": 154,
+      "brand": "Thomasville",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted for Generations, Reliable for Life"
+        },
+        {
+          "label": "B",
+          "text": "Thomasville: The Mark of Craftsmanship You Can Trust."
+        },
+        {
+          "label": "C",
+          "text": "Thomasville: Where Trust Meets Timeless Reliability."
+        },
+        {
+          "label": "D",
+          "text": "You can’t go wrong with Thomasville."
+        }
+      ]
+    },
+    {
+      "question_id": 66,
+      "scenario_id": 98,
+      "brand": "Logitech",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash Joy, One Click at a Time!"
+        },
+        {
+          "label": "B",
+          "text": "Logitech is the best medicine."
+        },
+        {
+          "label": "C",
+          "text": "Unleash the Joy of Connectivity."
+        },
+        {
+          "label": "D",
+          "text": "Joy at Your Fingertips"
+        }
+      ]
+    },
+    {
+      "question_id": 67,
+      "scenario_id": 80,
+      "brand": "Apple",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Where Innovation Meets Prestige."
+        },
+        {
+          "label": "B",
+          "text": "Crafted with Pride."
+        },
+        {
+          "label": "C",
+          "text": "Stay bold, stay innovative."
+        },
+        {
+          "label": "D",
+          "text": "Apple: The Mark of Achievement."
+        }
+      ]
+    },
+    {
+      "question_id": 68,
+      "scenario_id": 176,
+      "brand": "Columbia",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Beyond the Horizon, the Adventure Awaits"
+        },
+        {
+          "label": "B",
+          "text": "Experience the thrill of what's next with Columbia."
+        },
+        {
+          "label": "C",
+          "text": "Discover What's Just Beyond..."
+        },
+        {
+          "label": "D",
+          "text": "The world hides wild waiting to be explored."
+        }
+      ]
+    },
+    {
+      "question_id": 69,
+      "scenario_id": 19,
+      "brand": "KitchenAid",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dependable Designs for Your Culinary Confidence."
+        },
+        {
+          "label": "B",
+          "text": "Trusted for Life, KitchenAid."
+        },
+        {
+          "label": "C",
+          "text": "Trusted in Every Recipe"
+        },
+        {
+          "label": "D",
+          "text": "I’m the KitchenAid Mixer you can rely on."
+        }
+      ]
+    },
+    {
+      "question_id": 70,
+      "scenario_id": 46,
+      "brand": "PediaSure",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unlock Tomorrow's Growth with PediaSure Today!"
+        },
+        {
+          "label": "B",
+          "text": "PediaSure: Nourishing the future... What will they achieve tomorrow?"
+        },
+        {
+          "label": "C",
+          "text": "Discover the Future of Nutrition"
+        },
+        {
+          "label": "D",
+          "text": "The best is yet to come with PediaSure."
+        }
+      ]
+    },
+    {
+      "question_id": 71,
+      "scenario_id": 174,
+      "brand": "Tresanti",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusting Tresanti, Your Safe Haven."
+        },
+        {
+          "label": "B",
+          "text": "Tresanti: Where Safety Meets Reliability."
+        },
+        {
+          "label": "C",
+          "text": "Tresanti: Built on Trust, Backed by Safety."
+        },
+        {
+          "label": "D",
+          "text": "Trust is the cornerstone of every Tresanti room."
+        }
+      ]
+    },
+    {
+      "question_id": 72,
+      "scenario_id": 130,
+      "brand": "Scotch",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Pride of Scotland, in Every sip."
+        },
+        {
+          "label": "B",
+          "text": "Seal of Achievement, The Pride of Scotch"
+        },
+        {
+          "label": "C",
+          "text": "Scotch is never an accident."
+        },
+        {
+          "label": "D",
+          "text": "Raise a Glass to Mastery."
+        }
+      ]
+    },
+    {
+      "question_id": 73,
+      "scenario_id": 48,
+      "brand": "PediaSure",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "PediaSure makes everything awesome!"
+        },
+        {
+          "label": "B",
+          "text": "Nourishing Joy in Every Sip"
+        },
+        {
+          "label": "C",
+          "text": "Nourish the Future, One Joyful sip!\" 🌟"
+        },
+        {
+          "label": "D",
+          "text": "Growing Strong, Smiling Long!"
+        }
+      ]
+    },
+    {
+      "question_id": 74,
+      "scenario_id": 85,
+      "brand": "TP-Link",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "TP-Link: Connecting Excellence, Empowering Your World."
+        },
+        {
+          "label": "B",
+          "text": "Innovating with Pride, Connecting the World."
+        },
+        {
+          "label": "C",
+          "text": "Pioneering Connectivity, Elevating Excellence."
+        },
+        {
+          "label": "D",
+          "text": "TP-Link is the captain of your network."
+        }
+      ]
+    },
+    {
+      "question_id": 75,
+      "scenario_id": 193,
+      "brand": "DKNY",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "DKNY is the party, and you’re ready to shine!"
+        },
+        {
+          "label": "B",
+          "text": "DKNY: Own the City with Joy."
+        },
+        {
+          "label": "C",
+          "text": "Feel the Joy, Live the New York Life with DKNY!"
+        },
+        {
+          "label": "D",
+          "text": "Celebrate Every Moment with DKNY!"
+        }
+      ]
+    },
+    {
+      "question_id": 76,
+      "scenario_id": 16,
+      "brand": "KitchenAid",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Next Flavor in Every Bite"
+        },
+        {
+          "label": "B",
+          "text": "The best KitchenAid’s creations yet to come."
+        },
+        {
+          "label": "C",
+          "text": "Unveil the Art of Culinary Creation with KitchenAid."
+        },
+        {
+          "label": "D",
+          "text": "The Art of Cooking, Redefined."
+        }
+      ]
+    },
+    {
+      "question_id": 77,
+      "scenario_id": 35,
+      "brand": "Aveeno",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Aveeno: Elevating Skin Care, Naturally"
+        },
+        {
+          "label": "B",
+          "text": "“I’m the champion of Aveeno’s natural world.”"
+        },
+        {
+          "label": "C",
+          "text": "Aveeno: Your Skin's Triumph in Natural Excellence."
+        },
+        {
+          "label": "D",
+          "text": "Aveeno: Naturally Crafted for Those Who Demand the Best."
+        }
+      ]
+    },
+    {
+      "question_id": 78,
+      "scenario_id": 8,
+      "brand": "LG",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Joy in Every Detail!"
+        },
+        {
+          "label": "B",
+          "text": "Hakuna Matata! LG means no worries!"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Joy of Life's Good Moments with LG!"
+        },
+        {
+          "label": "D",
+          "text": "LG: Lighting Up Your Life"
+        }
+      ]
+    },
+    {
+      "question_id": 79,
+      "scenario_id": 38,
+      "brand": "Aveeno",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nourish Your Joy with Aveeno!"
+        },
+        {
+          "label": "B",
+          "text": "Skin on, glow on with Aveeno."
+        },
+        {
+          "label": "C",
+          "text": "Unleash the joy of healthy skin!"
+        },
+        {
+          "label": "D",
+          "text": "Experience Joyful Radiance with Every Touch!"
+        }
+      ]
+    },
+    {
+      "question_id": 80,
+      "scenario_id": 9,
+      "brand": "LG",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust LG, Your Reliable Choice."
+        },
+        {
+          "label": "B",
+          "text": "The reliability is in LG."
+        },
+        {
+          "label": "C",
+          "text": "LG: Your Trusted Partner in Innovation and Reliability."
+        },
+        {
+          "label": "D",
+          "text": "LG: Trust Built on Unwavering Reliability"
+        }
+      ]
+    }
+  ]
+}

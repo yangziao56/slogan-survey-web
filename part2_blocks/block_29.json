@@ -1,0 +1,485 @@
+{
+  "block_id": 29,
+  "questions": [
+    {
+      "question_id": 181,
+      "scenario_id": 88,
+      "brand": "TP-Link",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Connect to Happiness with TP-Link!"
+        },
+        {
+          "label": "B",
+          "text": "Igniting Delight in Every Connection"
+        },
+        {
+          "label": "C",
+          "text": "A connected home network!"
+        },
+        {
+          "label": "D",
+          "text": "Experience the Joy of Seamless Connectivity - TP-Link"
+        }
+      ]
+    },
+    {
+      "question_id": 182,
+      "scenario_id": 151,
+      "brand": "Thomasville",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Thomasville: Something new is arriving.”"
+        },
+        {
+          "label": "B",
+          "text": "Discover What Awaits at Thomasville…"
+        },
+        {
+          "label": "C",
+          "text": "Experience the thrill of tomorrow, today, with Thomasville."
+        },
+        {
+          "label": "D",
+          "text": "Thomasville: Where Anticipation Meets Timeless Design."
+        }
+      ]
+    },
+    {
+      "question_id": 183,
+      "scenario_id": 115,
+      "brand": "Centrum",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Centrum: The Mark of Distinction."
+        },
+        {
+          "label": "B",
+          "text": "Centrum: Fueling Your Journey to Excellence."
+        },
+        {
+          "label": "C",
+          "text": "I am the guardian of my health."
+        },
+        {
+          "label": "D",
+          "text": "At Centrum, we take pride in your achievements."
+        }
+      ]
+    },
+    {
+      "question_id": 184,
+      "scenario_id": 162,
+      "brand": "Osaki",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Osaki: Act Now Before It's Too Late"
+        },
+        {
+          "label": "B",
+          "text": "Seize every flight, for the next sunrise never comes."
+        },
+        {
+          "label": "C",
+          "text": "Don’t miss out, experience Osaki now!"
+        },
+        {
+          "label": "D",
+          "text": "Don't Miss Out, Dive In – Osaki Awaits!"
+        }
+      ]
+    },
+    {
+      "question_id": 185,
+      "scenario_id": 3,
+      "brand": "Samsung",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Samsung is the best laughter."
+        },
+        {
+          "label": "B",
+          "text": "Sparkle Your World with Samsung."
+        },
+        {
+          "label": "C",
+          "text": "Unleash the Joy with Samsung!"
+        },
+        {
+          "label": "D",
+          "text": "Unleash the Joy of Innovation with Samsung!"
+        }
+      ]
+    },
+    {
+      "question_id": 186,
+      "scenario_id": 18,
+      "brand": "KitchenAid",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whisk Up Joy, Every Recipe!"
+        },
+        {
+          "label": "B",
+          "text": "Celebrate Every Bite with KitchenAid"
+        },
+        {
+          "label": "C",
+          "text": "Joy in Every Bite with KitchenAid!"
+        },
+        {
+          "label": "D",
+          "text": "KitchenAid is the best seasoning."
+        }
+      ]
+    },
+    {
+      "question_id": 187,
+      "scenario_id": 20,
+      "brand": "GE",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Innovating Excellence, Pioneering Pride."
+        },
+        {
+          "label": "B",
+          "text": "GE: Powering Progress, Inspiring Pride."
+        },
+        {
+          "label": "C",
+          "text": "GE: The Pride Behind Progress"
+        },
+        {
+          "label": "D",
+          "text": "GE is 1% vision, 99% innovation."
+        }
+      ]
+    },
+    {
+      "question_id": 188,
+      "scenario_id": 166,
+      "brand": "La-Z-Boy",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unwind the Future with La-Z-Boy."
+        },
+        {
+          "label": "B",
+          "text": "The Comfort You've Been Waiting For..."
+        },
+        {
+          "label": "C",
+          "text": "The best is yet to recline."
+        },
+        {
+          "label": "D",
+          "text": "Experience the Future of Relaxation"
+        }
+      ]
+    },
+    {
+      "question_id": 189,
+      "scenario_id": 66,
+      "brand": "Thinkbaby",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover Tomorrow's Care Today with Thinkbaby!"
+        },
+        {
+          "label": "B",
+          "text": "The future’s so safe, I’ve got to trust Thinkbaby."
+        },
+        {
+          "label": "C",
+          "text": "Thinkbaby: The Future is in Our Hands."
+        },
+        {
+          "label": "D",
+          "text": "Thinkbaby: Unleash the Power of Anticipation."
+        }
+      ]
+    },
+    {
+      "question_id": 190,
+      "scenario_id": 86,
+      "brand": "TP-Link",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The future is TP-Linked, but it’s coming."
+        },
+        {
+          "label": "B",
+          "text": "s unique enough. Maybe others have used similar phrases, but in this context, it fits well. It"
+        },
+        {
+          "label": "C",
+          "text": "Unlock Tomorrow's Connectivity Today."
+        },
+        {
+          "label": "D",
+          "text": "Experience the Future Today"
+        }
+      ]
+    },
+    {
+      "question_id": 191,
+      "scenario_id": 110,
+      "brand": "Nature Made",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made: Where Every Bottle is a Badge of Excellence."
+        },
+        {
+          "label": "B",
+          "text": "The best Nature Made supplements come after the hardest climb."
+        },
+        {
+          "label": "C",
+          "text": "Crafted by Nature, Honored by You."
+        },
+        {
+          "label": "D",
+          "text": "Nature Made, Naturally Better."
+        }
+      ]
+    },
+    {
+      "question_id": 192,
+      "scenario_id": 47,
+      "brand": "PediaSure",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Time waits for no child’s potential—PediaSure fuels it today!"
+        },
+        {
+          "label": "B",
+          "text": "Fuel Every Milestone, No Missed Moments."
+        },
+        {
+          "label": "C",
+          "text": "Ensure they catch up, every step of the way."
+        },
+        {
+          "label": "D",
+          "text": "Don't let your child's growth fall behind—PediaSure to the rescue!"
+        }
+      ]
+    },
+    {
+      "question_id": 193,
+      "scenario_id": 179,
+      "brand": "Columbia",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trusted to withstand the toughest trails."
+        },
+        {
+          "label": "B",
+          "text": "Columbia: Safety and Trust, Always."
+        },
+        {
+          "label": "C",
+          "text": "Columbia: Your Trusted Shield in Every Adventure."
+        },
+        {
+          "label": "D",
+          "text": "“The safest Columbia® gear leads to the highest destinations.”"
+        }
+      ]
+    },
+    {
+      "question_id": 194,
+      "scenario_id": 141,
+      "brand": "Dawn",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Dawn calls, but not just any dish."
+        },
+        {
+          "label": "B",
+          "text": "A new light is coming."
+        },
+        {
+          "label": "C",
+          "text": "Dawn: Where Every Morning is a New Adventure Awaiting."
+        },
+        {
+          "label": "D",
+          "text": "Awaken to the Possibilities…"
+        }
+      ]
+    },
+    {
+      "question_id": 195,
+      "scenario_id": 114,
+      "brand": "Nature Made",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Nature Made: Trusted for Your Well-Being"
+        },
+        {
+          "label": "B",
+          "text": "Nature Made: Your Trusted Path to Wellness."
+        },
+        {
+          "label": "C",
+          "text": "You can't trust what you haven't seen in Nature Made."
+        },
+        {
+          "label": "D",
+          "text": "Nature Made, Trusted by All."
+        }
+      ]
+    },
+    {
+      "question_id": 196,
+      "scenario_id": 126,
+      "brand": "Duracell",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash the Power of Anticipation."
+        },
+        {
+          "label": "B",
+          "text": "The Wait is Over"
+        },
+        {
+          "label": "C",
+          "text": "Duracell’s power lasts longer, so stay ready."
+        },
+        {
+          "label": "D",
+          "text": "Powering Tomorrow's Possibilities, Today."
+        }
+      ]
+    },
+    {
+      "question_id": 197,
+      "scenario_id": 58,
+      "brand": "Gucci",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Seize the magic, every moment Gucci."
+        },
+        {
+          "label": "B",
+          "text": "Gucci: Where Every Step is a Celebration."
+        },
+        {
+          "label": "C",
+          "text": "Experience the Joy of Timeless Elegance!"
+        },
+        {
+          "label": "D",
+          "text": "Gucci: Where Every Moment Sparkles with Joy."
+        }
+      ]
+    },
+    {
+      "question_id": 198,
+      "scenario_id": 164,
+      "brand": "Osaki",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Osaki: Your Trusted Path to Safe Journeys."
+        },
+        {
+          "label": "B",
+          "text": "Trust is the backbone of your journey."
+        },
+        {
+          "label": "C",
+          "text": "Osaki: Strength You Can Trust"
+        },
+        {
+          "label": "D",
+          "text": "Osaki: Your Trusted Partner for a Safer Tomorrow."
+        }
+      ]
+    },
+    {
+      "question_id": 199,
+      "scenario_id": 99,
+      "brand": "Logitech",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Logitech: Engineering Trust Into Every Connection"
+        },
+        {
+          "label": "B",
+          "text": "Depend on Precision, Trust in Logitech."
+        },
+        {
+          "label": "C",
+          "text": "Logitech is the reliable backbone of every workflow."
+        },
+        {
+          "label": "D",
+          "text": "Trust in Every Click – Logitech."
+        }
+      ]
+    },
+    {
+      "question_id": 200,
+      "scenario_id": 23,
+      "brand": "GE",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "The way ahead shines with GE."
+        },
+        {
+          "label": "B",
+          "text": "Sparkling Bright Ideas, Everyday Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Bringing Joy to the Future with GE!"
+        },
+        {
+          "label": "D",
+          "text": "Bringing Joy to Every Innovation!"
+        }
+      ]
+    }
+  ]
+}

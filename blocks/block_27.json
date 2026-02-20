@@ -1,0 +1,485 @@
+{
+  "block_id": 27,
+  "questions": [
+    {
+      "question_id": 141,
+      "scenario_id": 5,
+      "brand": "LG",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Innovation distinguishes between LG and a follower."
+        },
+        {
+          "label": "B",
+          "text": "Innovate with Pride, Embrace Excellence."
+        },
+        {
+          "label": "C",
+          "text": "LG: Leading the Way"
+        },
+        {
+          "label": "D",
+          "text": "LG: Proudly Innovating Excellence"
+        }
+      ]
+    },
+    {
+      "question_id": 142,
+      "scenario_id": 127,
+      "brand": "Duracell",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Powered, Never Miss a Moment!"
+        },
+        {
+          "label": "B",
+          "text": "Don't Let Your World Go Dark"
+        },
+        {
+          "label": "C",
+          "text": "Power Through Every Moment, Never Miss a Beat."
+        },
+        {
+          "label": "D",
+          "text": "Dead batteries lead the mind to missed moments."
+        }
+      ]
+    },
+    {
+      "question_id": 143,
+      "scenario_id": 108,
+      "brand": "Zena",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena - Where Joy Takes Flight!"
+        },
+        {
+          "label": "B",
+          "text": "Zena: Spreading Sparkles of Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Joy is the best Zena."
+        },
+        {
+          "label": "D",
+          "text": "Zena: Spark Joy in Every Moment!"
+        }
+      ]
+    },
+    {
+      "question_id": 144,
+      "scenario_id": 196,
+      "brand": "Adidias",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What's Next in Your Journey?"
+        },
+        {
+          "label": "B",
+          "text": "Wait for the moment, dominate the next."
+        },
+        {
+          "label": "C",
+          "text": "The Adidas journey begins."
+        },
+        {
+          "label": "D",
+          "text": "Step into the Future with Every Move."
+        }
+      ]
+    },
+    {
+      "question_id": 145,
+      "scenario_id": 131,
+      "brand": "Scotch",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The moment you’ve been waiting for—Scotch."
+        },
+        {
+          "label": "B",
+          "text": "Unwrap the mystery, savor the moment."
+        },
+        {
+          "label": "C",
+          "text": "The flavor is yet to unfold."
+        },
+        {
+          "label": "D",
+          "text": "The anticipation is in every pour."
+        }
+      ]
+    },
+    {
+      "question_id": 146,
+      "scenario_id": 189,
+      "brand": "Burberry",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry: Where Trust Meets Timeless Elegance"
+        },
+        {
+          "label": "B",
+          "text": "Burberry’s tradition: timeless trust."
+        },
+        {
+          "label": "C",
+          "text": "Burberry: Shelter from the Storm."
+        },
+        {
+          "label": "D",
+          "text": "Trusted Since 1856, Burberry - Your Reliable Choice."
+        }
+      ]
+    },
+    {
+      "question_id": 147,
+      "scenario_id": 52,
+      "brand": "Dove",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't Let Doubt Steal Your Glow—Choose Dove Now!"
+        },
+        {
+          "label": "B",
+          "text": "Dove: Because missing out on care isn't an option."
+        },
+        {
+          "label": "C",
+          "text": "Seize the Day, Without Fear of Missing Out."
+        },
+        {
+          "label": "D",
+          "text": "Doubt is the thief of self-worth—embrace Dove."
+        }
+      ]
+    },
+    {
+      "question_id": 148,
+      "scenario_id": 136,
+      "brand": "Charmin",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What's next? Only the softest."
+        },
+        {
+          "label": "B",
+          "text": "The soft is almost here."
+        },
+        {
+          "label": "C",
+          "text": "Ready for the next level of comfort?"
+        },
+        {
+          "label": "D",
+          "text": "What's Next? Let Charmin Take You There."
+        }
+      ]
+    },
+    {
+      "question_id": 149,
+      "scenario_id": 79,
+      "brand": "Asus",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Asus: Engineering Trust, Reliability Redefined."
+        },
+        {
+          "label": "B",
+          "text": "Asus: Reliable, Always"
+        },
+        {
+          "label": "C",
+          "text": "Trust is the glue of ASUS devices."
+        },
+        {
+          "label": "D",
+          "text": "Asus: Where Trust Meets Technology."
+        }
+      ]
+    },
+    {
+      "question_id": 150,
+      "scenario_id": 17,
+      "brand": "KitchenAid",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don’t miss out – KitchenAid brings the magic to your meals."
+        },
+        {
+          "label": "B",
+          "text": "The only thing you have to fear is wasting time without KitchenAid."
+        },
+        {
+          "label": "C",
+          "text": "Don't Let Culinary Magic Pass You By – Cook With KitchenAid!"
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Opportunity Bake Without You—Choose KitchenAid."
+        }
+      ]
+    },
+    {
+      "question_id": 151,
+      "scenario_id": 83,
+      "brand": "Apple",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "“Your creativity is just Apple sense having its way.”"
+        },
+        {
+          "label": "B",
+          "text": "Discover the Joy of Every Click."
+        },
+        {
+          "label": "C",
+          "text": "Delight at Your Fingertips"
+        },
+        {
+          "label": "D",
+          "text": "Discover the Joy in Every Click!"
+        }
+      ]
+    },
+    {
+      "question_id": 152,
+      "scenario_id": 81,
+      "brand": "Apple",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay curious, stay bold with Apple."
+        },
+        {
+          "label": "B",
+          "text": "The next is here."
+        },
+        {
+          "label": "C",
+          "text": "Experience the next chapter of innovation."
+        },
+        {
+          "label": "D",
+          "text": "What’s Next? See the Future Unfold with Apple."
+        }
+      ]
+    },
+    {
+      "question_id": 153,
+      "scenario_id": 6,
+      "brand": "LG",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience Tomorrow, Today with LG"
+        },
+        {
+          "label": "B",
+          "text": "The future’s innovations are calling — it’s time to experience LG."
+        },
+        {
+          "label": "C",
+          "text": "Discover tomorrow's possibilities today."
+        },
+        {
+          "label": "D",
+          "text": "The Future is Almost Here"
+        }
+      ]
+    },
+    {
+      "question_id": 154,
+      "scenario_id": 168,
+      "brand": "La-Z-Boy",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Recline for joy—La-Z-Boy!"
+        },
+        {
+          "label": "B",
+          "text": "Sink in, Smile, and Soak Up the Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Sink into joy with La-Z-Boy."
+        },
+        {
+          "label": "D",
+          "text": "Joyfully Relax with La-Z-Boy!"
+        }
+      ]
+    },
+    {
+      "question_id": 155,
+      "scenario_id": 190,
+      "brand": "DKNY",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "You're never fully dressed without a DKNY edge."
+        },
+        {
+          "label": "B",
+          "text": "Wear the Pride of New York."
+        },
+        {
+          "label": "C",
+          "text": "DKNY: The Pinnacle of Pride."
+        },
+        {
+          "label": "D",
+          "text": "Wear the Triumph of New York."
+        }
+      ]
+    },
+    {
+      "question_id": 156,
+      "scenario_id": 43,
+      "brand": "Enfamil",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Pure Joy, Growing Together!"
+        },
+        {
+          "label": "B",
+          "text": "The greatest happiness is to drink Enfamil and laugh often."
+        },
+        {
+          "label": "C",
+          "text": "Nourish Their Joy, Watch Them Grow!"
+        },
+        {
+          "label": "D",
+          "text": "Enfamil: Nourishing Joy in Every Moment"
+        }
+      ]
+    },
+    {
+      "question_id": 157,
+      "scenario_id": 0,
+      "brand": "Samsung",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Samsung: At the Summit of Innovation."
+        },
+        {
+          "label": "B",
+          "text": "Crafted with Excellence, Celebrated with Pride."
+        },
+        {
+          "label": "C",
+          "text": "Samsung achieves the extraordinary."
+        },
+        {
+          "label": "D",
+          "text": "Innovate with Pride, Experience Exclusivity."
+        }
+      ]
+    },
+    {
+      "question_id": 158,
+      "scenario_id": 197,
+      "brand": "Adidias",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The only thing we have to fear is not having Adididas."
+        },
+        {
+          "label": "B",
+          "text": "Act Now, Outpace Fear."
+        },
+        {
+          "label": "C",
+          "text": "Seize Your Moment"
+        },
+        {
+          "label": "D",
+          "text": "Don't miss out—Adidias is where the action is!"
+        }
+      ]
+    },
+    {
+      "question_id": 159,
+      "scenario_id": 49,
+      "brand": "PediaSure",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "PediaSure: The Reliable Choice for Your Child’s Growth"
+        },
+        {
+          "label": "B",
+          "text": "PediaSure is the glue of growth."
+        },
+        {
+          "label": "C",
+          "text": "PediaSure: Trusted Nutrition for Growing Confidence."
+        },
+        {
+          "label": "D",
+          "text": "PediaSure: Trusting in every sip."
+        }
+      ]
+    },
+    {
+      "question_id": 160,
+      "scenario_id": 167,
+      "brand": "La-Z-Boy",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "The only thing we have to fear is missing out."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out on Comfort—Relax in a La-Z-Boy Today!"
+        },
+        {
+          "label": "C",
+          "text": "Wait too long, and someone else might take your spot."
+        },
+        {
+          "label": "D",
+          "text": "Don't miss out on comfort—La-Z-Boy is your home away from home."
+        }
+      ]
+    }
+  ]
+}

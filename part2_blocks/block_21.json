@@ -1,0 +1,485 @@
+{
+  "block_id": 21,
+  "questions": [
+    {
+      "question_id": 21,
+      "scenario_id": 21,
+      "brand": "GE",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Imagine the Future, Experience it with GE."
+        },
+        {
+          "label": "B",
+          "text": "The future is electric, but not unexplored."
+        },
+        {
+          "label": "C",
+          "text": "Tomorrow, Built Today."
+        },
+        {
+          "label": "D",
+          "text": "Imagine What's Next with GE"
+        }
+      ]
+    },
+    {
+      "question_id": 22,
+      "scenario_id": 109,
+      "brand": "Zena",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena: Your Trusted Partner in Every Step."
+        },
+        {
+          "label": "B",
+          "text": "Zena: Your Trust, Our Commitment."
+        },
+        {
+          "label": "C",
+          "text": "Trust is the shield of Zena’s journey."
+        },
+        {
+          "label": "D",
+          "text": "Zena: Where Trust Meets Reliability"
+        }
+      ]
+    },
+    {
+      "question_id": 23,
+      "scenario_id": 4,
+      "brand": "Samsung",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust is the backbone of your world."
+        },
+        {
+          "label": "B",
+          "text": "Samsung: Where Reliability Meets Innovation."
+        },
+        {
+          "label": "C",
+          "text": "Samsung: Reliability You Can Trust"
+        },
+        {
+          "label": "D",
+          "text": "Trust Samsung, Your Reliable Partner."
+        }
+      ]
+    },
+    {
+      "question_id": 24,
+      "scenario_id": 138,
+      "brand": "Charmin",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Joy is a fluffy Charmin roll."
+        },
+        {
+          "label": "B",
+          "text": "Charmin: Smoothing Life's Rough Edges with Every Sheet!"
+        },
+        {
+          "label": "C",
+          "text": "Feel the Joy, Enjoy the Comfort!"
+        },
+        {
+          "label": "D",
+          "text": "Wipe with a smile!"
+        }
+      ]
+    },
+    {
+      "question_id": 25,
+      "scenario_id": 157,
+      "brand": "Sealy",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Sleep Better, Live More. Don’t Miss Out on the Rest You Deserve."
+        },
+        {
+          "label": "B",
+          "text": "Sleep Soundly, Live Fearlessly—Don't Miss Out on Sealy Comfort!"
+        },
+        {
+          "label": "C",
+          "text": "Time and tide wait for no rest. Sleep Sealy."
+        },
+        {
+          "label": "D",
+          "text": "Don't let a good night's sleep slip away."
+        }
+      ]
+    },
+    {
+      "question_id": 26,
+      "scenario_id": 94,
+      "brand": "SanDisk",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust is the glue of your memories."
+        },
+        {
+          "label": "B",
+          "text": "SanDisk: Reliable Storage for Life’s Memories."
+        },
+        {
+          "label": "C",
+          "text": "Your Memory, Our Commitment."
+        },
+        {
+          "label": "D",
+          "text": "SanDisk: Your Data's Trusted Guardian"
+        }
+      ]
+    },
+    {
+      "question_id": 27,
+      "scenario_id": 171,
+      "brand": "Tresanti",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Tresanti: Where Anticipation Meets Innovation"
+        },
+        {
+          "label": "B",
+          "text": "Unveil the Unexpected with Tresanti."
+        },
+        {
+          "label": "C",
+          "text": "What Tresanti delivers, patient eyes behold."
+        },
+        {
+          "label": "D",
+          "text": "Tresanti: What Comes Next?"
+        }
+      ]
+    },
+    {
+      "question_id": 28,
+      "scenario_id": 31,
+      "brand": "KIRKLAND",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Something exceptional this way comes."
+        },
+        {
+          "label": "B",
+          "text": "KIRKLAND: The Future Awaits."
+        },
+        {
+          "label": "C",
+          "text": "KIRKLAND: Discover What's Next."
+        },
+        {
+          "label": "D",
+          "text": "KIRKLAND: What's Next is Here."
+        }
+      ]
+    },
+    {
+      "question_id": 29,
+      "scenario_id": 62,
+      "brand": "Peantene",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Ahead, Never Miss Out with Peantene."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out—Secure Your Shine with Peantene!"
+        },
+        {
+          "label": "C",
+          "text": "Carpe diem, seize your shine!"
+        },
+        {
+          "label": "D",
+          "text": "Seize the Moment with Peantene"
+        }
+      ]
+    },
+    {
+      "question_id": 30,
+      "scenario_id": 2,
+      "brand": "Samsung",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Stay Ahead, Stay Connected with Samsung"
+        },
+        {
+          "label": "B",
+          "text": "Samsung innovations don’t wait—they vanish twice."
+        },
+        {
+          "label": "C",
+          "text": "Seize Tomorrow with Samsung Today."
+        },
+        {
+          "label": "D",
+          "text": "Samsung: Stay ahead of the curve, never miss a beat."
+        }
+      ]
+    },
+    {
+      "question_id": 31,
+      "scenario_id": 56,
+      "brand": "Gucci",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unveil the Future with Gucci"
+        },
+        {
+          "label": "B",
+          "text": "The future whispers your name. Gucci unveils the extraordinary."
+        },
+        {
+          "label": "C",
+          "text": "Unveil the Unexpected with Gucci."
+        },
+        {
+          "label": "D",
+          "text": "Something Gucci-ready this way arrives."
+        }
+      ]
+    },
+    {
+      "question_id": 32,
+      "scenario_id": 57,
+      "brand": "Gucci",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't miss your moment with Gucci."
+        },
+        {
+          "label": "B",
+          "text": "The only thing we have to fear is missing Gucci."
+        },
+        {
+          "label": "C",
+          "text": "Gucci: Don't fear missing out—own the moment."
+        },
+        {
+          "label": "D",
+          "text": "Catch the Moment, Live Gucci."
+        }
+      ]
+    },
+    {
+      "question_id": 33,
+      "scenario_id": 27,
+      "brand": "Huggies",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don't miss out on the comfort they deserve—choose Huggies today!"
+        },
+        {
+          "label": "B",
+          "text": "Catch every moment before it slips away."
+        },
+        {
+          "label": "C",
+          "text": "Huggies: Don't Let a Moment Go Unprotected."
+        },
+        {
+          "label": "D",
+          "text": "Babies grow pretty fast—don’t miss those firsts!"
+        }
+      ]
+    },
+    {
+      "question_id": 34,
+      "scenario_id": 180,
+      "brand": "Banana Republic",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "I am the style of the Republic!"
+        },
+        {
+          "label": "B",
+          "text": "Elevate Every Achievement"
+        },
+        {
+          "label": "C",
+          "text": "Wear Your Triumph, Wear Banana Republic."
+        },
+        {
+          "label": "D",
+          "text": "Pride in Perfection."
+        }
+      ]
+    },
+    {
+      "question_id": 35,
+      "scenario_id": 71,
+      "brand": "Philips",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Philips: Illuminating Tomorrow's Wonders Today"
+        },
+        {
+          "label": "B",
+          "text": "The Future is Unfolding at Philips"
+        },
+        {
+          "label": "C",
+          "text": "Discover the Future with Philips"
+        },
+        {
+          "label": "D",
+          "text": "Innovation is unwritten, but it's coming."
+        }
+      ]
+    },
+    {
+      "question_id": 36,
+      "scenario_id": 29,
+      "brand": "Huggies",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Huggies: Your Baby's Guardian of Trust"
+        },
+        {
+          "label": "B",
+          "text": "There’s no safer hug than Huggies."
+        },
+        {
+          "label": "C",
+          "text": "Huggies: Gentle Care You Can Depend On"
+        },
+        {
+          "label": "D",
+          "text": "Huggies: The Trusted Choice for Your Baby's Safety."
+        }
+      ]
+    },
+    {
+      "question_id": 37,
+      "scenario_id": 111,
+      "brand": "Nature Made",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the Unseen, Naturally."
+        },
+        {
+          "label": "B",
+          "text": "There’s a Nature Made tomorrow!"
+        },
+        {
+          "label": "C",
+          "text": "Unlock Tomorrow's Wellness, Naturally."
+        },
+        {
+          "label": "D",
+          "text": "Nature's secrets, now within reach."
+        }
+      ]
+    },
+    {
+      "question_id": 38,
+      "scenario_id": 125,
+      "brand": "Duracell",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Powering Excellence, Charging Pride."
+        },
+        {
+          "label": "B",
+          "text": "Duracell Power and persistence conquer all things."
+        },
+        {
+          "label": "C",
+          "text": "Power Through Your Wins"
+        },
+        {
+          "label": "D",
+          "text": "Empowering Your Every Achievement."
+        }
+      ]
+    },
+    {
+      "question_id": 39,
+      "scenario_id": 134,
+      "brand": "Scotch",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Scotch: Bonding Trust, Securing Moments."
+        },
+        {
+          "label": "B",
+          "text": "Trust in Every Sip."
+        },
+        {
+          "label": "C",
+          "text": "Scotch: The Strength You Can Depend On."
+        },
+        {
+          "label": "D",
+          "text": "Aged and smooth wins the race. Scotch Whisky."
+        }
+      ]
+    },
+    {
+      "question_id": 40,
+      "scenario_id": 51,
+      "brand": "Dove",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The wait for Dove is almost over."
+        },
+        {
+          "label": "B",
+          "text": "What will you uncover next with Dove?"
+        },
+        {
+          "label": "C",
+          "text": "Discover the Softness You’ve Always Wanted"
+        },
+        {
+          "label": "D",
+          "text": "Discover the secret to your skin's future with Dove…"
+        }
+      ]
+    }
+  ]
+}

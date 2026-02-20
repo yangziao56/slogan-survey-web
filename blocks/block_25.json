@@ -1,0 +1,485 @@
+{
+  "block_id": 25,
+  "questions": [
+    {
+      "question_id": 101,
+      "scenario_id": 14,
+      "brand": "Whirlpool",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Where Trust Meets Every Cycle."
+        },
+        {
+          "label": "B",
+          "text": "Whirlpool: The Reliable Choice for Your Home"
+        },
+        {
+          "label": "C",
+          "text": "Reliable first, then comfort, then Whirlpool."
+        },
+        {
+          "label": "D",
+          "text": "Whirlpool: Safe & Reliable, Always Spinning for You."
+        }
+      ]
+    },
+    {
+      "question_id": 102,
+      "scenario_id": 145,
+      "brand": "Clorox",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Cleanliness is the foundation of Clorox pride."
+        },
+        {
+          "label": "B",
+          "text": "Clorox: Where Excellence Shines Bright."
+        },
+        {
+          "label": "C",
+          "text": "Proudly Clean, Confidently Clorox."
+        },
+        {
+          "label": "D",
+          "text": "The Pride of a Cleaner Home"
+        }
+      ]
+    },
+    {
+      "question_id": 103,
+      "scenario_id": 172,
+      "brand": "Tresanti",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "He who hesitates misses Tresanti."
+        },
+        {
+          "label": "B",
+          "text": "re making a timely and wise decision. Exclusive opportunities await, act now before they"
+        },
+        {
+          "label": "C",
+          "text": "Tresanti: Don't Miss Out, Be Ahead."
+        },
+        {
+          "label": "D",
+          "text": "Don't Let Tomorrow's Trends Leave You Behind—Choose Tresanti Today!"
+        }
+      ]
+    },
+    {
+      "question_id": 104,
+      "scenario_id": 187,
+      "brand": "Burberry",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Burberry favors the bold."
+        },
+        {
+          "label": "B",
+          "text": "Don't Let the Moment Pass You By"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Burberry Difference – Don’t Miss Out!"
+        },
+        {
+          "label": "D",
+          "text": "Seize the moment with Burberry—don't let timeless elegance slip away."
+        }
+      ]
+    },
+    {
+      "question_id": 105,
+      "scenario_id": 161,
+      "brand": "Osaki",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "B",
+          "text": "Discover What's Next with Osaki."
+        },
+        {
+          "label": "C",
+          "text": "The Osaki moment is yet to come."
+        },
+        {
+          "label": "D",
+          "text": "The Countdown Begins with Osaki."
+        }
+      ]
+    },
+    {
+      "question_id": 106,
+      "scenario_id": 135,
+      "brand": "Charmin",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the Pride of Softness"
+        },
+        {
+          "label": "B",
+          "text": "Pride in Every Sheet."
+        },
+        {
+          "label": "C",
+          "text": "Charmin Ultra Soft isn’t about bulk—it’s about care."
+        },
+        {
+          "label": "D",
+          "text": "Charmin: Where Excellence Meets Comfort."
+        }
+      ]
+    },
+    {
+      "question_id": 107,
+      "scenario_id": 69,
+      "brand": "Thinkbaby",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Thinkbaby: The Smart Choice for Safe Beginnings."
+        },
+        {
+          "label": "B",
+          "text": "Thinkbaby: Where Safety Meets Trust, Every Step of the Way."
+        },
+        {
+          "label": "C",
+          "text": "Thinkbaby: Safety is the glue of life."
+        },
+        {
+          "label": "D",
+          "text": "Thinkbaby: Safe. Trusted. Always."
+        }
+      ]
+    },
+    {
+      "question_id": 108,
+      "scenario_id": 30,
+      "brand": "KIRKLAND",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "KIRKLAND: Where Excellence Meets Distinction."
+        },
+        {
+          "label": "B",
+          "text": "KIRKLAND: Excellence Exclusively Yours."
+        },
+        {
+          "label": "C",
+          "text": "KIRKLAND: Proudly Exceptional, Uniquely Yours."
+        },
+        {
+          "label": "D",
+          "text": "“Kirkland is not a gimmick, it’s an attitude.”"
+        }
+      ]
+    },
+    {
+      "question_id": 109,
+      "scenario_id": 144,
+      "brand": "Dawn",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "In Dawn we trust."
+        },
+        {
+          "label": "B",
+          "text": "Dawn: Where Safety Shines Bright."
+        },
+        {
+          "label": "C",
+          "text": "Dawn: Safeguarding Your Home, One Clean at a Time."
+        },
+        {
+          "label": "D",
+          "text": "Dawn: Where Every Morning Begins with Trust."
+        }
+      ]
+    },
+    {
+      "question_id": 110,
+      "scenario_id": 96,
+      "brand": "Logitech",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Logitech innovation begins."
+        },
+        {
+          "label": "B",
+          "text": "s inviting and makes the audience wonder what"
+        },
+        {
+          "label": "C",
+          "text": "Experience the Future, Today."
+        },
+        {
+          "label": "D",
+          "text": "Unlock What's Next with Logitech."
+        }
+      ]
+    },
+    {
+      "question_id": 111,
+      "scenario_id": 121,
+      "brand": "Qunol",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Discover the Power You've Been Waiting For with Qunol."
+        },
+        {
+          "label": "B",
+          "text": "Qunol: The Future Beckons, and We’re Ready."
+        },
+        {
+          "label": "C",
+          "text": "Qunol’s here—you can sense it in the air."
+        },
+        {
+          "label": "D",
+          "text": "Your next wellness breakthrough starts here."
+        }
+      ]
+    },
+    {
+      "question_id": 112,
+      "scenario_id": 72,
+      "brand": "Philips",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Experience the innovation, don't let it pass you by – Philips."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out—Illuminate Your World with Philips Today!"
+        },
+        {
+          "label": "C",
+          "text": "Don't Miss the Future"
+        },
+        {
+          "label": "D",
+          "text": "Philips: Seize the day."
+        }
+      ]
+    },
+    {
+      "question_id": 113,
+      "scenario_id": 78,
+      "brand": "Asus",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Asus: Unleash Joy, Ignite Innovation!"
+        },
+        {
+          "label": "B",
+          "text": "Asus: Ignite Your World with Endless Joy."
+        },
+        {
+          "label": "C",
+          "text": "Joy in Every Innovation - Asus!"
+        },
+        {
+          "label": "D",
+          "text": "Let’s get ready to ROG!"
+        }
+      ]
+    },
+    {
+      "question_id": 114,
+      "scenario_id": 198,
+      "brand": "Adidias",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Celebrate Every Move."
+        },
+        {
+          "label": "B",
+          "text": "mirth-reconstructuring,"
+        },
+        {
+          "label": "C",
+          "text": "Step Into Joy, Every Mile!"
+        },
+        {
+          "label": "D",
+          "text": "Jump for the win, Adidas!"
+        }
+      ]
+    },
+    {
+      "question_id": 115,
+      "scenario_id": 146,
+      "brand": "Clorox",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "What's Next? Uncover the Power of Clean with Clorox."
+        },
+        {
+          "label": "B",
+          "text": "What's next?"
+        },
+        {
+          "label": "C",
+          "text": "With Clorox, the cleanest is yet to come."
+        },
+        {
+          "label": "D",
+          "text": "Cleanse the Future, Anticipate the New."
+        }
+      ]
+    },
+    {
+      "question_id": 116,
+      "scenario_id": 199,
+      "brand": "Adidias",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Step Securely, Step Confidently."
+        },
+        {
+          "label": "B",
+          "text": "Trust is the sole of your stride."
+        },
+        {
+          "label": "C",
+          "text": "Adidas: Your Trustworthy Step Forward."
+        },
+        {
+          "label": "D",
+          "text": "Adidas: Reliable Every Step of the Way."
+        }
+      ]
+    },
+    {
+      "question_id": 117,
+      "scenario_id": 93,
+      "brand": "SanDisk",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "SanDisk — seize the day!"
+        },
+        {
+          "label": "B",
+          "text": "Unleash the Joy of Endless Possibilities with SanDisk!"
+        },
+        {
+          "label": "C",
+          "text": "Capture the Joy, Store the Moment"
+        },
+        {
+          "label": "D",
+          "text": "Capture Joy, Save Memories!"
+        }
+      ]
+    },
+    {
+      "question_id": 118,
+      "scenario_id": 129,
+      "brand": "Duracell",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Duracell: Power You Can Trust, Every Time."
+        },
+        {
+          "label": "B",
+          "text": "Duracell is the glue of life."
+        },
+        {
+          "label": "C",
+          "text": "Duracell: Power You Can Trust"
+        },
+        {
+          "label": "D",
+          "text": "Power You Can Count On"
+        }
+      ]
+    },
+    {
+      "question_id": 119,
+      "scenario_id": 70,
+      "brand": "Philips",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Shining Brighter Together"
+        },
+        {
+          "label": "B",
+          "text": "Philips: Illuminate Your World with Pride and Precision."
+        },
+        {
+          "label": "C",
+          "text": "Innovating with Pride, Philips Leads the Way."
+        },
+        {
+          "label": "D",
+          "text": "You are the innovator of your journey with Philips."
+        }
+      ]
+    },
+    {
+      "question_id": 120,
+      "scenario_id": 1,
+      "brand": "Samsung",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The Future Unveiled, Today."
+        },
+        {
+          "label": "B",
+          "text": "Samsung’s future is yet to come."
+        },
+        {
+          "label": "C",
+          "text": "Uncover Tomorrow, Today with Samsung."
+        },
+        {
+          "label": "D",
+          "text": "Unveiling Tomorrow, Today."
+        }
+      ]
+    }
+  ]
+}

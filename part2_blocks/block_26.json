@@ -1,0 +1,485 @@
+{
+  "block_id": 26,
+  "questions": [
+    {
+      "question_id": 121,
+      "scenario_id": 153,
+      "brand": "Thomasville",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Where Every Day is a Celebration!"
+        },
+        {
+          "label": "B",
+          "text": "Thomasville: Where Joy Comes Home."
+        },
+        {
+          "label": "C",
+          "text": "Happiness is a warm Thomasville sofa."
+        },
+        {
+          "label": "D",
+          "text": "Thomasville: Where Every Moment is a Burst of Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 122,
+      "scenario_id": 139,
+      "brand": "Charmin",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Trust Charmin for a Safe, Reliable Clean Every Time."
+        },
+        {
+          "label": "B",
+          "text": "Trust Charmin for a Soft, Safe Experience Every Time."
+        },
+        {
+          "label": "C",
+          "text": "Charmin: Trust every wipe."
+        },
+        {
+          "label": "D",
+          "text": "Trust is the reliability of life."
+        }
+      ]
+    },
+    {
+      "question_id": 123,
+      "scenario_id": 103,
+      "brand": "Orgain",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Orgain: Nourish Your Joy, Every Day!"
+        },
+        {
+          "label": "B",
+          "text": "Let’s eat Orgain like nobody’s judging!"
+        },
+        {
+          "label": "C",
+          "text": "Orgain: Nourish Your Joy"
+        },
+        {
+          "label": "D",
+          "text": "Savor the Joy of Pure Nutrition!"
+        }
+      ]
+    },
+    {
+      "question_id": 124,
+      "scenario_id": 63,
+      "brand": "Peantene",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Peantene: The Fresh Start to Your Day!"
+        },
+        {
+          "label": "B",
+          "text": "Joyful Locks with Peantene"
+        },
+        {
+          "label": "C",
+          "text": "Glow like no one’s watching."
+        },
+        {
+          "label": "D",
+          "text": "Peantene: Joyful Hair, Happy You!"
+        }
+      ]
+    },
+    {
+      "question_id": 125,
+      "scenario_id": 118,
+      "brand": "Centrum",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Feel the Joy of Being at Your Best with Centrum!"
+        },
+        {
+          "label": "B",
+          "text": "Centrum: Celebrate Life's Vibrant Moments!"
+        },
+        {
+          "label": "C",
+          "text": "Laughter is the best Centrum supplement."
+        },
+        {
+          "label": "D",
+          "text": "Feel the Joy in Every Moment!"
+        }
+      ]
+    },
+    {
+      "question_id": 126,
+      "scenario_id": 188,
+      "brand": "Burberry",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Life is a Burberry banquet—don’t starve!"
+        },
+        {
+          "label": "B",
+          "text": "Wrap yourself in joy with Burberry."
+        },
+        {
+          "label": "C",
+          "text": "Unleash the Joy of Burberry"
+        },
+        {
+          "label": "D",
+          "text": "Wear the Joy, Embrace the Elegance!"
+        }
+      ]
+    },
+    {
+      "question_id": 127,
+      "scenario_id": 191,
+      "brand": "DKNY",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "The DKNY style is undefined."
+        },
+        {
+          "label": "B",
+          "text": "What’s Next, New York?"
+        },
+        {
+          "label": "C",
+          "text": "Unveil the New York You’ve Always Imagined."
+        },
+        {
+          "label": "D",
+          "text": "Unlock Tomorrow's Style Today with DKNY."
+        }
+      ]
+    },
+    {
+      "question_id": 128,
+      "scenario_id": 73,
+      "brand": "Philips",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Philips: Light Up Your Life with Joy!"
+        },
+        {
+          "label": "B",
+          "text": "Philips: Illuminate Your Life with Joy!"
+        },
+        {
+          "label": "C",
+          "text": "Philips: Lighting Up Your World with Joy!"
+        },
+        {
+          "label": "D",
+          "text": "The brighter the Philips glow, the more delightful it glows."
+        }
+      ]
+    },
+    {
+      "question_id": 129,
+      "scenario_id": 61,
+      "brand": "Peantene",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Your hair's best is yet to come."
+        },
+        {
+          "label": "B",
+          "text": "Unlock the Future of Haircare - Are You Ready for Peantene?"
+        },
+        {
+          "label": "C",
+          "text": "The best is yet to grow with Pantene."
+        },
+        {
+          "label": "D",
+          "text": "Unveil the Glow with Peantene—Where Anticipation Meets Radiance."
+        }
+      ]
+    },
+    {
+      "question_id": 130,
+      "scenario_id": 55,
+      "brand": "Gucci",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Wear Your Triumph."
+        },
+        {
+          "label": "B",
+          "text": "Gucci: Where Every Stitch Tells a Story of Excellence."
+        },
+        {
+          "label": "C",
+          "text": "Gucci are the icons, my friends."
+        },
+        {
+          "label": "D",
+          "text": "Crafted with Pride, Born to Shine"
+        }
+      ]
+    },
+    {
+      "question_id": 131,
+      "scenario_id": 105,
+      "brand": "Zena",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Zena: Where Pride Meets Perfection."
+        },
+        {
+          "label": "B",
+          "text": "Zena belongs to the champions."
+        },
+        {
+          "label": "C",
+          "text": "Zena: Where Excellence Reigns Supreme."
+        },
+        {
+          "label": "D",
+          "text": "Zena: Pride at Its Zenith"
+        }
+      ]
+    },
+    {
+      "question_id": 132,
+      "scenario_id": 60,
+      "brand": "Peantene",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "Peantene: Elevate Your Excellence."
+        },
+        {
+          "label": "B",
+          "text": "Celebrate Your Distinction With Peantene."
+        },
+        {
+          "label": "C",
+          "text": "Glory favors the glossy."
+        },
+        {
+          "label": "D",
+          "text": "Pride in Every Hair."
+        }
+      ]
+    },
+    {
+      "question_id": 133,
+      "scenario_id": 12,
+      "brand": "Whirlpool",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Whirlpool: Don't miss out, be there."
+        },
+        {
+          "label": "B",
+          "text": "Don't Let Life Spin Out of Control."
+        },
+        {
+          "label": "C",
+          "text": "Whirlpool: Don't Miss Out on a Cleaner Tomorrow!"
+        },
+        {
+          "label": "D",
+          "text": "Seize your clean before it slips away. Whirlpool’s got your back."
+        }
+      ]
+    },
+    {
+      "question_id": 134,
+      "scenario_id": 40,
+      "brand": "Enfamil",
+      "persona": "Pride",
+      "options": [
+        {
+          "label": "A",
+          "text": "They believe they can thrive with Enfamil."
+        },
+        {
+          "label": "B",
+          "text": "Nourishing Excellence, One Baby at a Time."
+        },
+        {
+          "label": "C",
+          "text": "Nurturing Brilliance, Celebrating Every Milestone."
+        },
+        {
+          "label": "D",
+          "text": "Enfamil: Nurturing Excellence, Every Bottle."
+        }
+      ]
+    },
+    {
+      "question_id": 135,
+      "scenario_id": 132,
+      "brand": "Scotch",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Don’t Miss the Moment—Scotch Makes It Last."
+        },
+        {
+          "label": "B",
+          "text": "Don't Let Life Pass You By – Scotch Makes Every Moment Last."
+        },
+        {
+          "label": "C",
+          "text": "The only thing you need to fear is missing Scotch."
+        },
+        {
+          "label": "D",
+          "text": "Never Miss a Moment with Scotch."
+        }
+      ]
+    },
+    {
+      "question_id": 136,
+      "scenario_id": 26,
+      "brand": "Huggies",
+      "persona": "Anticipation",
+      "options": [
+        {
+          "label": "A",
+          "text": "Unleash the wonder of parenthood with Huggies."
+        },
+        {
+          "label": "B",
+          "text": "Wonder what comfort feels like? Huggies will show you."
+        },
+        {
+          "label": "C",
+          "text": "Huggies: What's Next?"
+        },
+        {
+          "label": "D",
+          "text": "The Huggies moments are yet to grow."
+        }
+      ]
+    },
+    {
+      "question_id": 137,
+      "scenario_id": 122,
+      "brand": "Qunol",
+      "persona": "Fear",
+      "options": [
+        {
+          "label": "A",
+          "text": "Act now, and never miss a beat."
+        },
+        {
+          "label": "B",
+          "text": "Don't Miss Out on Wellness—Choose Qunol Today!"
+        },
+        {
+          "label": "C",
+          "text": "Seize the day with Qunol—for tomorrow never comes."
+        },
+        {
+          "label": "D",
+          "text": "Don't miss out—Qunol is your ultimate solution!"
+        }
+      ]
+    },
+    {
+      "question_id": 138,
+      "scenario_id": 173,
+      "brand": "Tresanti",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Life is a Tresanti moment, and everyone is invited!"
+        },
+        {
+          "label": "B",
+          "text": "Tresanti: Where Every Moment Sparkles with Delight!"
+        },
+        {
+          "label": "C",
+          "text": "Tresanti: Celebrate Every Moment with Joy!"
+        },
+        {
+          "label": "D",
+          "text": "Tresanti: Where Every Day is a Celebration of Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 139,
+      "scenario_id": 33,
+      "brand": "KIRKLAND",
+      "persona": "Joy",
+      "options": [
+        {
+          "label": "A",
+          "text": "Kirkland: Where Quality Meets Joy."
+        },
+        {
+          "label": "B",
+          "text": "Life is a joy, you’ve just got to bring Kirkland’s."
+        },
+        {
+          "label": "C",
+          "text": "KIRKLAND: Where Every Choice Sparks Joy!"
+        },
+        {
+          "label": "D",
+          "text": "KIRKLAND: Where Every Moment Sparkles with Joy!"
+        }
+      ]
+    },
+    {
+      "question_id": 140,
+      "scenario_id": 59,
+      "brand": "Gucci",
+      "persona": "Trust",
+      "options": [
+        {
+          "label": "A",
+          "text": "Gucci: Where Timeless Trust Meets Elegance."
+        },
+        {
+          "label": "B",
+          "text": "Gucci classics are forever."
+        },
+        {
+          "label": "C",
+          "text": "Gucci: Crafted with Precision, Trusted for Generations."
+        },
+        {
+          "label": "D",
+          "text": "Gucci - Where Luxury Meets Trust"
+        }
+      ]
+    }
+  ]
+}

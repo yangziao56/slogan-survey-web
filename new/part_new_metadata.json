@@ -1,6 +1,6 @@
 {
-  "created_at_utc": "2026-02-20T21:01:33.051298+00:00",
-  "bank_id": "2ce006bec0a8107482ac6e6c9f41c2bdc0840d56b2445ec1038c0390f4ff8b6e",
+  "created_at_utc": "2026-02-21T16:17:58.703049+00:00",
+  "bank_id": "7fbb9ffdd7680cc44ba321d6f7a9f614aed0e5790a0973ccdd39116fbe2f2493",
   "seed": 20260220,
   "input_bank": "stage_b_bank_blocks.csv",
   "candidate_brands_25": [
@@ -31,44 +31,60 @@
     "Zena"
   ],
   "fixed_qwq_questions_3": {
-    "15": "Osaki",
-    "144": "Huggies",
+    "153": "LG",
+    "146": "Dawn",
     "12": "Samsung"
   },
+  "fixed_random_brand_model": {
+    "Huggies": "DeepSeek-R1-Distill-Llama-70B",
+    "Osaki": "DeepSeek-R1-Distill-Qwen-32B"
+  },
   "selected_fixed_qwq_brands_3": [
+    "Dawn",
     "Huggies",
+    "LG",
     "Osaki",
     "Samsung"
   ],
-  "sampled_part1_brands_9": [
+  "sampled_part1_brands_remaining": [
     "Centrum",
-    "Dawn",
-    "LG",
-    "La-Z-Boy",
+    "Dove",
     "Peantene",
-    "Scotch",
+    "Philips",
+    "Qunol",
     "TP-Link",
-    "Thinkbaby",
-    "Zena"
+    "Whirlpool"
   ],
   "part2_lure_brands_12": [
     "Adidias",
     "Columbia",
-    "Dove",
     "Duracell",
     "Gucci",
     "KIRKLAND",
-    "Philips",
-    "Qunol",
+    "La-Z-Boy",
     "SanDisk",
+    "Scotch",
     "Sealy",
+    "Thinkbaby",
     "Thomasville",
-    "Whirlpool"
+    "Zena"
   ],
   "model_quota_for_part1": {
     "QwQ-32B-LoRA": 3,
     "DeepSeek-R1-Distill-Qwen-32B": 3,
     "DeepSeek-R1-Distill-Llama-70B": 3,
+    "GPT-4o": 3
+  },
+  "fixed_model_counts": {
+    "QwQ-32B-LoRA": 3,
+    "DeepSeek-R1-Distill-Qwen-32B": 1,
+    "DeepSeek-R1-Distill-Llama-70B": 1,
+    "GPT-4o": 0
+  },
+  "sampled_need_by_model": {
+    "QwQ-32B-LoRA": 0,
+    "DeepSeek-R1-Distill-Qwen-32B": 2,
+    "DeepSeek-R1-Distill-Llama-70B": 2,
     "GPT-4o": 3
   },
   "counts": {

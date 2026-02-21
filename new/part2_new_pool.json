@@ -1,11 +1,11 @@
 {
-  "bank_id": "2ce006bec0a8107482ac6e6c9f41c2bdc0840d56b2445ec1038c0390f4ff8b6e",
-  "created_at_utc": "2026-02-20T21:01:33.051298+00:00",
+  "bank_id": "7fbb9ffdd7680cc44ba321d6f7a9f614aed0e5790a0973ccdd39116fbe2f2493",
+  "created_at_utc": "2026-02-21T16:17:58.703049+00:00",
   "seed": 20260220,
   "num_items": 24,
   "items": [
     {
-      "brand": "Gucci",
+      "brand": "KIRKLAND",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -21,7 +21,7 @@
       "pool_index": 2
     },
     {
-      "brand": "Dawn",
+      "brand": "Osaki",
       "is_old": true,
       "source_item_id": 1,
       "source_model": "DeepSeek-R1-Distill-Qwen-32B",
@@ -37,7 +37,7 @@
       "pool_index": 4
     },
     {
-      "brand": "Qunol",
+      "brand": "Scotch",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -45,7 +45,7 @@
       "pool_index": 5
     },
     {
-      "brand": "Scotch",
+      "brand": "Philips",
       "is_old": true,
       "source_item_id": 7,
       "source_model": "DeepSeek-R1-Distill-Qwen-32B",
@@ -53,7 +53,7 @@
       "pool_index": 6
     },
     {
-      "brand": "SanDisk",
+      "brand": "Sealy",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -61,26 +61,26 @@
       "pool_index": 7
     },
     {
-      "brand": "Centrum",
+      "brand": "Huggies",
       "is_old": true,
       "source_item_id": 5,
-      "source_model": "GPT-4o",
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
       "lure_origin": "",
       "pool_index": 8
     },
     {
-      "brand": "La-Z-Boy",
+      "brand": "Dove",
       "is_old": true,
       "source_item_id": 12,
-      "source_model": "DeepSeek-R1-Distill-Qwen-32B",
+      "source_model": "GPT-4o",
       "lure_origin": "",
       "pool_index": 9
     },
     {
-      "brand": "TP-Link",
+      "brand": "Qunol",
       "is_old": true,
       "source_item_id": 9,
-      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "source_model": "GPT-4o",
       "lure_origin": "",
       "pool_index": 10
     },
@@ -93,7 +93,7 @@
       "pool_index": 11
     },
     {
-      "brand": "Huggies",
+      "brand": "Dawn",
       "is_old": true,
       "source_item_id": 6,
       "source_model": "QwQ-32B-LoRA",
@@ -101,7 +101,7 @@
       "pool_index": 12
     },
     {
-      "brand": "Whirlpool",
+      "brand": "Zena",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -109,15 +109,15 @@
       "pool_index": 13
     },
     {
-      "brand": "Thinkbaby",
+      "brand": "TP-Link",
       "is_old": true,
       "source_item_id": 11,
-      "source_model": "GPT-4o",
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
       "lure_origin": "",
       "pool_index": 14
     },
     {
-      "brand": "Osaki",
+      "brand": "LG",
       "is_old": true,
       "source_item_id": 8,
       "source_model": "QwQ-32B-LoRA",
@@ -125,7 +125,7 @@
       "pool_index": 15
     },
     {
-      "brand": "KIRKLAND",
+      "brand": "La-Z-Boy",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -133,10 +133,10 @@
       "pool_index": 16
     },
     {
-      "brand": "Zena",
+      "brand": "Whirlpool",
       "is_old": true,
       "source_item_id": 10,
-      "source_model": "GPT-4o",
+      "source_model": "DeepSeek-R1-Distill-Llama-70B",
       "lure_origin": "",
       "pool_index": 17
     },
@@ -144,12 +144,12 @@
       "brand": "Peantene",
       "is_old": true,
       "source_item_id": 2,
-      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "source_model": "GPT-4o",
       "lure_origin": "",
       "pool_index": 18
     },
     {
-      "brand": "Philips",
+      "brand": "SanDisk",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -157,15 +157,15 @@
       "pool_index": 19
     },
     {
-      "brand": "LG",
+      "brand": "Centrum",
       "is_old": true,
       "source_item_id": 4,
-      "source_model": "DeepSeek-R1-Distill-Llama-70B",
+      "source_model": "DeepSeek-R1-Distill-Qwen-32B",
       "lure_origin": "",
       "pool_index": 20
     },
     {
-      "brand": "Sealy",
+      "brand": "Thinkbaby",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -173,7 +173,7 @@
       "pool_index": 21
     },
     {
-      "brand": "Duracell",
+      "brand": "Gucci",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",
@@ -181,7 +181,7 @@
       "pool_index": 22
     },
     {
-      "brand": "Dove",
+      "brand": "Duracell",
       "is_old": false,
       "source_item_id": "",
       "source_model": "",

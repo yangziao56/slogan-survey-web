@@ -8,6 +8,7 @@ window.SURVEY_CONFIG = {
   completionCodePart2: "REPLACE_ME_PART2",
   completionCodePart1New: "REPLACE_ME_PART1_NEW",
   completionCodePart2New: "REPLACE_ME_PART2_NEW",
+  completionCodeDemographic: "DEMO2026",
   part2: {
     numOld: 20,
     numLures: 20,

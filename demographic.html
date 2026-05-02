@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Background Survey</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Background Survey</h1>
+      <p class="muted">
+        Please answer the following background questions. These questions are used only for aggregate analysis.
+      </p>
+
+      <div class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+        </div>
+        <p class="muted">
+          If you came from Prolific, this will be auto-filled from the URL parameter <span class="code">PROLIFIC_PID</span>.
+        </p>
+      </div>
+
+      <form id="demographicForm">
+        <div id="questionsRoot"></div>
+
+        <div class="card">
+          <p id="submitError" class="error" style="display: none"></p>
+          <div class="footer-actions">
+            <button id="submitBtn" type="submit">Submit</button>
+            <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+          </div>
+        </div>
+      </form>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { getParam, postJson } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+
+      const pidInput = document.getElementById("pidInput");
+      const form = document.getElementById("demographicForm");
+      const questionsRoot = document.getElementById("questionsRoot");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      const regionOptions = [
+        "United States",
+        "Canada",
+        "United Kingdom",
+        "Europe",
+        "East Asia",
+        "South/Southeast Asia",
+        "Latin America",
+        "Middle East/North Africa",
+        "Sub-Saharan Africa",
+        "Oceania",
+        "Other",
+        "Prefer not to say",
+      ];
+
+      const questions = [
+        {
+          id: "age_range",
+          label: "What is your age range?",
+          options: ["18-24", "25-34", "35-44", "45-54", "55-64", "65+", "Prefer not to say"],
+        },
+        {
+          id: "gender",
+          label: "What is your gender?",
+          options: ["Woman", "Man", "Non-binary", "Prefer to self-describe", "Prefer not to say"],
+          freeTextFor: "Prefer to self-describe",
+        },
+        {
+          id: "current_region",
+          label: "Where do you currently live?",
+          options: regionOptions,
+          freeTextFor: "Other",
+        },
+        {
+          id: "grew_up_region",
+          label: "Where did you primarily grow up?",
+          options: regionOptions,
+          freeTextFor: "Other",
+        },
+        {
+          id: "english_proficiency",
+          label: "How would you describe your English proficiency?",
+          options: ["Native or near-native", "Fluent", "Advanced", "Intermediate", "Basic", "Prefer not to say"],
+        },
+        {
+          id: "quote_familiarity",
+          label: "How familiar are you with English quotes, idioms, memes, or culturally well-known phrases?",
+          options: ["Very familiar", "Somewhat familiar", "Slightly familiar", "Not very familiar", "Not familiar at all"],
+        },
+        {
+          id: "english_ad_exposure",
+          label: "How often do you encounter English-language advertising or marketing copy?",
+          options: ["Daily", "Several times a week", "Several times a month", "Rarely", "Almost never"],
+        },
+        {
+          id: "marketing_background",
+          label: "Do you have experience in marketing, advertising, branding, copywriting, or related fields?",
+          options: ["Yes, professionally", "Yes, academically", "Some informal experience", "No", "Prefer not to say"],
+        },
+      ];
+
+      function showError(message) {
+        submitError.textContent = message;
+        submitError.style.display = message ? "block" : "none";
+      }
+
+      function selectedValue(id) {
+        const el = document.querySelector(`input[name="${id}"]:checked`);
+        return el ? el.value : "";
+      }
+
+      function renderQuestion(q) {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>${q.label}</strong>`;
+        card.appendChild(title);
+
+        const choices = document.createElement("div");
+        choices.className = "row";
+        choices.style.marginTop = "10px";
+
+        q.options.forEach((option) => {
+          const label = document.createElement("label");
+          label.innerHTML = `<input type="radio" name="${q.id}" value="${option}" required /> ${option}`;
+          choices.appendChild(label);
+        });
+        card.appendChild(choices);
+
+        if (q.freeTextFor) {
+          const input = document.createElement("input");
+          input.type = "text";
+          input.id = `${q.id}_text`;
+          input.placeholder = "Please specify";
+          input.autocomplete = "off";
+          input.style.display = "none";
+          input.style.marginTop = "10px";
+          input.dataset.freeTextFor = q.freeTextFor;
+          card.appendChild(input);
+
+          choices.addEventListener("change", () => {
+            const shouldShow = selectedValue(q.id) === q.freeTextFor;
+            input.style.display = shouldShow ? "block" : "none";
+            input.required = shouldShow;
+            if (!shouldShow) input.value = "";
+          });
+        }
+
+        return card;
+      }
+
+      function collectAnswers() {
+        const out = {};
+        for (const q of questions) {
+          const value = selectedValue(q.id);
+          out[q.id] = value;
+          if (q.freeTextFor) {
+            const textInput = document.getElementById(`${q.id}_text`);
+            out[`${q.id}_text`] = textInput ? textInput.value.trim() : "";
+          }
+        }
+        return out;
+      }
+
+      async function submit(e) {
+        e.preventDefault();
+        showError("");
+
+        if (!form.reportValidity()) return;
+
+        const pid = (pidInput.value || "").trim();
+        if (!pid) {
+          showError("Please enter PROLIFIC_PID.");
+          pidInput.focus();
+          return;
+        }
+
+        submitBtn.disabled = true;
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "demographic",
+            block_id: "",
+            demographic_answers: collectAnswers(),
+            client: {
+              user_agent: navigator.userAgent,
+              page: "demographic",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+
+          form.style.display = "none";
+          doneCard.style.display = "block";
+          completionCode.textContent = cfg.completionCodeDemographic || "DEMO2026";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (err) {
+          showError(String(err && err.message ? err.message : err));
+          submitBtn.disabled = false;
+        }
+      }
+
+      questions.forEach((q) => questionsRoot.appendChild(renderQuestion(q)));
+      submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+      }
+
+      form.addEventListener("submit", submit);
+    </script>
+  </body>
+</html>

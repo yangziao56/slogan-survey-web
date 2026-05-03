@@ -11,7 +11,7 @@
     <main>
       <h1>Ablation Pairwise Survey</h1>
       <p class="muted">
-        You will answer 40 questions. Each question shows 2 slogans for the same brand and persona.
+        You will answer 20 questions. Each question shows 2 slogans for the same brand and persona.
         For each question, select the slogan that hits you first and the slogan that fits the persona best.
         You may choose the same slogan for both.
       </p>
@@ -34,10 +34,13 @@
         <div class="row">
           <div>
             <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
-            <div class="muted"><strong>Part:</strong> ablation_pairwise</div>
+            <div class="muted">
+              <span><strong>Block:</strong> <span id="blockLabel"></span></span>
+              <span style="margin-left: 10px"><strong>Part:</strong> ablation_pairwise</span>
+            </div>
           </div>
           <div style="margin-left: auto" class="muted">
-            Progress: <span id="progressLabel">0/40</span>
+            Progress: <span id="progressLabel">0/20</span>
           </div>
         </div>
       </div>
@@ -77,6 +80,7 @@
       const startBtn = document.getElementById("startBtn");
       const surveyCard = document.getElementById("surveyCard");
       const pidLabel = document.getElementById("pidLabel");
+      const blockLabel = document.getElementById("blockLabel");
       const progressLabel = document.getElementById("progressLabel");
       const questionsRoot = document.getElementById("questionsRoot");
       const navCard = document.getElementById("navCard");
@@ -90,6 +94,7 @@
       const completionCode = document.getElementById("completionCode");
 
       let pid = "";
+      let blockId = null;
       let surveyData = null;
       let pairs = [];
       let currentIndex = 0;
@@ -116,6 +121,14 @@
           opt.label = idx === 0 ? "A" : "B";
         });
         return options;
+      }
+
+      function resolveBlockId() {
+        const overrideBlock = getParam("BLOCK_ID");
+        if (overrideBlock === "0" || overrideBlock === "1") {
+          return Number(overrideBlock);
+        }
+        return fnv1a32(pid) % 2;
       }
 
       function currentValues(pair) {
@@ -228,10 +241,15 @@
           return;
         }
         surveyData = await loadJson("ablation/qwq_vs_ablation_pairwise_40.json");
-        pairs = surveyData.pairs || [];
+        blockId = resolveBlockId();
+        pairs = (surveyData.pairs || []).filter((pair) => {
+          if (blockId === 0) return Number(pair.source_block_id) === 10;
+          return Number(pair.source_block_id) === 11;
+        });
         currentIndex = 0;
         answersByPairId = {};
         pidLabel.textContent = pid;
+        blockLabel.textContent = String(blockId);
         surveyCard.style.display = "block";
         navCard.style.display = "block";
         submitCard.style.display = "none";
@@ -275,7 +293,7 @@
             STUDY_ID: getParam("STUDY_ID") || "",
             SESSION_ID: getParam("SESSION_ID") || "",
             study_part: "ablation_pairwise",
-            block_id: "",
+            block_id: blockId,
             seed: surveyData.seed,
             pair_ids: pairs.map((pair) => pair.pair_id),
             answers,

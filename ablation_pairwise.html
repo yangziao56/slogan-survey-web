@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ablation Pairwise Survey</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="config.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Ablation Pairwise Survey</h1>
+      <p class="muted">
+        You will answer 40 questions. Each question shows 2 slogans for the same brand and persona.
+        For each question, select the slogan that hits you first and the slogan that fits the persona best.
+        You may choose the same slogan for both.
+      </p>
+
+      <div id="pidCard" class="card">
+        <div class="row">
+          <label>
+            PROLIFIC_PID:
+            <input id="pidInput" type="text" placeholder="e.g., 5f2c..." autocomplete="off" />
+          </label>
+          <button id="startBtn" type="button">Start</button>
+        </div>
+        <p id="pidError" class="error" style="display: none"></p>
+        <p class="muted">
+          If you came from Prolific, this will be auto-filled from the URL parameter <span class="code">PROLIFIC_PID</span>.
+        </p>
+      </div>
+
+      <div id="surveyCard" class="card" style="display: none">
+        <div class="row">
+          <div>
+            <div><strong>Participant:</strong> <span id="pidLabel"></span></div>
+            <div class="muted"><strong>Part:</strong> ablation_pairwise</div>
+          </div>
+          <div style="margin-left: auto" class="muted">
+            Progress: <span id="progressLabel">0/40</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="questionsRoot"></div>
+
+      <div id="navCard" class="card" style="display: none">
+        <p id="navHint" class="muted" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="nextBtn" type="button" disabled>Next</button>
+        </div>
+      </div>
+
+      <div id="submitCard" class="card" style="display: none">
+        <p id="submitError" class="error" style="display: none"></p>
+        <div class="footer-actions">
+          <button id="submitBtn" type="button">Submit</button>
+          <span class="muted">Submits to: <span id="submitUrlLabel" class="code"></span></span>
+        </div>
+      </div>
+
+      <div id="doneCard" class="card" style="display: none">
+        <h2 style="margin: 0 0 10px">Done</h2>
+        <p>Completion code:</p>
+        <div class="code" id="completionCode"></div>
+      </div>
+    </main>
+
+    <script type="module">
+      import { fnv1a32, getParam, loadJson, mulberry32, postJson, shuffleInPlace } from "./shared.js";
+
+      const cfg = window.SURVEY_CONFIG || {};
+      const submitMode = cfg.submitMode || "cors";
+
+      const pidInput = document.getElementById("pidInput");
+      const pidError = document.getElementById("pidError");
+      const startBtn = document.getElementById("startBtn");
+      const surveyCard = document.getElementById("surveyCard");
+      const pidLabel = document.getElementById("pidLabel");
+      const progressLabel = document.getElementById("progressLabel");
+      const questionsRoot = document.getElementById("questionsRoot");
+      const navCard = document.getElementById("navCard");
+      const navHint = document.getElementById("navHint");
+      const nextBtn = document.getElementById("nextBtn");
+      const submitCard = document.getElementById("submitCard");
+      const submitBtn = document.getElementById("submitBtn");
+      const submitError = document.getElementById("submitError");
+      const submitUrlLabel = document.getElementById("submitUrlLabel");
+      const doneCard = document.getElementById("doneCard");
+      const completionCode = document.getElementById("completionCode");
+
+      let pid = "";
+      let surveyData = null;
+      let pairs = [];
+      let currentIndex = 0;
+      let answersByPairId = {};
+
+      function showError(el, msg) {
+        el.textContent = msg;
+        el.style.display = msg ? "block" : "none";
+      }
+
+      function getCheckedValue(name) {
+        const el = document.querySelector(`input[name="${name}"]:checked`);
+        return el ? el.value : "";
+      }
+
+      function optionOrder(pair) {
+        const options = [
+          { label: "A", variant: "original_qwq", text: pair.original_qwq_slogan },
+          { label: "B", variant: "ablation", text: pair.ablation_slogan },
+        ];
+        const rng = mulberry32(fnv1a32(`${pid}|${pair.pair_id}|ablation_pairwise`));
+        shuffleInPlace(options, rng);
+        options.forEach((opt, idx) => {
+          opt.label = idx === 0 ? "A" : "B";
+        });
+        return options;
+      }
+
+      function currentValues(pair) {
+        return {
+          hits_you_first: getCheckedValue(`pair${pair.pair_id}_hits`),
+          persona_fit_best: getCheckedValue(`pair${pair.pair_id}_persona`),
+        };
+      }
+
+      function isComplete(values) {
+        return values.hits_you_first && values.persona_fit_best;
+      }
+
+      function updateNavState() {
+        const pair = pairs[currentIndex];
+        if (!pair) return;
+        const complete = isComplete(currentValues(pair));
+        const isLast = currentIndex === pairs.length - 1;
+        navCard.style.display = isLast ? "none" : "block";
+        submitCard.style.display = isLast ? "block" : "none";
+        nextBtn.disabled = !complete;
+        submitBtn.disabled = !complete;
+        navHint.textContent = complete ? "" : "Complete both choices to continue.";
+        navHint.style.display = complete ? "none" : "block";
+      }
+
+      function setProgress() {
+        progressLabel.textContent = `Question ${currentIndex + 1}/${pairs.length}`;
+      }
+
+      function renderPair(pair) {
+        const options = optionOrder(pair);
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = `pair-${pair.pair_id}`;
+
+        const title = document.createElement("div");
+        title.innerHTML = `<strong>Question ${currentIndex + 1}</strong> <span class="muted">(Brand: ${pair.brand} · Persona: ${pair.persona})</span>`;
+        card.appendChild(title);
+
+        const table = document.createElement("table");
+        table.innerHTML = `
+          <thead>
+            <tr>
+              <th style="width: 60%">Slogan</th>
+              <th style="width: 20%">Hits you first</th>
+              <th style="width: 20%">Persona-fit best</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        `;
+        const tbody = table.querySelector("tbody");
+        for (const opt of options) {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td><span class="option-label">${opt.label}.</span>${opt.text}</td>
+            <td><input type="radio" name="pair${pair.pair_id}_hits" value="${opt.label}" /></td>
+            <td><input type="radio" name="pair${pair.pair_id}_persona" value="${opt.label}" /></td>
+          `;
+          tbody.appendChild(tr);
+        }
+        card.appendChild(table);
+        card.addEventListener("change", updateNavState);
+        return card;
+      }
+
+      function renderCurrent() {
+        questionsRoot.innerHTML = "";
+        const pair = pairs[currentIndex];
+        if (!pair) return;
+        questionsRoot.appendChild(renderPair(pair));
+        setProgress();
+        updateNavState();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function storeCurrentPair() {
+        const pair = pairs[currentIndex];
+        if (!pair) return false;
+        const values = currentValues(pair);
+        if (!isComplete(values)) return false;
+        const options = optionOrder(pair);
+        const optionMap = {};
+        for (const opt of options) {
+          optionMap[opt.label] = {
+            variant: opt.variant,
+            text: opt.text,
+          };
+        }
+        answersByPairId[pair.pair_id] = {
+          pair_id: pair.pair_id,
+          source_block_id: pair.source_block_id,
+          source_display_id: pair.source_display_id,
+          question_id: pair.question_id,
+          scenario_id: pair.scenario_id,
+          brand: pair.brand,
+          persona: pair.persona,
+          hits_you_first: values.hits_you_first,
+          persona_fit_best: values.persona_fit_best,
+          option_map: optionMap,
+        };
+        return true;
+      }
+
+      async function start() {
+        showError(pidError, "");
+        pid = (pidInput.value || "").trim();
+        if (!pid) {
+          showError(pidError, "Please enter PROLIFIC_PID.");
+          return;
+        }
+        surveyData = await loadJson("ablation/qwq_vs_ablation_pairwise_40.json");
+        pairs = surveyData.pairs || [];
+        currentIndex = 0;
+        answersByPairId = {};
+        pidLabel.textContent = pid;
+        surveyCard.style.display = "block";
+        navCard.style.display = "block";
+        submitCard.style.display = "none";
+        submitUrlLabel.textContent = cfg.submitUrl || "(not set)";
+        renderCurrent();
+      }
+
+      async function submit() {
+        showError(submitError, "");
+        submitBtn.disabled = true;
+
+        try {
+          if (!cfg.submitUrl) {
+            throw new Error("submitUrl not set in config.js");
+          }
+          if (!storeCurrentPair()) {
+            showError(submitError, "Please complete both choices on this question.");
+            submitBtn.disabled = false;
+            return;
+          }
+
+          const answers = [];
+          const missing = [];
+          for (const pair of pairs) {
+            const answer = answersByPairId[pair.pair_id];
+            if (!answer) {
+              missing.push(pair.pair_id);
+              continue;
+            }
+            answers.push(answer);
+          }
+          if (missing.length) {
+            showError(submitError, `Please answer all questions (missing: ${missing.slice(0, 5).join(", ")}${missing.length > 5 ? "..." : ""}).`);
+            submitBtn.disabled = false;
+            return;
+          }
+
+          const payload = {
+            timestamp: new Date().toISOString(),
+            PROLIFIC_PID: pid,
+            STUDY_ID: getParam("STUDY_ID") || "",
+            SESSION_ID: getParam("SESSION_ID") || "",
+            study_part: "ablation_pairwise",
+            block_id: "",
+            seed: surveyData.seed,
+            pair_ids: pairs.map((pair) => pair.pair_id),
+            answers,
+            client: {
+              user_agent: navigator.userAgent,
+              page: "ablation_pairwise",
+            },
+          };
+
+          await postJson(cfg.submitUrl, payload, submitMode);
+
+          submitCard.style.display = "none";
+          doneCard.style.display = "block";
+          completionCode.textContent = cfg.completionCodeAblationPairwise || "ABLATION2026";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (e) {
+          showError(submitError, String(e && e.message ? e.message : e));
+          submitBtn.disabled = false;
+        }
+      }
+
+      startBtn.addEventListener("click", () => start());
+      nextBtn.addEventListener("click", () => {
+        showError(submitError, "");
+        if (!storeCurrentPair()) return;
+        currentIndex = Math.min(pairs.length - 1, currentIndex + 1);
+        renderCurrent();
+      });
+      submitBtn.addEventListener("click", () => submit());
+
+      const pidFromUrl = getParam("PROLIFIC_PID");
+      if (pidFromUrl) {
+        pidInput.value = pidFromUrl;
+      }
+    </script>
+  </body>
+</html>
